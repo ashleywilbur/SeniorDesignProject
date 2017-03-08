@@ -1,0 +1,5 @@
+﻿*** KNOWN ISSUES ***
+-'urgent' div used in many places, needs to be separated [A&A Lead, progress-package, myPackage pages] 
+ASHLEY: I don’t think this is an issue anymore once we made new div classes in the CSS where they call to.
+
+- The DASHBOARD button has been made and implemented only in the progress package html and users html. I am stuck on the fact that the A&A, Customer, Package Team member and Package validator all use my packages - A&A, Elevated user and {aqua Validator all use Reports - A&A, Package team member and package validator all use my assignments. The issue here is what html to link the dashboard button to since they all use these singular html pages. It must have something to do with the login once the database is all set but I am not sure how to implement that or even go about that. PHP? Suggestions :-)
