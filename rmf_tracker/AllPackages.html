@@ -167,7 +167,8 @@ var STYLE_PREFIX = 'wsite';
 
 	<div  class="wsite-section wsite-header-section wsite-section-bg-color" style="background-color: #1c4c76;background-image: none;is_customized: 1;" >
 <h2 class="wsite-content-title"><font size="6">All Packages</font></h2>		
-<h2>This</h2>
+    <div class="wsite-spacer" style="height:250px;"></div>
+
 		<div class="wsite-section-content">
 			
           <div class="container">
@@ -180,7 +181,7 @@ var STYLE_PREFIX = 'wsite';
 
 
 					
-						
+				
 
 
 
@@ -193,7 +194,11 @@ var STYLE_PREFIX = 'wsite';
 </div>
 </div>
 
-
+			
+						
+<p id = "packageCounterBox">
+<label style = "float:right;"> # of packages </label>
+</p> <br />
 					
 				</td>			</tr>
 		</tbody>
@@ -211,6 +216,8 @@ var STYLE_PREFIX = 'wsite';
 </div>
 
     </div>
+
+
 
 <div class ="PackTable">
 
@@ -302,30 +309,84 @@ var STYLE_PREFIX = 'wsite';
 
 </div>
 
+		<div class="filtDiv" style= "float: left;">
+  <button  class="dropbtn">Active</button>
 
-  <div id="navMobile" class="nav mobile-nav">
-    <label class="hamburger"><span></span></label>
-    <ul class="wsite-menu-default">
-    		<li id="pg838545246619449792" class="wsite-menu-item-wrap">
-    			<a
-    						href="index.html"
-    				class="wsite-menu-item"
-    				>
-    				Home
-    			</a>
-    			
-    		</li>
-    		<li id="pg209166988402577634" class="wsite-menu-item-wrap">
-    			<a
-    						href="login.html"
-    				class="wsite-menu-item"
-    				>
-    				Login
-    			</a>
-    			
-    		</li>
-    </ul>
   </div>
+  
+  		<div class="filtDiv2" style= "float: left;">
+  <button  class="dropbtn">Archived</button>
+
+  </div>
+  
+  		<div class="filtDiv3" style= "float: left;">
+  <button  class="dropbtn">Both</button>
+
+  </div>
+  
+  <!--style="text-align:left;-->
+  
+</div>
+</div>	
+
+<!--<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("packageTable");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>-->
+
+
 
 	<script type="text/javascript" src="files/theme/plugins.js"></script>
   <script type="text/javascript" src="files/theme/custom.js"></script>
