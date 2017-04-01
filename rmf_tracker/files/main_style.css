@@ -510,25 +510,48 @@ div.TrackerSteps{
 }		
 
 .PackTable{
-	width: 1000px;
-	height:250px;
+
 	background-color:#4682B4;
 	position:absolute;
-	top: 200px;
-	left:100px;
+	top: 50%;
+	left:50px;
 	overflow:auto;
 	border: solid;
 	border-color:white;
 	border-bottom-width:1px;
+	font-family: 'Birdseye', sans-serif;
+	font-size: 16px;
+
+	color: #ffffff;
+	text-align: center;
 	
 }
+th{
+	font-size:20px;
+	color: #1C4C76;
+	background-color:white;
 
+	border-right:1px solid #1C4C76; 
+	border-left:1px solid #1C4C76;
+
+}
+tr,td,th{
+	border:1px solid white;
+	padding:8px;
+}
+tr:nth-child(even) {
+    background-color: #2b506e;
+}
 .TableBut{
 	width:980px;
 	height:50px;
 	background-color: #4682B4;
 	word-spacing:80px;
 }
+table{
+	 border-collapse: collapse;
+}
+
 
 .gi-2x{font-size: 2em;}
 .gi-3x{font-size: 3em;}
