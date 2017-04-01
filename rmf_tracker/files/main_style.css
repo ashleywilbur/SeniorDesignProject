@@ -311,12 +311,12 @@ div.paragraph ol, div.paragraph ol li { list-style: decimal outside !important; 
 .dropbtn {
     background-color: #4682B4;
     color: white;
-    padding: 20px;
+    padding: 5px;
     font-size: 16px;
     border-style: solid;
     cursor: pointer;
 	font-family: 'Birdseye', sans-serif;
-	width: 200px;
+	width: 80px;
 }
 
 /* Dropdown button on hover & focus */
@@ -419,7 +419,7 @@ div.urgent1 {
 
 .dropdown-content1 a {
     color: black;
-    width:200px;
+    width:120px;
 	height:25px;
     text-decoration: none;
     display: block;
@@ -550,6 +550,21 @@ tr:nth-child(even) {
 }
 table{
 	 border-collapse: collapse;
+}
+.filtDiv{
+	position:absolute;
+	top:270px;
+	left:60px;
+}
+.filtDiv2{
+	position:absolute;
+	top:270px;
+	left:150px;
+}
+.filtDiv3{
+	position:absolute;
+	top:270px;
+	left:240px;
 }
 
 
