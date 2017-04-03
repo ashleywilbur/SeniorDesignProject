@@ -311,7 +311,7 @@ div.paragraph ol, div.paragraph ol li { list-style: decimal outside !important; 
 .dropbtn {
     background-color: #4682B4;
     color: white;
-    padding: 5px;
+    padding: 20px;
     font-size: 16px;
     border-style: solid;
     cursor: pointer;
