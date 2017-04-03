@@ -538,20 +538,21 @@ div.TrackerSteps{
 	text-align: center;
 	
 }
-th{
+.allP th{
 	font-size:20px;
 	color: #1C4C76;
 	background-color:white;
-
-	border-right:1px solid #1C4C76; 
-	border-left:1px solid #1C4C76;
+	padding:8px;
+	border-left:solid 1px #2b506e;
+	border-right:solid 1px #2b506e;
+	border-bottom:solid 1px #2b506e;
 
 }
-tr,td,th{
+.allP tr td{
 	border:1px solid white;
 	padding:8px;
 }
-tr:nth-child(even) {
+.allP tr:nth-child(even) {
     background-color: #2b506e;
 }
 .TableBut{
@@ -560,7 +561,7 @@ tr:nth-child(even) {
 	background-color: #4682B4;
 	word-spacing:80px;
 }
-table{
+.allP{
 	 border-collapse: collapse;
 }
 .filtDiv{
