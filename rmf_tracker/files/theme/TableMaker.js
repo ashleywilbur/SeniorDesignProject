@@ -24,12 +24,15 @@ function GetInfo(pNum){
 	xhttp.onreadystatechange = function() {
     response =this.responseText;
 	console.log(this);
-
 	
+	//if statement makes sure the right data only comes in once
+	if(this.readyState == 3){
 	Information = response;
+	//the parse makes the data usuable
 	Information =JSON.parse(Information);
 				
-
+	//makes the table by grabbing the previous HTML and adding more info to it
+	//The structure is very sensitive, editing has to be done carefully because of the quotes
 	var tableStart = document.getElementById('allP').innerHTML;
 	var tableD = "<tr>\
 	<td>"+Information.Name+"</td>\
@@ -42,6 +45,7 @@ function GetInfo(pNum){
 	<td>"+Information.CertificationAcquiredDate+"</td></tr>"
 
 	document.getElementById('allP').innerHTML = tableStart + tableD;
+	}
 	};
 	
   xhttp.open("POST", "http://localhost/Pro/tracker.php", true);
