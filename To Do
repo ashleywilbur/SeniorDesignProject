@@ -11,3 +11,5 @@ generate report
 package table
 user and assignemtn table
 read and write forms
+Fix tracker buttons bug
+Fix xhttp bringing back multiples of the same data during POST
