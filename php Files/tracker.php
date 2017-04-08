@@ -167,14 +167,15 @@
 	
 	//search artifacts using PUID and associated tables
 	
-	$sql = "SELECT PUID FROM packageusers WHERE package.PID LIKE '%" . $package . "%'";
+	$sql = "SELECT PUID FROM packageusers WHERE packageusers.PID LIKE '%" . $package . "%'";
 	$result = $conn->query($sql);
 	
 	if (!$result) {
 		trigger_error('Invalid query: ' . $conn->error);
 	}
 	
-	$puid = $result->fetch_assoc();
+	$row = $result->fetch_assoc();
+	$puid = $row["PUID"];
 	
 	
 	$sql = "SELECT * FROM artifacts a, packageartifacts pa WHERE a.AID LIKE pa.AID AND pa.PUID LIKE '%" . $puid . "%'";
