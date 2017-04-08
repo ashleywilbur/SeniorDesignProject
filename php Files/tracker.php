@@ -81,6 +81,7 @@
 	echo $row["ArchiveDate"];
 	echo ",";
 	echo "\"TrackerStep\":";
+	
 	//output of current step
 	$step = $row["TrackerStep"];
 	
@@ -164,85 +165,38 @@
 	echo $row["OverallProcessMonths"]; //how long the process should take as a wile (months)
 	echo ",";
 	
-	//set search value for artifact info based off packagestandardtimeline
+	//search artifacts using PUID and associated tables
 	
-	$aid1 = $row["Step1Artifact"];
-	$aid2 = $row["Step2Artifact"];
-	$aid3 = $row["Step3Artifact"];
-	$aid4 = $row["Step4Artifact"];
-	$aid5 = $row["Step5Artifact"];
-	
-	//search & output using set value
-	
-	//aid1
-	$sql = "SELECT * FROM artifacts WHERE artifacts.AID LIKE '%" . $aid1 . "%'";
+	$sql = "SELECT PUID FROM packageusers WHERE package.PID LIKE '%" . $package . "%'";
 	$result = $conn->query($sql);
 	
 	if (!$result) {
 		trigger_error('Invalid query: ' . $conn->error);
 	}
 	
-	$row = $result->fetch_assoc();
-	echo "\"Artifact1\":\"";
-	echo $row["Name"] . "\"";
-	echo isset ($row["Date"]);	//error
+	$puid = $result->fetch_assoc();
 	
-	//aid2
-	$sql = "SELECT * FROM artifacts WHERE artifacts.AID LIKE '%" . $aid2 . "%'";
+	
+	$sql = "SELECT * FROM artifacts a, packageartifacts pa WHERE a.AID LIKE pa.AID AND pa.PUID LIKE '%" . $puid . "%'";
 	$result = $conn->query($sql);
 	
 	if (!$result) {
 		trigger_error('Invalid query: ' . $conn->error);
 	}
 	
-	$row = $result->fetch_assoc();
-	echo ",";
-	echo "\"Artifact2\":\"";
-	echo $row["Name"] . "\"";
-	echo isset ($row["Date"]);	//error
-	
-	//aid3
-	$sql = "SELECT * FROM artifacts WHERE artifacts.AID LIKE '%" . $aid3 . "%'";
-	$result = $conn->query($sql);
-	
-	if (!$result) {
-		trigger_error('Invalid query: ' . $conn->error);
+	if ($result->num_rows > 0) {
+		// output data of each row
+		while($row = $result->fetch_assoc()) {
+			echo $row["Name"] . "\"";
+			echo $row["SID"] . "\"";
+			echo $row["SubmitDate"] . "\"";
+			echo $row["Progress"];
+		}
+	} else {
+		echo "0 results";
 	}
 	
-	$row = $result->fetch_assoc();
-	echo ",";
-	echo "\"Artifact3\":\"";
-	echo $row["Name"] . "\"";
-	echo isset ($row["Date"]);	//error
 	
-	//aid4
-	$sql = "SELECT * FROM artifacts WHERE artifacts.AID LIKE '%" . $aid4 . "%'";
-	$result = $conn->query($sql);
-	
-	if (!$result) {
-		trigger_error('Invalid query: ' . $conn->error);
-	}
-	
-	$row = $result->fetch_assoc();
-	echo ",";
-	echo "\"Artifact4\":\"";
-	echo $row["Name"] . "\"";
-	echo isset ($row["Date"]);	//error
-	
-	//aid5
-	$sql = "SELECT * FROM artifacts WHERE artifacts.AID LIKE '%" . $aid5 . "%'";
-	$result = $conn->query($sql);
-	
-	if (!$result) {
-		trigger_error('Invalid query: ' . $conn->error);
-	}
-	
-	$row = $result->fetch_assoc();
-	echo ",";
-	echo "\"Artifact5\":\"";
-	echo $row["Name"] . "\"";
-	echo isset ($row["Date"]);	//error
-	echo "}";
 	//echo "\"";
 	
 	
