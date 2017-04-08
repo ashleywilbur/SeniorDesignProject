@@ -3,7 +3,9 @@ var action = 1;
 var action2 = 1;
 var action3 = 1;
 window.onload = loadDoc;
+packNum = window.location.href.split("#") 
 
+console.log(packNum);
 function TrackerColor(id, color) {
 
 	//What shows up on first click
@@ -92,8 +94,8 @@ function loadDoc() {
   xhttp.onreadystatechange = function() {
       response =this.responseText;  
 	 // Information = response.split(","); Can be used to take in info as array instead of object
-
-	   
+	if(this.readyState == 3){
+	  
 	 Information = response;
 	 
 	 //Parse brings errors but if it is not there it does not work
@@ -108,14 +110,15 @@ function loadDoc() {
 	document.getElementById('Sdesc').innerHTML = Information.Description;
 	
 	//loop for tracker color
-	  for(i =1; i <= Information.TrackerStep; i++){
+	  for(i =1; i < Information.TrackerStep; i++){
 		  document.getElementById("Track"+i).style.backgroundColor = '#63AC50';
 		  document.getElementById("Track"+(i+1)).style.backgroundColor = '#FFFF69';
 	  }
+	}
   };
   xhttp.open("POST", "http://localhost/Pro/tracker.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send("package=3");
+  xhttp.send("package="+packNum[1]);
 
  
    
