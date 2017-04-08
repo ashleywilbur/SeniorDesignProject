@@ -3,7 +3,7 @@
 	$servername = "localhost";
 	$username = "root";
 	$password = "password";
-	$dbname = "127_0_0_1";
+	$dbname = "rmf_tracker;
 	
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	

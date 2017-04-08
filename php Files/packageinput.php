@@ -16,33 +16,8 @@
 		die("Connection failed: " . $conn->connect_error);
 	} 
 	//echo "Connected successfully";
-	
-	
-	//display user count
-	
-	if(isset($_POST['email'])){
-		$email = $_POST['email'];
-	}
-	
-	
-	//$package = $_POST["package"];
-	
-	
-	//Checks Package ID and returns the current step
-	
-	$sql = "SELECT UID FROM user WHERE user.Email LIKE '%" . $email . "%'";
-	$result = $conn->query($sql);
-	
-	
-	if (!$result) {
-		trigger_error('Invalid query: ' . $conn->error);
-	}
-	
-	$row = mysql_fetch_row($result);
-	
-	
-	//output of UID
-	echo $row["UID"];
+
+	//name, acronym, description, eMassID, classification, CIA, artifact
 	
 	
 	//reference code - not used
