@@ -18,7 +18,7 @@
 	//echo "Connected successfully";
 	
 	
-	//display package count
+	//display user count
 	
 	if(isset($_POST['email'])){
 		$email = $_POST['email'];
