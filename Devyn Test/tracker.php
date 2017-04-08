@@ -87,6 +87,13 @@
 	echo $step;
 	echo ",";
 	
+	echo "\"PID\":";
+	//output of current step
+	$step = $row["PID"];
+	
+	echo $step;
+	echo ",";
+	
 	//Searches for all packagestandardtimeline/standardtimeline values
 	
 	$sql = "SELECT * FROM packagestandardtimeline pst, standardtimeline st WHERE pst.PID LIKE '%" . $package . "%' AND pst.STID LIKE st.STID";
