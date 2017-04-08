@@ -166,7 +166,8 @@ var STYLE_PREFIX = 'wsite';
 	<div class="wsite-section-wrap">
 
 	<div  class="wsite-section wsite-header-section wsite-section-bg-color" style="background-color: #1c4c76;background-image: none;is_customized: 1;" >
-<h2 class="wsite-content-title"><font size="6">All Packages</font></h2>		
+<h2 class="wsite-content-title"><font size="6">All Packages</font></h2>
+<h3> Total Packages: # </h3>		
     <div class="wsite-spacer" style="height:250px;"></div>
 
 		<div class="wsite-section-content">
@@ -175,34 +176,7 @@ var STYLE_PREFIX = 'wsite';
             <div class="banner">
 				<div class="wsite-section-elements">
 					<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-	<table class="wsite-multicol-table">
-		<tbody class="wsite-multicol-tbody">
-			<tr class="wsite-multicol-tr">
 
-
-					
-				
-
-
-
-
-<!--Make the table so it can be searched/sorted -->
-
-
-
-  </div>
-</div>
-</div>
-
-			
-						
-<p id = "packageCounterBox">
-<label style = "float:right;"> # of packages </label>
-</p> <br />
-					
-				</td>			</tr>
-		</tbody>
-	</table>
 </div></div></div>
 				</div>
 			</div>
@@ -310,7 +284,7 @@ var STYLE_PREFIX = 'wsite';
   </tr> -->
 </div>
 
-		<div class="filtDiv" style= "float: left;">
+		<div onclick="MakeTable()" class="filtDiv" style= "float: left;">
   <button  class="dropbtn5">Active</button>
 
   </div>
