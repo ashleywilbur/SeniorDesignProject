@@ -656,7 +656,35 @@ div.TrackerSteps{
 .allP tr:hover {
 	text-decoration:underline;
 }
+.login{
+	background-color:#4682B4;
+	width: 200px;
+	position:absolute;
+	top:50%;
+	left:40%;
+	height:250px;
+	border-radius: 25px;
+	border: solid 2px white;
+	
+}
+.login input{
+	height: 25px;
+	border: solid 2px white;
+	border-radius: 5px;
+}
 
+#loginSubmit{
+    background-color: #1C4C76;
+    color: white;
+    font-size: 20px;
+    border-style: solid;
+    cursor: pointer;
+	font-family: 'Birdseye', sans-serif;
+	width: 100px;
+	text-align: center;
+	height:50px;
+	
+}
 
 .gi-2x{font-size: 2em;}
 .gi-3x{font-size: 3em;}
