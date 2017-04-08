@@ -3,7 +3,7 @@
 	$servername = "localhost";
 	$username = "root";
 	$password = "password";
-	$dbname = "rmf_test_devyn";
+	$dbname = "127_0_0_1";
 	
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	
