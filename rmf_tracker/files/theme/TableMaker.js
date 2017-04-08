@@ -6,7 +6,7 @@ function MakeTable(){
 	for(var i =1; i <7; i++){
 	GetInfo(i);
 	}
-
+	console.log(window.location.href );
 }
 function GetInfo(pNum){
 
@@ -23,7 +23,7 @@ function GetInfo(pNum){
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
     response =this.responseText;
-	console.log(this);
+	//console.log(this);
 	
 	//if statement makes sure the right data only comes in once
 	if(this.readyState == 3){
@@ -35,7 +35,7 @@ function GetInfo(pNum){
 	//The structure is very sensitive, editing has to be done carefully because of the quotes
 	var tableStart = document.getElementById('allP').innerHTML;
 	var tableD = "<tr>\
-	<td>"+Information.Name+"</td>\
+	<td><a href=\"http://localhost/Pro/MyPackages.html#"+Information.PID+"\">"+Information.Name+"</a></td>\
 	<td>"+Information.eMassID+"</td>\
 	<td>"+Information.Customer+"</td>\
 	<td>"+Information.PackageLead+"</td>\
