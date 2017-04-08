@@ -565,6 +565,23 @@ div.TrackerSteps{
 	text-align: center;
 	
 }
+.ArchTable{
+
+	background-color:#4682B4;
+	position:absolute;
+	top: 40%;
+	left:220px;
+	overflow:auto;
+	border: solid;
+	border-color:white;
+	border-bottom-width:1px;
+	font-family: 'Birdseye', sans-serif;
+	font-size: 16px;
+
+	color: #ffffff;
+	text-align: center;
+	
+}
 .allP th{
 	font-size:20px;
 	color: #1C4C76;
@@ -634,6 +651,27 @@ div.TrackerSteps{
     background-color: #2b506e;
 }
 .validateTable{
+	 border-collapse: collapse;
+}
+
+.archiveTable th{
+	font-size:20px;
+	color: #1C4C76;
+	background-color:white;
+	padding:8px;
+	border-left:solid 1px #2b506e;
+	border-right:solid 1px #2b506e;
+	border-bottom:solid 1px #2b506e;
+
+}
+.archiveTable tr td{
+	border:1px solid white;
+	padding:8px;
+}
+.archiveTable tr:nth-child(even) {
+    background-color: #2b506e;
+}
+.archiveTable{
 	 border-collapse: collapse;
 }
 
