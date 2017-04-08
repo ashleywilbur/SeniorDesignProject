@@ -30,12 +30,10 @@
 	echo $row["total"];
 	
 	
-	if(isset($_POST['package'])){
-		$package = $_POST['package'];
-	}
-	
 	
 	//$package = $_POST["package"];
+	
+	
 	
 	
 	//reference code - not used
