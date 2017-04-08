@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>All Packages</title>
+		<title>Archive Packages</title>
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -166,7 +166,7 @@ var STYLE_PREFIX = 'wsite';
 	<div class="wsite-section-wrap">
 
 	<div  class="wsite-section wsite-header-section wsite-section-bg-color" style="background-color: #1c4c76;background-image: none;is_customized: 1;" >
-<h2 class="wsite-content-title"><font size="6">Validate Progress</font></h2>		
+<h2 class="wsite-content-title"><font size="6">Archive Packages</font></h2>		
     <div class="wsite-spacer" style="height:250px;"></div>
 
 		<div class="wsite-section-content">
@@ -205,93 +205,44 @@ var STYLE_PREFIX = 'wsite';
 <!--Search functionality
 <input type="text" id="searchTable" onkeyup="searchTable()" placeholder="Enter a search term">
 -->
-<div class ="PackTable">
+<div class ="ArchTable">
 
-<table class="validateTable">
+<table class="archiveTable">
  <tr>
-    <th>Name</th>
-    <th>eMASS ID</th>
-	<th>Customer</th>
-    <th>Package Lead</th>
-    <th>Current Step</th>
-    <th>Certification Acquired Date</th>
-	<th>Confirm Progress </th> 
-	<!--This final row should be a button to confirm and move along the process -->
+    <th>Package Name</th>
+    <th>Package Acronym</th>
+	<th>Archive? </th> 
+	<th>Date of Last Archive </th>
+	<!--This final row should be a check box to toggle archive status -->
   </tr>
   <tr>
-    <td>JOHN SMITH</td>
-    <td>12345G</td>
-	<td>Weston Co.</td>
-    <td>Smith Johns</td>
-    <td>Validation</td>
-    <td>N/A</td>
-	<td><button class = "validPass">Confirm</button></td>
+    <td>Fine Wines</td>
+    <td>FW</td>
+	<td> <input type="checkbox" name="archivePackage1" value="archived"> Archive Package<br></td>
+	<td>3/3/2013 </td>
   </tr>
     <tr>
-    <td>WILL CHRISON</td>
-    <td>66678I</td>
-	<td>Burger King</td>
-	<td>Not Will</td>
-    <td>Planning</td>
-    <td>N/A</td>
-	<td><button class = "validPass">Confirm</button></td>
+    <td>Hard Rock Cafe</td>
+    <td>HRC</td>
+	<td> <input type="checkbox" name="archivePackage2" value="archived"> Archive Package<br></td>
+	<td>6/1/2016 </td>
   </tr>
     <tr>
-    <td>Doober</td>
-    <td>01017Q</td>
-	<td>QQQQQQ</td>
-	<td>Doogal</td>
-    <td>Complete</td>
-    <td>N/A</td>
-	<td><button class = "validPass">Confirm</button></td>
+    <td>Game of Thrones</td>
+    <td>GOT</td>
+	<td> <input type="checkbox" name="archivePackage3" value="archived"> Archive Package<br></td>
+	<td>12/31/2015 </td>
   </tr>
       <tr>
-    <td>Doober</td>
-    <td>01017Q</td>
-	<td>QQQQQQ</td>
-	<td>Doogal</td>
-    <td>Complete</td>
-    <td>N/A</td>
-	<td><button class = "validPass">Confirm</button></td>
-  </tr>
-      <tr>
-    <td>Doober</td>
-    <td>01017Q</td>
-	<td>QQQQQQ</td>
-	<td>Doogal</td>
-    <td>Complete</td>
-    <td>N/A</td>
-	<td><button class = "validPass">Confirm</button></td>
-  </tr>
-      <tr>
-    <td>Doober</td>
-    <td>01017Q</td>
-	<td>QQQQQQ</td>
-	<td>Doogal</td>
-    <td>Complete</td>
-    <td>N/A</td>
-	<td><button class = "validPass">Confirm</button></td>
+    <td>Package</td>
+    <td>PG</td>
+	<td> <input type="checkbox" name="archivePackage4" value="archived"> Archive Package<br></td>
+	<td>5/9/1560 </td>
   </tr>
 </table> 
 
 </div>
 
-		<div class="filtDiv" style= "float: left;">
-  <button  class="dropbtn5">Active</button>
-
-  </div>
-  
-  		<div class="filtDiv2" style= "float: left;">
-  <button  class="dropbtn5">Archived</button>
-
-  </div>
-  
-  		<div class="filtDiv3" style= "float: left;">
-  <button  class="dropbtn5">Both</button>
-
-  </div>
-  
-  
  <script>
 function searchTable() {
   // Declare variables
