@@ -2,7 +2,9 @@
 var action = 1;
 var action2 = 1;
 var action3 = 1;
+//function gets called as soon as the page loads
 window.onload = loadDoc;
+//divides URL into an array to extract the package ID from the previous link
 packNum = window.location.href.split("#") 
 
 console.log(packNum);
