@@ -723,6 +723,41 @@ div.TrackerSteps{
 	height:50px;
 	
 }
+.createPackage{
+	background-color:#4682B4;
+	width: 550px;
+	position:absolute;
+	top:70%;
+	left:5%;
+	height:350px;
+	border-radius: 25px;
+	border: solid 2px white;
+	padding:5px;
+	vertical-align:left;
+}
+.createPackage input{
+	height: 25px;
+	border: solid 2px white;
+	border-radius: 5px;
+	width:375px;
+	display:inline-block;
+}
+.createPackage h3 {
+	margin:10px;
+	text-align:right;
+}
+
+#createPackageSubmit{
+	background-color: #1C4C76;
+    color: white;
+    font-size: 20px;
+    border-style: solid;
+    cursor: pointer;
+	font-family: 'Birdseye', sans-serif;
+	width: 100px;
+	text-align: center;
+	height:50px;
+}
 
 .gi-2x{font-size: 2em;}
 .gi-3x{font-size: 3em;}
