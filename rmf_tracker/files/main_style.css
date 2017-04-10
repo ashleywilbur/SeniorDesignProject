@@ -674,21 +674,10 @@ div.TrackerSteps{
 .archiveTable{
 	 border-collapse: collapse;
 }
-
 .filtDiv{
 	position:absolute;
-	top:270px;
-	left:60px;
-}
-.filtDiv2{
-	position:absolute;
-	top:270px;
-	left:150px;
-}
-.filtDiv3{
-	position:absolute;
-	top:270px;
-	left:240px;
+	top:250px;
+	left:50px;
 }
 
 .allP tr:hover {
