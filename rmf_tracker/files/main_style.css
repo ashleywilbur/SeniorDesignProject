@@ -560,9 +560,9 @@ div.TrackerSteps{
 	border-bottom-width:1px;
 	font-family: 'Birdseye', sans-serif;
 	font-size: 16px;
-
 	color: #ffffff;
-	text-align: center;
+	word-wrap: break-word;
+	white-space:nowrap;
 	
 }
 .ArchTable{
@@ -676,7 +676,7 @@ div.TrackerSteps{
 }
 .filtDiv{
 	position:absolute;
-	top:250px;
+	top:200px;
 	left:50px;
 }
 
