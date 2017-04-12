@@ -159,18 +159,17 @@ var STYLE_PREFIX = 'wsite';
 
 <div class="wsite-spacer" style="height:131px;"></div>
 
-<div class="login">
-
-<form action="/action_page.php">
+<div id="tester" class="login">
+<br><br>
+<form id="loginForm"  >
   <h3>E-mail:</h3>
-  <input type="text" name="email">
+  <input id="email" type="text" name="email">
 
-  <h3>Password:</h3>
-  <input type="text" name="password" >
-	<br><br><br>
-  <input id="loginSubmit" type="submit" value="Submit">
+
+	<br><br>
+  <input id="loginSubmit" type="button" onclick="checkCreds()" value="Submit">
 </form> 
-
+<div id="errorM" style="color:red"></div>
 </div>
 
 
@@ -192,7 +191,7 @@ var STYLE_PREFIX = 'wsite';
 </div>
 
     </div>
-
+	<script type="text/javascript" src="files/theme/login.js"></script>
 	<script type="text/javascript" src="files/theme/plugins.js"></script>
   <script type="text/javascript" src="files/theme/custom.js"></script>
 
