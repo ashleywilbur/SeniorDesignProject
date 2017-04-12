@@ -35,7 +35,7 @@ function GetInfo(pNum){
 	//The structure is very sensitive, editing has to be done carefully because of the quotes
 	var tableStart = document.getElementById('allP').innerHTML;
 	var tableD = "<tr>\
-	<td><a href=\"http://localhost/Pro/MyPackages.html#"+Information.PID+"\">"+Information.Name+"</a></td>\
+	<td><a href=\"http://localhost/php Files/MyPackages.html#"+Information.PID+"\">"+Information.Name+"</a></td>\
 	<td>"+Information.eMassID+"</td>\
 	<td>"+Information.Customer+"</td>\
 	<td>"+Information.PackageLead+"</td>\
