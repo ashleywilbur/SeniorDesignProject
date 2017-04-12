@@ -56,20 +56,4 @@ function GetInfo(pNum){
 	
 }
 
-function getTotal(){
-	var total = 0;
-	var xhttp = new XMLHttpRequest();	
-	xhttp.onreadystatechange = function() {
-    response =this.responseText;
-	console.log(response);
 
-	Information = response;
-	Information =JSON.parse(Information);
-
-  };
-  xhttp.open("POST", "http://localhost/Pro/tracker.php", true);
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send("package=0");
-	console.log(pTotal);
-	
-}
