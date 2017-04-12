@@ -85,14 +85,14 @@
 	//output of current step
 	$step = $row["TrackerStep"];
 	//everything under this is commented out for now. Until there is data in the database it will only bring errors
-	echo $step;/*
+	echo $step;
 	echo ",";
 	
 	echo "\"PID\":";
 	//output of current step
 	$step = $row["PID"];
 	
-	echo $step;
+	echo $step;/*
 	echo ",";
 	
 	//Searches for all packagestandardtimeline/standardtimeline values
