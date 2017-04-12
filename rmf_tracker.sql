@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2017 at 10:38 PM
+-- Generation Time: Apr 12, 2017 at 10:24 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -30,38 +30,37 @@ CREATE TABLE IF NOT EXISTS `artifacts` (
   `AID` int(11) NOT NULL,
   `SID` int(11) NOT NULL,
   `Name` varchar(20) NOT NULL,
-  `SubmitDate` date NOT NULL,
-  `Progress` int(1) NOT NULL
+  `SubmitDate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `artifacts`
 --
 
-INSERT INTO `artifacts` (`AID`, `SID`, `Name`, `SubmitDate`, `Progress`) VALUES
-(1, 1, 'Artifact 1', '0000-00-00', 0),
-(2, 1, 'Artifact 2', '0000-00-00', 0),
-(3, 1, 'Artifact 3', '0000-00-00', 0),
-(4, 2, 'Artifact 4', '0000-00-00', 0),
-(5, 2, 'Artifact 5', '0000-00-00', 0),
-(6, 2, 'Artifact 6', '0000-00-00', 0),
-(7, 2, 'Artifact 7', '0000-00-00', 0),
-(8, 2, 'Artifact 8', '0000-00-00', 0),
-(9, 3, 'Artifact 9', '0000-00-00', 0),
-(10, 3, 'Artifact 10', '0000-00-00', 0),
-(11, 3, 'Artifact 11', '0000-00-00', 0),
-(12, 4, 'Artifact 12', '0000-00-00', 0),
-(13, 4, 'Artifact 13', '0000-00-00', 0),
-(14, 4, 'Artifact 14', '0000-00-00', 0),
-(15, 4, 'Artifact 15', '0000-00-00', 0),
-(16, 5, 'Artifact 16', '0000-00-00', 0),
-(17, 5, 'Artifact 17', '0000-00-00', 0),
-(18, 6, 'Artifact 18', '0000-00-00', 0),
-(19, 6, 'Artifact 19', '0000-00-00', 0),
-(20, 7, 'Artifact 20', '0000-00-00', 0),
-(21, 7, 'Artifact 21', '0000-00-00', 0),
-(22, 8, 'Artifact 22', '0000-00-00', 0),
-(23, 8, 'Artifact 23', '0000-00-00', 0);
+INSERT INTO `artifacts` (`AID`, `SID`, `Name`, `SubmitDate`) VALUES
+(1, 1, 'Artifact 1', '0000-00-00'),
+(2, 1, 'Artifact 2', '0000-00-00'),
+(3, 1, 'Artifact 3', '0000-00-00'),
+(4, 2, 'Artifact 4', '0000-00-00'),
+(5, 2, 'Artifact 5', '0000-00-00'),
+(6, 2, 'Artifact 6', '0000-00-00'),
+(7, 2, 'Artifact 7', '0000-00-00'),
+(8, 2, 'Artifact 8', '0000-00-00'),
+(9, 3, 'Artifact 9', '0000-00-00'),
+(10, 3, 'Artifact 10', '0000-00-00'),
+(11, 3, 'Artifact 11', '0000-00-00'),
+(12, 4, 'Artifact 12', '0000-00-00'),
+(13, 4, 'Artifact 13', '0000-00-00'),
+(14, 4, 'Artifact 14', '0000-00-00'),
+(15, 4, 'Artifact 15', '0000-00-00'),
+(16, 5, 'Artifact 16', '0000-00-00'),
+(17, 5, 'Artifact 17', '0000-00-00'),
+(18, 6, 'Artifact 18', '0000-00-00'),
+(19, 6, 'Artifact 19', '0000-00-00'),
+(20, 7, 'Artifact 20', '0000-00-00'),
+(21, 7, 'Artifact 21', '0000-00-00'),
+(22, 8, 'Artifact 22', '0000-00-00'),
+(23, 8, 'Artifact 23', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -123,7 +122,8 @@ CREATE TABLE IF NOT EXISTS `packageartifacts` (
   `SubmitDate` date NOT NULL,
   `AcceptedDate` date NOT NULL,
   `DeliveryDate` date NOT NULL,
-  `ApprovalDate` date NOT NULL
+  `ApprovalDate` date NOT NULL,
+  `Progress` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -300,6 +300,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `FirstName` varchar(20) NOT NULL,
   `LastName` varchar(25) NOT NULL,
   `Email` varchar(30) NOT NULL,
+  `Code` int(4) NOT NULL,
   `Phone` varchar(11) NOT NULL,
   `Location` varchar(20) NOT NULL,
   `Org` varchar(20) NOT NULL,
@@ -311,15 +312,15 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`UID`, `FirstName`, `LastName`, `Email`, `Phone`, `Location`, `Org`, `Archive`, `ArchiveDate`) VALUES
-(1, 'Jane', 'Does', 'Jane.Doe@navy.mil', '4019991234', 'NUWC', '25', 0, '0000-00-00'),
-(2, 'John ', 'Smith', 'John.Smith@navy.mil', '4019991235', 'NUWC', '25', 1, '0000-00-00'),
-(3, 'Wesley', 'Snipe', 'Wes.Snipe@Westport.air', '8086761111', 'GMT', 'West Port', 0, '0000-00-00'),
-(4, 'Huckle', 'Fynn', 'Huckle.Fynn@navy.mil', '4019991237', 'NUWC', '25', 1, '0000-00-00'),
-(5, 'John', 'Snow', 'John.Snow@navy.mil', '4019991238', 'NUWC', '25', 0, '0000-00-00'),
-(6, 'Carrie ', 'Bradshaw', 'Carrie.Bradshaw@navy.mil', '4019991239', 'NUWC', '25', 0, '0000-00-00'),
-(7, 'Steve', 'Jobs', 'Steve.Jobs@Monoply.org', '5035551254', 'PST', 'Monopoly', 0, '0000-00-00'),
-(8, 'Walt ', 'Disney', 'Walt.Disney@navy.mil', '4019991241', 'NUWC', '85', 0, '0000-00-00');
+INSERT INTO `users` (`UID`, `FirstName`, `LastName`, `Email`, `Code`, `Phone`, `Location`, `Org`, `Archive`, `ArchiveDate`) VALUES
+(1, 'Jane', 'Does', 'Jane.Doe@navy.mil', 2642, '4019991234', 'NUWC', '25', 0, '0000-00-00'),
+(2, 'John ', 'Smith', 'John.Smith@navy.mil', 4567, '4019991235', 'NUWC', '25', 1, '0000-00-00'),
+(3, 'Wesley', 'Snipe', 'Wes.Snipe@Westport.air', 1234, '8086761111', 'GMT', 'West Port', 0, '0000-00-00'),
+(4, 'Huckle', 'Fynn', 'Huckle.Fynn@navy.mil', 6783, '4019991237', 'NUWC', '25', 1, '0000-00-00'),
+(5, 'John', 'Snow', 'John.Snow@navy.mil', 8652, '4019991238', 'NUWC', '25', 0, '0000-00-00'),
+(6, 'Carrie ', 'Bradshaw', 'Carrie.Bradshaw@navy.mil', 3452, '4019991239', 'NUWC', '25', 0, '0000-00-00'),
+(7, 'Steve', 'Jobs', 'Steve.Jobs@Monoply.org', 7532, '5035551254', 'PST', 'Monopoly', 0, '0000-00-00'),
+(8, 'Walt ', 'Disney', 'Walt.Disney@navy.mil', 5782, '4019991241', 'NUWC', '85', 0, '0000-00-00');
 
 --
 -- Indexes for dumped tables
