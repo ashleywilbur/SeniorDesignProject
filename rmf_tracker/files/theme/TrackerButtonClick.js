@@ -118,7 +118,7 @@ function loadDoc() {
 	  }
 	}
   };
-  xhttp.open("POST", "http://localhost/Pro/tracker.php", true);
+  xhttp.open("POST", "http://localhost/php Files/tracker.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("package="+packNum[1]);
 
