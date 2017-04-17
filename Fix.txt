@@ -22,6 +22,7 @@ Elevator dash
 
 User dash
 Figure out why it is there if not purge (A: when a new user inputs an email in the login that is not in the database (so a new user), a new page is going to pop up telling them to contact their A&A lead to add them into database)
+add a automatic alert system after the user clicks a button, sends an automatic email to the A&A lead with the new users email IF WE HAVE THE TIME - IT'D BE COOL TO DO.
 
 Package Team member dash
 Dashboard button removed
