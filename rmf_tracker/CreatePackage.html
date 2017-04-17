@@ -210,45 +210,63 @@ var STYLE_PREFIX = 'wsite';
 
 <h3>Artifact Name: <input type="text" name="artifact"  ></h3> 
 
+  
+</form>
 <!--Create artifacts section-->
 <form>
-  Number of artifacts<br>
-  <input type="text" name="artifactCount"><br>
+<fieldset style = "color: white; float: left; position: absolute; left: 600px; top: 10px;">
+  <legend style = "color:white"> Number of artifacts: </legend>
+  <input type="text" name="artifactCount" style= "color: black; "> <br>
+  <button onclick = "createArtifactRegion(this)" class="artButton" style = "background-color: #1C4C76; text-color: white; position:absolute; top:40px;">Continue</button>
+</fieldset>
 </form>
+
+<div id = "artifactList">
+	<!--This is where all the extra boxes go-->
+</div>
+
 <script>
+	//This feels unnecessary, but just in case. Sets the artifact count field to nothing.
+	document.getElementById("artifactCount").defaultValue = " ";
+</script>
+
+<script>
+//Button function
 function createArtifactRegion (form) {
-	var numArts = form.artifactCount.value;
+	//One way of pulling in the value- either *should* work.
+	var numArts = document.getElementById("artifactCount").value;
+		 alert("FUNCTION");
+	
+	//var numArts = form.artifactCount.value;
 	for (i = 0; i < numArts; i++) {
-     // Number of inputs to create
-    // var number = document.getElementById("artifactCount").value;
-     // Container <div> where dynamic content will be placed
-     var container = document.getElementById("container");
+	 alert("FUNCTION");
+     // artifactList <div> where dynamic content will be placed
+     var container = document.getElementById("artifactList");
      // Clear previous contents of the container
-     while (container.hasChildNodes()) { container.removeChild(container.lastChild); }
+	 alert("FUNCTION");
+     while (artifactList.hasChildNodes()) { artifactList.removeChild(artifactList.lastChild); }
 		for (i=0;i<numArts;i++){
-			// Append a node with a random text
-            container.appendChild(document.createTextNode("Artifact " + (i+1)));
+			// Append a node with a the artifact number
+            artifactList.appendChild(document.createTextNode("Artifact " + (i+1)));
             // Create an <input> element, set its type and name attributes
             var input = document.createElement("input");
             input.type = "text";
             input.name = "artifactCount" + i;
-            container.appendChild(input);
+            artifactList.appendChild(input);
             // Append a line break 
-            container.appendChild(document.createElement("br"));
+            artifactList.appendChild(document.createElement("br"));
 			alert("New field created");
         }
 	}
 }
 </script>
 
-
 <!--users-->
 <br>
   
     
   <input id="createPackageSubmit" type="submit" value="Submit">
-  
-</form>
+
 </div>
 </p>			
 
