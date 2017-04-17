@@ -530,6 +530,16 @@ div.TrackerSteps{
 	text-align: center;
 }
 
+.artButton{
+    background-color: #C0504B;
+    padding: 1px;
+    border-style: solid;
+	border-width:1px;
+    cursor: pointer;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+}
 
 .Steps{
     background-color: #4682B4;
@@ -746,6 +756,22 @@ div.TrackerSteps{
 	width: 100px;
 	text-align: center;
 	height:50px;
+}
+
+.artifactGenButton {
+	background-color: #1C4C76; 
+	text-color: white; 
+	position:absolute; 
+	top:74px;
+	left:380px;
+}
+
+.cPackField {
+	color: white; 
+	float: left; 
+	position: absolute; 
+	left: 600px; 
+	top: 10px;
 }
 
 .gi-2x{font-size: 2em;}
