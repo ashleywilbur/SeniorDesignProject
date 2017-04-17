@@ -24,7 +24,7 @@
 	}
 	
 	
-	$sql = "SELECT PID , COUNT(PID) FROM packageusers WHERE users.UID LIKE '%" . $uid . "%'";
+	$sql = "SELECT PID , COUNT(PID) FROM packageusers WHERE packageusers.UID LIKE '%" . $uid . "%'";
 	$result = $conn->query($sql);
 	
 	
@@ -32,6 +32,7 @@
 		trigger_error('Invalid query: ' . $conn->error);
 	}
 	
+	$row = mysql_fetch_row($result);
 	echo $row["total"];
 
 	
