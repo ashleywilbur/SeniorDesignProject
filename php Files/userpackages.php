@@ -32,7 +32,7 @@
 		trigger_error('Invalid query: ' . $conn->error);
 	}
 	
-	$row = mysql_fetch_row($result);
+	$row = $result->fetch_assoc();
 	echo $row["total"];
 
 	
