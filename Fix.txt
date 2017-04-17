@@ -6,8 +6,8 @@ Add names and codes
 Link urgent actions are a week within delivery date
 Javascript to check date and bring up on pages
 Buttons names for my packages needs to change to all packages (A: done on all dash's that have all packages button)
-Account system needs to only displays certain user's packages
-Link needs to be deleted in urgesnt actions on every dash
+Account system needs to only displays certain user's packages 
+Link needs to be deleted in urgesnt actions on every dash (A: done on all dash's that have urgent actions)
 
 AA dash
 link create package
