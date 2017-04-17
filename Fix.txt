@@ -25,12 +25,13 @@ Figure out why it is there if not purge (A: when a new user inputs an email in t
 add a automatic alert system after the user clicks a button, sends an automatic email to the A&A lead with the new users email IF WE HAVE THE TIME - IT'D BE COOL TO DO.
 
 Package Team member dash
-Dashboard button removed
-Links need to be changed to allpackages
+Dashboard button removed (A: done)
+Get rid of the underline on URGENT ACTIONS
+Links need to be changed to allpackages (A: done)
 
 package validator dash
-Dashboard button removed
-links need to be changed
+Dashboard button removed (A: done)
+links need to be changed (A: done)
 
 All packages
 fix filter 
