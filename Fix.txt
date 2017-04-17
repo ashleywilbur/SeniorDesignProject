@@ -1,0 +1,77 @@
+Login
+Delete - Home button
+
+Dashboards
+Add names and codes
+Link urgent actions are a week within delivery date
+Javascript to check date and bring up on pages
+Buttons names for my packages needs to change to all packages
+Account system needs to only displays certain user's packages
+Link needs to be deleted in urgesnt actions on every dash
+
+AA dash
+link create package
+
+Customer dash
+*Good
+
+Elevator dash
+*Good
+
+User dash
+Figure out why it is there if not purge
+Take out button
+
+Package Team member dash
+Dashboard button removed
+Links need to be changed to allpackages
+
+package validator dash
+Dashboard button removed
+links need to be changed
+
+All packages
+fix filter 
+make buttons functional
+total packages from database
+add note for links to mypackages
+filter by alphabetical...etc.
+
+archive package
+purge?
+
+archve reviewer
+purge?
+
+create package
+Fix css for text
+add functionalit to submit
+MAKE PHP FILE FOR Use
+Number of artifacts form functionality
+
+generate report
+add overall functionality to pages
+remove button click
+add color based key
+print button working
+
+Home
+Really?
+
+my assignments
+figure out what this needs to do?
+add check boxes? and submit button?
+
+mypackages
+fix buttons on tracker
+add color key
+
+reports
+purge
+repurpose to mypackages to generate report
+
+users
+table of users
+
+validate packages
+What is it for?
