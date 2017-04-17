@@ -1,4 +1,5 @@
 
+
 MakeTable();
 
 function MakeTable(){
@@ -8,6 +9,7 @@ function MakeTable(){
 	}
 	console.log(window.location.href );
 }
+
 function GetInfo(pNum){
 
 	//Name
@@ -24,7 +26,8 @@ function GetInfo(pNum){
 	xhttp.onreadystatechange = function() {
     response =this.responseText;
 	//console.log(this);
-	
+	console.log(this);
+	console.log(response);
 	//if statement makes sure the right data only comes in once
 	if(this.readyState == 3){
 	Information = response;
@@ -48,11 +51,46 @@ function GetInfo(pNum){
 	}
 	};
 	
-  xhttp.open("POST", "http://localhost/php Files/tracker.php", true);
+	//function for search bar
+	jQuery(function ($) {
+    
+    	var filter;
+    	
+    	$("#active").click(function () {
+        	if (filter == 'active') {
+            	$('tr').show();
+            	filter = undefined;
+        	} else {
+            	$('tr:not(.success)').hide();
+            	$('tr.success').show();
+        	filter = 'active';
+        	}
+    	});
+    	$("#archived").click(function () {
+        	if (filter == 'archived') {
+            	$('tr').show();
+            filter = undefined;
+        	} else {
+            	$('tr:not(.danger)').hide();
+            	$('tr.danger').show();
+            filter = 'archived';
+        	}
+    	});
+        $("#both").click(function () {
+        	if (filter == 'both') {
+            	$('tr').show();
+            filter = undefined;
+        	} else {
+            	$('tr:not(.danger)').hide();
+            	$('tr.danger').show();
+            filter = 'both';
+        	}
+    	});
+});
+	
+  xhttp.open("POST", "http://localhost/tracker.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("package=" + pNum);
-
-	
 	
 }
 
