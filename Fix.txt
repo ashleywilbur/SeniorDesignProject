@@ -19,8 +19,7 @@ Elevator dash
 *Good
 
 User dash
-Figure out why it is there if not purge
-Take out button
+Figure out why it is there if not purge (A: when a new user inputs an email in the login that is not in the database (so a new user), a new page is going to pop up telling them to contact their A&A lead to add them into database)
 
 Package Team member dash
 Dashboard button removed
