@@ -10,7 +10,7 @@ Account system needs to only displays certain user's packages
 Link needs to be deleted in urgesnt actions on every dash (A: done on all dash's that have urgent actions)
 
 AA dash
-link create package
+link create package (A: link done)
 
 Customer dash
 *Good
