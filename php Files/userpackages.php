@@ -24,7 +24,7 @@
 	}
 	
 	
-	$sql = "SELECT PID , COUNT(PID) FROM packageusers WHERE user.UID LIKE '%" . $uid . "%'";
+	$sql = "SELECT PID , COUNT(PID) FROM packageusers WHERE users.UID LIKE '%" . $uid . "%'";
 	$result = $conn->query($sql);
 	
 	
