@@ -3,9 +3,10 @@
 MakeTable();
 
 function MakeTable(){
-	var allPackages = new Array();
-	for(var i =1; i <7; i++){
-	GetInfo(i);
+	//var allPackages = new Array();
+	console.log(packageAmount);
+	for(var i =1; i <=parseInt(packageAmount[0]); i++){
+	GetInfo(parseInt(packageAmount[i]));
 	}
 	console.log(window.location.href );
 }
@@ -94,4 +95,22 @@ function GetInfo(pNum){
 	
 }
 
+function userPackages(){
 
+	var xhttp = new XMLHttpRequest();	
+	var uid = xhttp.onreadystatechange = function() {
+    response =this.responseText;
+	
+	if(this.readyState == 3){
+		packageAmount = response.split("+");
+		
+		MakeTable(packageAmount);
+	}
+
+  };
+
+  xhttp.open("POST", "http://localhost/userpackages.php", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("uid="+localStorage.getItem("UID"));
+	
+}
