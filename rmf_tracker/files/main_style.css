@@ -787,6 +787,13 @@ div.TrackerSteps{
 	color: black;
 	text-align: center;
 }
+.searchBar{
+	height: 25px;
+	border: solid 2px #1C4C76;
+	border-radius: 5px;
+	width:1200px;
+	display:inline-block;
+}
 
 .gi-2x{font-size: 2em;}
 .gi-3x{font-size: 3em;}
