@@ -8,23 +8,21 @@ window.onload = loadDoc;
 packNum = window.location.href.split("#") 
 
 console.log(packNum);
-function TrackerColor(id, color) {
+function TrackerColor(id) {
 
-	//What shows up on first click
-	if(action == 1){
-			document.getElementById('T1').style.visibility = 'visible';
-
-	
-			action = 2;
-	}
-	//everything gets hidden on the second click
-	else{			
-			document.getElementById('T1').style.visibility = 'hidden';
-
-			
-			action= 1;
-
-	}
+		if(id == "track1")
+			document.getElementById('T1').innerHTML = "<h1>Step #1</h1>Step Description: <br>Deliver Date: <h3>Artifacts: </h3> <h3>Progress: </h3>";
+		if(id == "track2")
+			document.getElementById('T1').innerHTML = "<h1>Step #2</h1>Step Description: <br>Deliver Date: <h3>Artifacts: </h3> <h3>Progress: </h3>";
+		if(id == "track3")
+			document.getElementById('T1').innerHTML = "<h1>Step #3</h1>Step Description: <br>Deliver Date: <h3>Artifacts: </h3> <h3>Progress: </h3>";
+		if(id == "track4")
+			document.getElementById('T1').innerHTML = "<h1>Step #4</h1>Step Description: <br>Deliver Date: <h3>Artifacts: </h3> <h3>Progress: </h3>";
+		if(id == "track5")
+			document.getElementById('T1').innerHTML = "<h1>Step #5</h1>Step Description: <br>Deliver Date: <h3>Artifacts: </h3> <h3>Progress: </h3>";
+		if(id == "track6")
+			document.getElementById('T1').innerHTML = "<h1>Step #6</h1>Step Description: <br>Deliver Date: <h3>Artifacts: </h3> <h3>Progress: </h3>";
+	document.getElementById('T1').style.visibility = 'visible';
 }
 function TrackClick(){
 		//What shows up on first click
