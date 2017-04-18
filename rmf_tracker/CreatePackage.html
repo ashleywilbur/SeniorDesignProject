@@ -204,29 +204,26 @@ var STYLE_PREFIX = 'wsite';
 
 
 <h3>CIA: <input type="text" name="CIA"  ></h3> 
-
-
-
-
-<h3>Artifact Name: <input type="text" name="artifact"  ></h3> 
-
   
 </form>
 
 
 <!--Create artifacts section-->
-<form id="createPackageForm" method = "POST">
+<form id="createPackageForm" action="packageinput.php" method = "POST">
 
 <fieldset class="cPackField">
   <legend style = "color:white"> Add Artifact: </legend>
   Number of artifacts:
   <input class="numImp" type="number" name="artifactCount" min="1" max="99" placeholder="2"> <br> 
   Name of artifact: 
-  <input type="text" name="artifactName" maxlength="30"><br>
-  <button type="button" onclick = "createArtifactRegion()" class="artifactGenButton" >Continue</button>
+  <input type="text" name="artifactName" maxlength="30">
+  Step: 
+  <input class= "numImp" type="number" name="artifactStep" min="1" max="5" placeholder="1"> <br>
+  <button type="button" onclick = "createArtifactRegion()" class="artifactGenButton">Continue</button>
  </fieldset>
 
-<div id = "artifactList">		<!--We put the things in here-->
+<div id = "artifactList">		
+	<!--We put the things in here-->
 </div>
 
 
