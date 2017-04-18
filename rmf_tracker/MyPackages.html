@@ -172,36 +172,39 @@ var STYLE_PREFIX = 'wsite';
 
 <font class="PackageInfo">
 <p>
-<h1 id = "Pacronym" >Package Acronym:</h1>
-<h1 id = "Atype" >Accredidation Type:</h1>
-<h1 id = "CATdate" >Certification Acquired Target Date:</h1><br>
+<h1>Package Acronym:</h1>
+<h1>Accredidation Type:</h1>
+<h1>Certification Acquired Target Date:</h1><br>
 </font></p>			
 <div class="TrackerSteps">
 
 <button class="Steps">Step 1</button><button class="Steps">Step 2</button><button class="Steps">Step 3</button><button class="Steps">Step 4</button><button class="Steps">Step 5</button><button class="Steps">Step 6</button>
-
 </div>
 
 <div class="TrackerSteps">
 
-<button id="Track1" onclick="TrackerColor('track1');" class="Tracker"></button>
-<button id="Track2" onclick="TrackerColor('track2');"  class="Tracker"></button>
-<button id="Track3" onclick="TrackerColor('track3');" class="Tracker"></button>
-<button id="Track4" onclick="TrackerColor('track4');" class="Tracker"></button>
-<button id="Track5" onclick="TrackerColor('track5');" class="Tracker"></button>
-<button id="Track6" onclick="TrackerColor('track6');" class="Tracker"></button>
+<button id="Track1" onclick="TrackerColor('Track1', '#63AC50');" class="Tracker"></button><button id="Track2"  class="Tracker"></button><button id="Track3" class="Tracker"></button><button id="Track4" class="Tracker"></button><button id="Track5" class="Tracker"></button><button id="Track6" class="Tracker"></button>
 </div>
 
 <div style="height:10px;" class="info" id="T1">
 
 <!--So if we can pass the information from the database to the javascript file we can fill the div with the necessary text -->
 
-<h1 id = "Snum" >Step #1</h1>
-<h3 id = "Sdesc" >Step Description</h3>
-<h3 id = "Ddate" >Deliver Date: </h3>
+<h1>Step #</h1>
+Step Description<br>
+Deliver Date: MM/DD/YYYY
 
-<h3 id = "Artifact" >Artifact</h3> 
-<h3 id = "Prog" >Progress</h3> 
+<h3>Artifact Progress</h3> <br>
+
+<label> Artifact 1 </label>
+<button id="art1" class = "artButton"></button><br>
+<label> Artifact 2 </label>
+<button id="art2" class = "artButton"></button><br>
+<label> Artifact 3 </label>
+<button id="art3" class = "artButton"></button><br> <br>
+
+<label> Delivered </label>
+<button id="del" class = "artButton"></button><br>
 
 
 </div>
