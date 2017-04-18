@@ -783,9 +783,10 @@ div.TrackerSteps{
 
 #artifactList  {
 	position: absolute;
-	left: 535px;
+	left: 600px;
 	top:150px;
 	width: 600px;
+	text-align:left;
 }
 
 #artifactList .numImp{
