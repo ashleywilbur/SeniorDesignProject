@@ -33,7 +33,7 @@
 	}
 	
 	$row = $result->fetch_assoc();
-	echo $row["total"]."\"";
+	echo $row["total"];
 	
 	$sql = "SELECT PID FROM packageusers WHERE packageusers.UID LIKE '%" . $uid . "%'";
 	$result = $conn->query($sql);
