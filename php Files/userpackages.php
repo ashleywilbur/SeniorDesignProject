@@ -10,7 +10,6 @@
 	// Create Connection for unsecured users
 	//$conn = new mysqli();
 	//mysql_select_db('movies');
-
 	// Check connection
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
@@ -46,6 +45,7 @@
 	if ($result->num_rows > 0) {
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
+			echo "+";	
 			echo $row["PID"];
 		}
 	} else {
@@ -57,7 +57,6 @@
 	
 	/*$sql = "SELECT id, firstname, lastname FROM MyGuests";
 	$result = $conn->query($sql);
-
 	if ($result->num_rows > 0) {
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
