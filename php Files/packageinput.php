@@ -42,13 +42,56 @@
 		$CIA = $_POST['CIA'];
 	}
 	
-	$sql = "INSERT INTO MyGuests (Name, Acronym, Description, eMassID, Classification, CIA) VALUES ('%" . $name . "%','%" . $acronym . "%','%" . $description . "%','%" . $eMassID . "%','%" . $classification . "%','%" . $CIA . "%')";
+	$sql = "SELECT MAX(PID) FROM package";
+	$result = $conn->query($sql);
+	$pid = $result->fetch_assoc();
+	$pid++;
+	
+	$sql = "INSERT INTO package (PID, Name, Acronym, Description, eMassID, Classification, CIA) 
+			VALUES ('%" . $pid . "%','%" . $name . "%','%" . $acronym . "%','%" . $description . "%','%" . $eMassID . "%','%" . $classification . "%','%" . $CIA . "%')";
 
 	if ($conn->query($sql) === TRUE) {
 		echo "New record created successfully";
 	} 
 	else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+	
+	$i=0;
+	
+	while(isset($_POST['Artifact['.$i.']'])) {
+		$artifact = $_POST['Artifact['.$i.']'];
+		$artifactStep = $_POST['ArtifactStep['.$i.']'];
+		
+		$sql = "SELECT MAX(AID) FROM artifacts";
+		$result = $conn->query($sql);
+		$aid = $result->fetch_assoc();
+		$aid++;
+		
+		$sql = "INSERT INTO artifacts (AID, SID, Name, SubmitDate) 
+			VALUES ('%" . $aid . "%','%" . $artifactStep . "%','%" . $artifact . "%','%" . string $format [, int $timestamp = time() ] . "%'";
+
+		if ($conn->query($sql) === TRUE) {
+			echo "New record created successfully";
+		} 
+		else {
+			echo "Error: " . $sql . "<br>" . $conn->error;
+		}
+		
+		$sql = "SELECT MAX(AID) FROM packageartifacts";
+		$result = $conn->query($sql);
+		$paid = $result->fetch_assoc();
+		$paid++;
+		
+		$sql = "INSERT INTO artifacts (PAID, PID, AID, StartDate, Progress) 
+			VALUES ('%" . $paid . "%','%" . $pid . "%','%" . $aid . "%','%" . string $format [, int $timestamp = time() ] . "%', 0";
+
+		if ($conn->query($sql) === TRUE) {
+			echo "New record created successfully";
+		} 
+		else {
+			echo "Error: " . $sql . "<br>" . $conn->error;
+		}
 	}
 	
 	//reference code - not used
