@@ -3,10 +3,9 @@
 MakeTable();
 
 function MakeTable(){
-	//var allPackages = new Array();
-	console.log(packageAmount);
-	for(var i =1; i <=parseInt(packageAmount[0]); i++){
-	GetInfo(parseInt(packageAmount[i]));
+	var allPackages = new Array();
+	for(var i =1; i <7; i++){
+	GetInfo(i);
 	}
 	console.log(window.location.href );
 }
@@ -27,8 +26,8 @@ function GetInfo(pNum){
 	xhttp.onreadystatechange = function() {
     response =this.responseText;
 	//console.log(this);
-	console.log(this);
-	console.log(response);
+	//console.log(this);
+	//console.log(response);
 	//if statement makes sure the right data only comes in once
 	if(this.readyState == 3){
 	Information = response;
@@ -46,14 +45,15 @@ function GetInfo(pNum){
 	<td>"+Information.PackageValidator+"</td>\
 	<td>"+Information.TrackerStep+"</td>\
 	<td>"+Information.AccredType+"</td>\
-	<td>"+Information.CertificationAcquiredDate+"</td></tr>"
+	<td>"+Information.CertificationAcquiredDate+"</td>\
+	<td><a href=\"http://localhost/rmf_tracker/generate-report.html#"+Information.PID+"\">"+Information.CertificationAcquiredDate+"</a></td></tr>"
 
 	document.getElementById('allP').innerHTML = tableStart + tableD;
 	}
 	};
 	
 	//function for search bar
-	jQuery(function ($) {
+	/*jQuery(function ($) {
     
     	var filter;
     	
@@ -86,31 +86,11 @@ function GetInfo(pNum){
             	$('tr.danger').show();
             filter = 'both';
         	}
-    	});
-});
+    	});*/
+
 	
-  xhttp.open("POST", "http://localhost/tracker.php", true);
+  xhttp.open("POST", "http://localhost/rmf_tracker/phpFiles/tracker.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("package=" + pNum);
-	
-}
-
-function userPackages(){
-
-	var xhttp = new XMLHttpRequest();	
-	var uid = xhttp.onreadystatechange = function() {
-    response =this.responseText;
-	
-	if(this.readyState == 3){
-		packageAmount = response.split("+");
-		
-		MakeTable(packageAmount);
-	}
-
-  };
-
-  xhttp.open("POST", "http://localhost/userpackages.php", true);
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send("uid="+localStorage.getItem("UID"));
 	
 }
