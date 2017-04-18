@@ -777,7 +777,7 @@ div.TrackerSteps{
 
 .cPackField .numImp{
 	width:50px;
-	height:30px;
+	height:25px;
 	color: black;
 	text-align: center;
 }
@@ -785,14 +785,14 @@ div.TrackerSteps{
 #artifactList  {
 	position: absolute;
 	left: 600px;
-	top:150px;
+	top:170px;
 	width: 600px;
 	text-align:left;
 }
 
 #artifactList .numImp{
 	width:50px;
-	height:30px;
+	height:25px;
 	color: black;
 	text-align: center;
 }
