@@ -238,6 +238,8 @@ function createArtifactRegion () {
 	var numArts = parseInt(incoming,10);
 	// Name of the artifact
 	var artName = document.getElementsByName("artifactName")[0].value;
+	var container = document.getElementById("artifactList");
+	while (container.hasChildNodes()) { container.removeChild(container.lastChild); }
 	//Loop for generation
 	for(i = 0; i < numArts; i++) { 
 		//Add the new artifact(s)
