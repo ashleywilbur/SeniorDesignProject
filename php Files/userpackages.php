@@ -24,7 +24,7 @@
 	}
 	
 	
-	$sql = "SELECT PID , COUNT(PID) as total FROM packageusers WHERE packageusers.UID LIKE '%" . $uid . "%'";
+	$sql = "SELECT COUNT(PID) as total FROM packageusers WHERE packageusers.UID LIKE '%" . $uid . "%'";
 	$result = $conn->query($sql);
 	
 	
@@ -33,8 +33,15 @@
 	}
 	
 	$row = $result->fetch_assoc();
-	echo $row["total"];
-
+	echo $row["total"]."\"";
+	
+	$sql = "SELECT PID FROM packageusers WHERE packageusers.UID LIKE '%" . $uid . "%'";
+	$result = $conn->query($sql);
+	
+	
+	if (!$result) {
+		trigger_error('Invalid query: ' . $conn->error);
+	}
 	
 	if ($result->num_rows > 0) {
 		// output data of each row
