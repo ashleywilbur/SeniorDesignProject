@@ -185,8 +185,8 @@ var STYLE_PREFIX = 'wsite';
 <div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
 
 <!--Package information/Report Information-->
- <h2>Package Name</h2>
- <h1>Package Acronym</h1>
+ <h2 id = "Pname1">Package Name</h2>
+ <h1 id = "Pacronym1" >Package Acronym</h1>
  
  		<div class="wsite-spacer" style="height:20px;"></div>
 		<div class="TrackerSteps">
@@ -199,11 +199,13 @@ var STYLE_PREFIX = 'wsite';
 <button id="Track1" onclick="TrackerColor('Track1', '#63AC50');" class="Tracker"></button><button id="Track2"  class="Tracker"></button><button id="Track3" class="Tracker"></button><button id="Track4" class="Tracker"></button><button id="Track5" class="Tracker"></button><button id="Track6" class="Tracker"></button>
 </div>
 
+
+
 <div style="height:10px;" class="info" id="T1">
 
 <!--So if we can pass the information from the database to the javascript file we can fill the div with the necessary text -->
 
-<h1>Step #</h1>
+<!--<h1>Step #</h1>
 Step Description<br>
 Deliver Date: MM/DD/YYYY
 
@@ -213,7 +215,7 @@ Artifact 1 []<br>
 Artifact 2 []<br>
 Artifact 3 []<br>
 
-Delivered? []
+Delivered? []-->
 
 
 </div>
@@ -229,19 +231,19 @@ Delivered? []
       <fieldset style = "float: left">
         <legend>Description of system: </legend>
 		<p>
-          <label>[insert description here]</label>
+          <label style="cursor:default" id = "Descript1"> Package Description </label>
         </p>
       </fieldset>
     </form>
 			
-	<h4 style = "text-align: left"> &nbsp; &nbsp; Zone: 		<br /> &nbsp; &nbsp; Accreditation Type: 		<br /> &nbsp; &nbsp; Certificate Acquired Target Date:     <br /> <br /></h4>	
-			
+	<h4 style = "text-align: left" id = "Zone"> &nbsp; &nbsp; Zone: 		</h4>  <h4 style = "text-align: left" id = "Atype1"> &nbsp; &nbsp; Accreditation Type: 		</h4> <h4 style = "text-align: left" id = "CATdate1">&nbsp; &nbsp; Certificate Acquired Target Date:     <br /> <br /></h4>	
+			</br>
 	<fieldset>
 		<legend>Package Members: </legend>
 		<p>
-		  <label>Package Lead: <br /></label>
-		  <label>Package Validator: <br /></label>
-		  <label>Team Members: <br /></label>
+		  <label style="cursor:default">Package Lead: <br /></label>
+		  <label style="cursor:default">Package Validator: <br /></label>
+		  <label style="cursor:default">Team Members: <br /></label>
 		  </p>
 		</fieldset>
 
@@ -251,55 +253,55 @@ Delivered? []
 		<fieldset>
 		<legend>STEP 1: </legend>
 		<p>
-		  <label style="float:left">Deliver Date: </label> <br />
-		  <label style="float:left">Approve Date: </label> <br />
-		  <label style="float:left">Artifact 1: </label> <br />
-		  <label style="float:left">Artifact 2: </label> <br />
-		  <label style="float:left">Artifact 3: </label> <br />
+		  <label style="cursor:default" style="float:left">Deliver Date: </label> <br />
+		  <label style="cursor:default" style="float:left">Approve Date: </label> <br />
+		  <label style="cursor:default" style="float:left">Artifact 1: </label> <br />
+		  <label style="cursor:default" style="float:left">Artifact 2: </label> <br />
+		  <label style="cursor:default" style="float:left">Artifact 3: </label> <br />
 		  </p>
 		</fieldset>
 		
 		<fieldset>
 		<legend>STEP 2: </legend>
 		<p>
-		  <label style="float:left">Deliver Date: </label> <br />
-		  <label style="float:left">Approve Date: </label> <br />
-		  <label style="float:left">Artifact 1: </label> <br />
-		  <label style="float:left">Artifact 2: </label> <br />
-		  <label style="float:left">Artifact 3: </label> <br />
+		  <label style="cursor:default" style="float:left">Deliver Date: </label> <br />
+		  <label style="cursor:default" style="float:left">Approve Date: </label> <br />
+		  <label style="cursor:default" style="float:left">Artifact 1: </label> <br />
+		  <label style="cursor:default" style="float:left">Artifact 2: </label> <br />
+		  <label style="cursor:default" style="float:left">Artifact 3: </label> <br />
 		  </p>
 		</fieldset>
 		
 		<fieldset>
 		<legend>STEP 3: </legend>
 		<p>
-		  <label style="float:left">Deliver Date: </label> <br />
-		  <label style="float:left">Approve Date: </label> <br />
-		  <label style="float:left">Artifact 1: </label> <br />
-		  <label style="float:left">Artifact 2: </label> <br />
-		  <label style="float:left">Artifact 3: </label> <br />
+		  <label style="cursor:default" style="float:left">Deliver Date: </label> <br />
+		  <label style="cursor:default" style="float:left">Approve Date: </label> <br />
+		  <label style="cursor:default" style="float:left">Artifact 1: </label> <br />
+		  <label style="cursor:default" style="float:left">Artifact 2: </label> <br />
+		  <label style="cursor:default" style="float:left">Artifact 3: </label> <br />
 		  </p>
 		</fieldset>
 		
 		<fieldset>
 		<legend>STEP 4: </legend>
 		<p>
-		  <label style="float:left">Deliver Date: </label> <br />
-		  <label style="float:left">Approve Date: </label> <br />
-		  <label style="float:left">Artifact 1: </label> <br />
-		  <label style="float:left">Artifact 2: </label> <br />
-		  <label style="float:left">Artifact 3: </label> <br />
+		  <label style="cursor:default" style="float:left">Deliver Date: </label> <br />
+		  <label style="cursor:default" style="float:left">Approve Date: </label> <br />
+		  <label style="cursor:default" style="float:left">Artifact 1: </label> <br />
+		  <label style="cursor:default" style="float:left">Artifact 2: </label> <br />
+		  <label style="cursor:default" style="float:left">Artifact 3: </label> <br />
 		  </p>
 		</fieldset>
 		
 		<fieldset>
 		<legend>STEP 5: </legend>
 		<p>
-		  <label style="float:left">Deliver Date: </label> <br />
-		  <label style="float:left">Approve Date: </label> <br />
-		  <label style="float:left">Artifact 1: </label> <br />
-		  <label style="float:left">Artifact 2: </label> <br />
-		  <label style="float:left">Artifact 3: </label> <br />
+		  <label style="cursor:default" style="float:left">Deliver Date: </label> <br />
+		  <label style="cursor:default" style="float:left">Approve Date: </label> <br />
+		  <label style="cursor:default" style="float:left">Artifact 1: </label> <br />
+		  <label style="cursor:default" style="float:left">Artifact 2: </label> <br />
+		  <label style="cursor:default" style="float:left">Artifact 3: </label> <br />
 		  </p>
 		</fieldset>
 		
@@ -307,8 +309,8 @@ Delivered? []
 		<fieldset>
 		<legend>FINAL: </legend>
 		<p>
-		  <label>Due Date: <br /></label>
-		  <label>ISCM: <br /></label> 
+		  <label style="cursor:default">Due Date: <br /></label>
+		  <label style="cursor:default">ISCM: <br /></label> 
 		  </p>
 		</fieldset>
 		
@@ -340,9 +342,8 @@ Delivered? []
     </div>
 
 
-  
-	<script type="text/javascript" src="files/theme/TrackerButtonClick.js"></script>
-	<script type="text/javascript" src="files/theme/plugins.js"></script>
+	<script type="text/javascript" src="files/theme/GenerateReport.js"></script>
+  	<script type="text/javascript" src="files/theme/plugins.js"></script>
   <script type="text/javascript" src="files/theme/custom.js"></script>
 
 		
