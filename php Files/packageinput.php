@@ -59,9 +59,9 @@
 	
 	$i=0;
 	
-	while(isset($_POST['Artifact['.$i.']'])) {
-		$artifact = $_POST['Artifact['.$i.']'];
-		$artifactStep = $_POST['ArtifactStep['.$i.']'];
+	while(isset($_POST['artifact['.$i.']'])) {
+		$artifact = $_POST['artifact['.$i.']'];
+		$artifactStep = $_POST['artifactStep['.$i.']'];
 		
 		$sql = "SELECT MAX(AID) FROM artifacts";
 		$result = $conn->query($sql);
