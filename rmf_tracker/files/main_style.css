@@ -781,6 +781,13 @@ div.TrackerSteps{
 	text-align: center;
 }
 
+#artifactList  {
+	position: absolute;
+	left: 535px;
+	top:150px;
+	width: 600px;
+}
+
 #artifactList .numImp{
 	width:50px;
 	height:30px;
