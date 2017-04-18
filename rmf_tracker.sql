@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 12, 2017 at 10:24 PM
+-- Generation Time: Apr 18, 2017 at 02:31 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -115,7 +115,7 @@ INSERT INTO `package` (`PID`, `Name`, `Acronym`, `Description`, `eMassID`, `Clas
 
 CREATE TABLE IF NOT EXISTS `packageartifacts` (
   `PAID` int(11) NOT NULL,
-  `PUID` int(11) NOT NULL,
+  `PID` int(11) NOT NULL,
   `AID` int(11) NOT NULL,
   `RWID` int(11) NOT NULL,
   `StartDate` date NOT NULL,
@@ -348,7 +348,7 @@ ALTER TABLE `package`
 -- Indexes for table `packageartifacts`
 --
 ALTER TABLE `packageartifacts`
- ADD PRIMARY KEY (`PAID`), ADD KEY `PUID` (`PUID`), ADD KEY `AID` (`AID`), ADD KEY `RWID` (`RWID`);
+ ADD PRIMARY KEY (`PAID`), ADD KEY `PUID` (`PID`), ADD KEY `AID` (`AID`), ADD KEY `RWID` (`RWID`);
 
 --
 -- Indexes for table `packagestandardtimeline`
@@ -413,9 +413,9 @@ ADD CONSTRAINT `kickbackreasons_ibfk_3` FOREIGN KEY (`PAID`) REFERENCES `package
 -- Constraints for table `packageartifacts`
 --
 ALTER TABLE `packageartifacts`
-ADD CONSTRAINT `packageartifacts_ibfk_1` FOREIGN KEY (`PUID`) REFERENCES `packageusers` (`PUID`),
 ADD CONSTRAINT `packageartifacts_ibfk_2` FOREIGN KEY (`AID`) REFERENCES `artifacts` (`AID`),
-ADD CONSTRAINT `packageartifacts_ibfk_3` FOREIGN KEY (`RWID`) REFERENCES `reviewer` (`RWID`);
+ADD CONSTRAINT `packageartifacts_ibfk_3` FOREIGN KEY (`RWID`) REFERENCES `reviewer` (`RWID`),
+ADD CONSTRAINT `packageartifacts_ibfk_4` FOREIGN KEY (`PID`) REFERENCES `package` (`PID`);
 
 --
 -- Constraints for table `packagestandardtimeline`
