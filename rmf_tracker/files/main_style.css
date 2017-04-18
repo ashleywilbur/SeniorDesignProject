@@ -774,6 +774,20 @@ div.TrackerSteps{
 	top: 10px;
 }
 
+.cPackField .numImp{
+	width:50px;
+	height:30px;
+	color: black;
+	text-align: center;
+}
+
+#artifactList .numImp{
+	width:50px;
+	height:30px;
+	color: black;
+	text-align: center;
+}
+
 .gi-2x{font-size: 2em;}
 .gi-3x{font-size: 3em;}
 .gi-4x{font-size: 4em;}
