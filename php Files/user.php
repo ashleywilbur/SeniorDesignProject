@@ -30,7 +30,7 @@
 	
 	//Checks Package ID and returns the current step
 	
-	$sql = "SELECT UID FROM user WHERE user.Email LIKE '%" . $email . "%'";
+	$sql = "SELECT UID FROM users WHERE users.Email LIKE '%" . $email . "%'";
 	$result = $conn->query($sql);
 	
 	
@@ -38,7 +38,6 @@
 		trigger_error('Invalid query: ' . $conn->error);
 	}
 	
-	//$row = mysql_fetch_row($result);
 	$row = $result->fetch_assoc();
 	
 	
