@@ -212,37 +212,43 @@ var STYLE_PREFIX = 'wsite';
 
   
 </form>
+
+
 <!--Create artifacts section-->
 <form id="createPackageForm" method = "POST">
+
 <fieldset class="cPackField">
   <legend style = "color:white"> Add Artifact: </legend>
   Number of artifacts:
-  <input type="text" name="artifactCount" style="color:black" maxlength="2"> <br> 
+  <input class="numImp" type="number" name="artifactCount" min="1" max="99" placeholder="2"> <br> 
   Name of artifact: 
-  <input type="text" name="artifactName" style="color:black" maxlength="30"><br>
-  <button type="button" onclick = "createArtifactRegion(createPackageForm)" class="artifactGenButton" >Continue</button>
+  <input type="text" name="artifactName" maxlength="30"><br>
+  <button type="button" onclick = "createArtifactRegion()" class="artifactGenButton" >Continue</button>
+ </fieldset>
 
-<div id = "artifactList">
-	<!--This is where all the extra boxes go-->
+<div id = "artifactList">		<!--We put the things in here-->
 </div>
+
 
 <script>
 //Button function
-function createArtifactRegion (form) {
+function createArtifactRegion () { 
 	//Get the number of artifacts being made
-	var numArts = document.getElementsByName("artifactCount")[0].value;
+	var incoming = document.getElementsByName("artifactCount")[0].value;
+	var numArts = parseInt(incoming,10);
 	// Name of the artifact
 	var artName = document.getElementsByName("artifactName")[0].value;
-	for(int i = 0; i < numArts; i++) {
-		//Add the new artifact
-		var newdiv = document.createElement('div');
-		newdiv.innerHTML = "Artifact " + (i + 1) + " <br><input type='text' name='artifact[]' style='color:black' maxlength='30'>";	
-		document.getElementById("artifactList").appendChild(newdiv);
+	//Loop for generation
+	for(i = 0; i < numArts; i++) { 
+		//Add the new artifact(s)
+		var newdiv = document.createElement('div'); 
+		newdiv.innerHTML = "Artifact " + (i + 1) + " <br><input type='text' name='artifact[]' maxlength='30'>" + "Step: " + "<input class='numImp' type='number' name='artifactStep[]' min='1' max='5' placeholder='1'>";	
+		document.getElementById("artifactList").appendChild(newdiv);  
 	}
 }
 </script>
-</fieldset>
-</form>
+
+</form> 
 <!--users-->
 <br>
   
