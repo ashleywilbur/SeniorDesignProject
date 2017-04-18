@@ -215,7 +215,7 @@ Artifact 1 []<br>
 Artifact 2 []<br>
 Artifact 3 []<br>
 
-Delivered? []-->
+Delivered? []--> 
 
 
 </div>
@@ -228,7 +228,7 @@ Delivered? []-->
 
 <div class="wsite-spacer" style="height:20px;"></div>
     <form>
-      <fieldset style = "float: left">
+      <fieldset class="reportField" style = "float: left">
         <legend>Description of system: </legend>
 		<p>
           <label style="cursor:default" id = "Descript1"> Package Description </label>
@@ -236,21 +236,21 @@ Delivered? []-->
       </fieldset>
     </form>
 			
+	<!--&nbsp creates a space [there for artificial padding] -->		
 	<h4 style = "text-align: left" id = "Zone"> &nbsp; &nbsp; Zone: 		</h4>  <h4 style = "text-align: left" id = "Atype1"> &nbsp; &nbsp; Accreditation Type: 		</h4> <h4 style = "text-align: left" id = "CATdate1">&nbsp; &nbsp; Certificate Acquired Target Date:     <br /> <br /></h4>	
 			</br>
-	<fieldset>
+	<fieldset class="reportField">
 		<legend>Package Members: </legend>
 		<p>
-		  <label style="cursor:default">Package Lead: <br /></label>
-		  <label style="cursor:default">Package Validator: <br /></label>
-		  <label style="cursor:default">Team Members: <br /></label>
+		  <label id="pLead" style="cursor:default">Package Lead: <br /></label>
+		  <label id="pVal"style="cursor:default">Package Validator: <br /></label>
+		  <label id="teamMembers" style="cursor:default">Team Members: <br /></label>
 		  </p>
 		</fieldset>
 
 
-		<!--Steps should not be hardcoded. Needs to pull in # of steps from elsewhere-this is a template -->
 		<!--This is the place where kickbacks can happen-->
-		<fieldset>
+		<fieldset class="reportField">
 		<legend>STEP 1: </legend>
 		<p>
 		  <label style="cursor:default" style="float:left">Deliver Date: </label> <br />
@@ -261,7 +261,7 @@ Delivered? []-->
 		  </p>
 		</fieldset>
 		
-		<fieldset>
+		<fieldset class="reportField">
 		<legend>STEP 2: </legend>
 		<p>
 		  <label style="cursor:default" style="float:left">Deliver Date: </label> <br />
@@ -272,7 +272,7 @@ Delivered? []-->
 		  </p>
 		</fieldset>
 		
-		<fieldset>
+		<fieldset class="reportField">
 		<legend>STEP 3: </legend>
 		<p>
 		  <label style="cursor:default" style="float:left">Deliver Date: </label> <br />
@@ -283,7 +283,7 @@ Delivered? []-->
 		  </p>
 		</fieldset>
 		
-		<fieldset>
+		<fieldset class="reportField">
 		<legend>STEP 4: </legend>
 		<p>
 		  <label style="cursor:default" style="float:left">Deliver Date: </label> <br />
@@ -294,7 +294,7 @@ Delivered? []-->
 		  </p>
 		</fieldset>
 		
-		<fieldset>
+		<fieldset class="reportField">
 		<legend>STEP 5: </legend>
 		<p>
 		  <label style="cursor:default" style="float:left">Deliver Date: </label> <br />
@@ -306,7 +306,7 @@ Delivered? []-->
 		</fieldset>
 		
 		<!-- Final step/approval-->
-		<fieldset>
+		<fieldset class="reportField">
 		<legend>FINAL: </legend>
 		<p>
 		  <label style="cursor:default">Due Date: <br /></label>
@@ -315,7 +315,6 @@ Delivered? []-->
 		</fieldset>
 		
 <!--Export button-->	
-<!--Website URL should be updated with a modern one that is actually a publishable PDF-->	
 <div class="paragraph" style="text-align:center;"><u>
 <div class="button">
   <button onclick="window.print()" class="button">Print</button>
