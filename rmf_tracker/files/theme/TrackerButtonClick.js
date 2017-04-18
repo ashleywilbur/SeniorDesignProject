@@ -11,17 +11,17 @@ console.log(packNum);
 function TrackerColor(id) {
 
 		if(id == "track1")
-			document.getElementById('T1').innerHTML = "<h1>Step #1</h1>Step Description: <br>Deliver Date: <h3>Artifacts: </h3> <h3>Progress: </h3>";
+			document.getElementById('Snum').innerHTML = "Step #1";
 		if(id == "track2")
-			document.getElementById('T1').innerHTML = "<h1>Step #2</h1>Step Description: <br>Deliver Date: <h3>Artifacts: </h3> <h3>Progress: </h3>";
+			document.getElementById('Snum').innerHTML = "Step #2";
 		if(id == "track3")
-			document.getElementById('T1').innerHTML = "<h1>Step #3</h1>Step Description: <br>Deliver Date: <h3>Artifacts: </h3> <h3>Progress: </h3>";
+			document.getElementById('Snum').innerHTML = "Step #3";
 		if(id == "track4")
-			document.getElementById('T1').innerHTML = "<h1>Step #4</h1>Step Description: <br>Deliver Date: <h3>Artifacts: </h3> <h3>Progress: </h3>";
+			document.getElementById('Snum').innerHTML = "Step #4";
 		if(id == "track5")
-			document.getElementById('T1').innerHTML = "<h1>Step #5</h1>Step Description: <br>Deliver Date: <h3>Artifacts: </h3> <h3>Progress: </h3>";
+			document.getElementById('Snum').innerHTML = "Step #5";
 		if(id == "track6")
-			document.getElementById('T1').innerHTML = "<h1>Step #6</h1>Step Description: <br>Deliver Date: <h3>Artifacts: </h3> <h3>Progress: </h3>";
+			document.getElementById('Snum').innerHTML = "Step #6";
 	document.getElementById('T1').style.visibility = 'visible';
 }
 function TrackClick(){
