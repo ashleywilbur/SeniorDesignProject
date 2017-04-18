@@ -78,3 +78,26 @@ table of users
 
 validate packages
 What is it for?
+
+
+***********AFTER MEETING***********
+
+MY ASSIGNMENTS
+
+Team members and team leads, packages they’re on, artifacts can be assigned to team member
+
+package artifact number and team lead name
+
+Team lead and A&A lead can set up assignments -  only ones
+
+OTHER 
+
+IMPORTANT ***ABLE TO KICKBACK FOR PACKAGES, CHECK BOX, A&A lead and team lead only ones to go back and check that off ***
+
+Expect letters in eMASS ID, long characters 
+
+Add CIA in my package, under certification acquired target date, pull from the database 
+
+When adding an artifact, make it optional to add a reviewer as well, drop down pulling from database, classification+CIA should be a drop down - either classified or unclassified: will get options from nicole for the drop downs 
+
+Generate Report, have the color box next to the artifacts, change it to letter of color or submitted or not submitted on print page because it will be in black and white
