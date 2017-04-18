@@ -30,7 +30,7 @@
 	
 	//Checks Package ID and returns the current step
 	
-	$sql = "SELECT UID FROM users WHERE users.Email LIKE '%" . $email . "%'";
+	$sql = "SELECT UID FROM user WHERE user.Email LIKE '%" . $email . "%'";
 	$result = $conn->query($sql);
 	
 	

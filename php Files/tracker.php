@@ -77,14 +77,14 @@
 	echo "\"Archive\":";
 	echo $row["Archive"];
 	echo ",";
-	echo "\"ArchiveDate\":\"";
-	echo $row["ArchiveDate"] . "\"";
+	echo "\"ArchiveDate\":";
+	echo $row["ArchiveDate"];
 	echo ",";
 	echo "\"TrackerStep\":";
 	
 	//output of current step
 	$step = $row["TrackerStep"];
-	//everything under this is commented out for now. Until there is data in the database it will only bring errors
+	
 	echo $step;
 	echo ",";
 	
@@ -92,7 +92,7 @@
 	//output of current step
 	$step = $row["PID"];
 	
-	echo $step;/*
+	echo $step;
 	echo ",";
 	
 	//Searches for all packagestandardtimeline/standardtimeline values
@@ -163,11 +163,11 @@
 	echo ",";
 	echo "\"OverallProcessMonths\":";
 	echo $row["OverallProcessMonths"]; //how long the process should take as a wile (months)
-
+	echo ",";
 	
 	//search artifacts using PUID and associated tables
 	
-$sql = "SELECT PUID FROM packageusers WHERE packageusers.PID LIKE '%" . $package . "%'";
+	$sql = "SELECT PUID FROM packageusers WHERE packageusers.PID LIKE '%" . $package . "%'";
 	$result = $conn->query($sql);
 	
 	if (!$result) {
@@ -188,21 +188,14 @@ $sql = "SELECT PUID FROM packageusers WHERE packageusers.PID LIKE '%" . $package
 	if ($result->num_rows > 0) {
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
-			echo ",";
-			echo "\"ArtifactName\":\"";
 			echo $row["Name"] . "\"";
-			echo ",";
-			echo "\"SID\":";
-			echo $row["SID"];
-			echo ",";
-			echo "\"SubmitDate\":";
-			echo $row["SubmitDate"];
-			echo ",";
-			echo "\"Progress\":";
+			echo $row["SID"] . "\"";
+			echo $row["SubmitDate"] . "\"";
 			echo $row["Progress"];
 		}
-	} */
-	echo "}";
+	} else {
+		echo "0 results";
+	}
 	
 	
 	//echo "\"";
