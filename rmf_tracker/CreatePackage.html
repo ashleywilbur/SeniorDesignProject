@@ -210,20 +210,21 @@ var STYLE_PREFIX = 'wsite';
 
 <!--Create artifacts section-->
 <form id="createPackageForm" action="packageinput.php" method = "POST">
-
+<div id = "cPackBase">
 <fieldset class="cPackField">
   <legend style = "color:white"> Add Artifact: </legend>
   Number of artifacts:
-  <input class="numImp" type="number" name="artifactCount" min="1" max="99" placeholder="2"> <br> 
+  <input class="numImp" type="number" name="artifactCount" min="1" max="99"> <br>
   Name of artifact: 
-  <input type="text" name="artifactName" maxlength="30">
-  Step: 
-  <input class= "numImp" type="number" name="artifactStep" min="1" max="5" placeholder="1"> <br>
+  <input type="text" name="artifactName" maxlength="30"> <br>
+  Beginning step:
+  <input class= "numImp" type="number" name="artifactStep" min="1" max="5"> <br>
   <button type="button" onclick = "createArtifactRegion()" class="artifactGenButton">Continue</button>
  </fieldset>
-
-<div id = "artifactList">		
-	<!--We put the things in here-->
+<br>
+</div>
+ 
+<div id = "artifactList">	
 </div>
 
 
@@ -241,7 +242,7 @@ function createArtifactRegion () {
 	for(i = 0; i < numArts; i++) { 
 		//Add the new artifact(s)
 		var newdiv = document.createElement('div'); 
-		newdiv.innerHTML = "Artifact " + (i + 1) + " <br><input type='text' name='artifact[]' maxlength='30'>" + "Step: " + "<input class='numImp' type='number' name='artifactStep[]' min='1' max='5' placeholder='1'>";	
+		newdiv.innerHTML = "Artifact " + (i + 1) + " <br><input class = 'nameImp' type='text' name='artifact[]' maxlength='30'>" + "Step: " + "<input class='numImp' type='number' name='artifactStep[]' min='1' max='5' >";	
 		document.getElementById("artifactList").appendChild(newdiv);  
 	}
 }
@@ -283,7 +284,6 @@ function createArtifactRegion () {
 </div>
 
     </div>
-  	<script type="text/javascript" src="files/theme/createPackage.js"></script>
 	<script type="text/javascript" src="files/theme/plugins.js"></script>
   <script type="text/javascript" src="files/theme/custom.js"></script>
 
