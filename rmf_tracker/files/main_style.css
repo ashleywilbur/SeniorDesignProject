@@ -741,6 +741,17 @@ div.TrackerSteps{
 	border-radius: 5px;
 	width:375px;
 	display:inline-block;
+	font-size:15px;
+}
+
+.createPackage select{
+	height: 25px;
+	border: solid 2px white;
+	color: black;
+	border-radius: 5px;
+	width:375px;
+	display:inline-block;
+	font-size:15px;
 }
 .createPackage h3 {
 	margin:10px;
