@@ -563,7 +563,7 @@ div.TrackerSteps{
 	background-color:#4682B4;
 	position:absolute;
 	top: 50%;
-	left:50px;
+	left:30px;
 	overflow:auto;
 	border: solid;
 	border-color:white;
@@ -811,8 +811,31 @@ div.TrackerSteps{
 	height: 25px;
 	border: solid 2px #1C4C76;
 	border-radius: 5px;
-	width:1200px;
+	width:1210px;
 	display:inline-block;
+}
+.buttonYellow{
+	background-color: #FFFF69;
+    color: white;
+    border-style: solid;
+	border-width:1px;
+    cursor: pointer;
+	font-family: 'Birdseye', sans-serif;
+	width: 5px;
+	height:15px;
+	text-align: center;	
+}
+
+.buttonGreen{
+    background-color: #63AC50;
+    color: white;
+    border-style: solid;
+	border-width:1px;
+    cursor: pointer;
+	font-family: 'Birdseye', sans-serif;
+	width: 5px;
+	height:15px;
+	text-align: center;	
 }
 
 .gi-2x{font-size: 2em;}
