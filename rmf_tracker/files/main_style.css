@@ -814,6 +814,21 @@ div.TrackerSteps{
 	width:1210px;
 	display:inline-block;
 }
+.colorKey{
+	position:absolute;
+	text-align:left;
+}
+.buttonRed{
+    background-color: #C0504B;
+    color: white;
+    border-style: solid;
+	border-width:1px;
+    cursor: pointer;
+	font-family: 'Birdseye', sans-serif;
+	width: 5px;
+	height:15px;
+	text-align: center;	
+}
 .buttonYellow{
 	background-color: #FFFF69;
     color: white;
