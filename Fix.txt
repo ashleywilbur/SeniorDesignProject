@@ -71,8 +71,8 @@ fix buttons on tracker (D: done)
 add color key (D: done)
 
 reports
-purge
-repurpose to mypackages to generate report
+purge (A: done)
+repurpose to mypackages to generate report (A: done)
 
 users
 table of users (D: working on)
