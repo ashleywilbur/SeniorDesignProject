@@ -853,6 +853,33 @@ div.TrackerSteps{
 	text-align: center;	
 }
 
+
+.createPackage:before {
+    content: "";
+    position: absolute;
+    right: 4%;
+    top: 52%;
+    width: 0; 
+    height: 0; 
+	color: black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #f00;
+}
+
+.createPackage:after {
+    content: "";
+    position: absolute;
+    right: 4%;
+    top: 63%;
+    width: 0; 
+    height: 0; 
+	color:black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #333;
+}
+
 .gi-2x{font-size: 2em;}
 .gi-3x{font-size: 3em;}
 .gi-4x{font-size: 4em;}
