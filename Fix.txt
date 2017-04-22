@@ -4,11 +4,11 @@ Login
 Delete - Home button
 
 Dashboards
-Add names and codes
+Add names and codes (D: done)
 Link urgent actions are a week within delivery date
-Javascript to check date and bring up on pages
+Javascript to check date and bring up on pages 
 Buttons names for my packages needs to change to all packages (A: done on all dash's that have all packages button)
-Account system needs to only displays certain user's packages 
+Account system needs to only displays certain user's packages (D: kind of done)
 Link needs to be deleted in urgesnt actions on every dash (A: done on all dash's that have urgent actions)
 
 AA dash
@@ -21,12 +21,13 @@ Elevator dash
 *Good
 
 User dash
-Figure out why it is there if not purge (A: when a new user inputs an email in the login that is not in the database (so a new user), a new page is going to pop up telling them to contact their A&A lead to add them into database)
-add a automatic alert system after the user clicks a button, sends an automatic email to the A&A lead with the new users email IF WE HAVE THE TIME - IT'D BE COOL TO DO.
+Figure out why it is there if not purge (A: when a new user inputs an email in the login that is not in the database (so a new user)
+a new page is going to pop up telling them to contact their A&A lead to add them into database) (A: done)
+add a automatic alert system after the user clicks a button, sends an automatic email to the A&A lead with the new users email IF WE HAVE THE TIME - IT'D BE COOL TO DO. 
 
 Package Team member dash
 Dashboard button removed (A: done)
-Get rid of the underline on URGENT ACTIONS
+Get rid of the underline on URGENT ACTIONS (BC: done - working on)
 Links need to be changed to allpackages (A: done)
 
 package validator dash
@@ -41,22 +42,22 @@ add note for links to mypackages
 filter by alphabetical...etc.
 
 archive package
-purge?
+need forms
 
 archve reviewer
-purge?
+need forms 
 
 create package
 Fix css for text
-add functionalit to submit
+add functionalit to submit 
 MAKE PHP FILE FOR User (BE: Done)
-Number of artifacts form functionality
+Number of artifacts form functionality (BC: done)
 
 generate report
-add overall functionality to pages
-remove button click
-add color based key
-print button working
+add overall functionality to pages 
+remove button click (A: done)
+add color based key 
+print button working (A: update print on the CSS)
 
 Home
 Really?
@@ -66,15 +67,15 @@ figure out what this needs to do?
 add check boxes? and submit button?
 
 mypackages
-fix buttons on tracker
-add color key
+fix buttons on tracker (D: done)
+add color key (D: done)
 
 reports
 purge
 repurpose to mypackages to generate report
 
 users
-table of users
+table of users (D: working on)
 
 validate packages
 What is it for?
