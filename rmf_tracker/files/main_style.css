@@ -880,6 +880,53 @@ div.TrackerSteps{
     border-top: 10px solid #333;
 }
 
+.reportDiv {
+	height: 20px; 
+	overflow: hidden; 
+	width: 100%;
+}
+
+.reportFieldHead{
+	padding:5px;
+	float:left;
+	cursor:default;
+}
+
+.reportFieldHead label{
+	cursor:default;
+}
+
+.reportField{
+	padding:5px;
+	float:left;
+	width: 100%;
+	
+}
+
+.reportField label{
+	cursor:default;
+}
+
+.reportZones label{
+	float:left;
+	text-align:left;
+	cursor: default;
+}
+.kickBack{
+	color: white; 
+	float: left; 
+	position: absolute; 
+	left: 400px; 
+	top: 370px;
+}
+.artList{
+	overflow:auto;
+	border: solid 1px white;
+	width:20px;
+	height:200px;
+}
+
+
 .gi-2x{font-size: 2em;}
 .gi-3x{font-size: 3em;}
 .gi-4x{font-size: 4em;}
