@@ -1,0 +1,25 @@
+.wsite-spacer {
+	height:20px;
+}
+
+.reportFieldHead{
+	padding:5px;
+	float:left;
+}
+
+.reportField{
+	padding:5px;
+	float:left;
+	width: 100%;
+}
+
+.reportField label {
+	cursor:default;
+	float:left;
+	padding:6px;
+	display:block;
+}
+
+.reportZones {
+	float:left;
+}
