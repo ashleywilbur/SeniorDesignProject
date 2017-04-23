@@ -21,34 +21,53 @@
 	if(isset($_POST['name'])){
 		$name = $_POST['name'];
 	}
+	else {
+		$name = "Unnamed";
+	}
 	
 	if(isset($_POST['acronym'])){
 		$acronym = $_POST['acronym'];
 	}
+	else {
+		$acronym = "N/A";
+	}
 	
-	if(isset($_POST['desription'])){
+	if(isset($_POST['description'])){
 		$description = $_POST['description'];
+	}
+	else {
+		$description = "No Description";
 	}
 	
 	if(isset($_POST['eMassID'])){
 		$eMassID = $_POST['eMassID'];
 	}
+	else {
+		$eMassID = "N/A";
+	}
 	
 	if(isset($_POST['classification'])){
-		$classification = $_POST['cassification'];
+		$classification = $_POST['classification'];
+	}
+	else {
+		$classification = "N/A";
 	}
 	
-	if(isset($_POST['CIA'])){
-		$CIA = $_POST['CIA'];
+	if(isset($_POST['cia'])){
+		$CIA = $_POST['cia'];
+	}
+	else {
+		$CIA = "N/A";
 	}
 	
-	$sql = "SELECT MAX(PID) FROM package";
+	$sql = "SELECT MAX(PID) as max FROM package";
 	$result = $conn->query($sql);
-	$pid = $result->fetch_assoc();
+	$row = $result->fetch_assoc();
+	$pid = $row['max'];
 	$pid++;
 	
 	$sql = "INSERT INTO package (PID, Name, Acronym, Description, eMassID, Classification, CIA) 
-			VALUES ('%" . $pid . "%','%" . $name . "%','%" . $acronym . "%','%" . $description . "%','%" . $eMassID . "%','%" . $classification . "%','%" . $CIA . "%')";
+			VALUES (" . $pid . ",'" . $name . "','" . $acronym . "','" . $description . "','" . $eMassID . "','" . $classification . "','" . $CIA . "')";
 
 	if ($conn->query($sql) === TRUE) {
 		echo "New record created successfully";
@@ -63,14 +82,15 @@
 		$artifact = $_POST['artifact['.$i.']'];
 		$artifactStep = $_POST['artifactStep['.$i.']'];
 		
-		$sql = "SELECT MAX(AID) FROM artifacts";
+		$sql = "SELECT MAX(AID) as max FROM artifacts";
 		$result = $conn->query($sql);
-		$aid = $result->fetch_assoc();
+		$row = $result->fetch_assoc();
+		$aid = $row['max'];
 		$aid++;
 		$date = date ("Y-m-d");
 		
 		$sql = "INSERT INTO artifacts (AID, SID, Name, SubmitDate) 
-			VALUES ('%" . $aid . "%','%" . $artifactStep . "%','%" . $artifact . "%','%" . $date . "%'";
+			VALUES (" . $aid . ",'" . $artifactStep . "','" . $artifact . "','" . $date . "'";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "New record created successfully";
@@ -93,6 +113,8 @@
 		else {
 			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
+		
+		$i++;
 	}
 	
 	//reference code - not used

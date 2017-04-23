@@ -182,7 +182,7 @@ var STYLE_PREFIX = 'wsite';
 
 
 <div class="createPackage">
-<form action="packageinput.php" method="POST">
+<form id="createPackageForm" action="packageinput.php" method = "POST">
 
 <h3>Name: <input type="text" name="name"  ></h3> 
 
@@ -205,38 +205,37 @@ var STYLE_PREFIX = 'wsite';
 
 
 
-<h3>Classification:  <select style="color:black">
-  <option value="unclass" selected="selected">Unclassified</option>
-  <option value="class">Classified</option>
+<h3>Classification:  <select style="color:black" name="classification">
+  <option value="Unclassified" selected>Unclassified</option>
+  <option value="Classified">Classified</option>
 </select> </h3> 
 
 
 
-<h3>CIA: <select style="color:black">
-  <option value="high">High</option>
-  <option value="medium" selected="selected">Medium</option>
-  <option value="low">Low</option>
+<h3>CIA: <select style="color:black" name="cia">
+  <option value="High">High</option>
+  <option value="Medium" selected>Medium</option>
+  <option value="Low">Low</option>
 </select></h3> 
   
-</form>
 
 
 <!--Create artifacts section-->
-<form id="createPackageForm" action="packageinput.php" method = "POST">
 <div id = "cPackBase">
 <fieldset class="cPackField">
   <legend style = "color:white"> Add Artifact: </legend>
   Number of artifacts:
   <input class="numImp" type="number" name="artifactCount" min="1" max="99"> <br>
   Name of artifact: 
-  <input type="text" name="artifactName" maxlength="30"> <br>
+  <input type="text" name="artifact" maxlength="30"> <br>
   Beginning step:
   <input class= "numImp" type="number" name="artifactStep" min="1" max="5"> <br>
   <button type="button" onclick = "createArtifactRegion()" class="artifactGenButton">Continue</button>
  </fieldset>
 <br>
 </div>
- 
+   <input id="createPackageSubmit" type="submit" value="Submit">
+
 <div id = "artifactList">	
 </div>
 
@@ -260,9 +259,8 @@ function createArtifactRegion () {
 	}
 }
 </script>
-    
-  <input id="createPackageSubmit" type="submit" value="Submit">
-</form> 
+  </form>   
+
 <!--users-->
 <br>
   
