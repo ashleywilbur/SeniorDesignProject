@@ -50,50 +50,49 @@
 		trigger_error('Invalid query: ' . $conn->error);
 	}
 	
-	$row = $result->fetch_assoc();
-	
-	
-	//output of package info
-	//echo "\"";
-	
-	echo "\"Name\":\"";
-	echo $row["Name"] . "\"";
-	echo ",";
-	echo "\"Acronym\":\"";
-	echo $row["Acronym"] . "\"";
-	echo ",";
-	echo "\"Description\":\"";
-	echo $row["Description"] . "\"";
-	echo ",";
-	echo "\"eMassID\":";
-	echo $row["eMassID"];	
-	echo ",";
-	echo "\"Classification\":\"";
-	echo $row["Classification"] . "\"";
-	echo ",";
-	echo "\"CIA\":\"";
-	echo $row["CIA"] . "\"";
-	echo ",";
-	echo "\"Archive\":";
-	echo $row["Archive"];
-	echo ",";
-	echo "\"ArchiveDate\":\"";
-	echo $row["ArchiveDate"] . "\"";
-	echo ",";
-	echo "\"TrackerStep\":";
-	
-	//output of current step
-	$step = $row["TrackerStep"];
-	//everything under this is commented out for now. Until there is data in the database it will only bring errors
-	echo $step;
-	echo ",";
-	
-	echo "\"PID\":";
-	//output of current step
-	$step = $row["PID"];
-	
-	echo $step;/*
-	echo ",";
+	if($row = $result->fetch_assoc()) {
+		
+		
+		//output of package info
+		//echo "\"";
+		
+		echo "\"Name\":\"";
+		echo $row["Name"] . "\"";
+		echo ",";
+		echo "\"Acronym\":\"";
+		echo $row["Acronym"] . "\"";
+		echo ",";
+		echo "\"Description\":\"";
+		echo $row["Description"] . "\"";
+		echo ",";
+		echo "\"eMassID\":";
+		echo $row["eMassID"];	
+		echo ",";
+		echo "\"Classification\":\"";
+		echo $row["Classification"] . "\"";
+		echo ",";
+		echo "\"CIA\":\"";
+		echo $row["CIA"] . "\"";
+		echo ",";
+		echo "\"Archive\":";
+		echo $row["Archive"];
+		echo ",";
+		echo "\"ArchiveDate\":\"";
+		echo $row["ArchiveDate"] . "\"";
+		echo ",";
+		echo "\"TrackerStep\":";
+		
+		//output of current step
+		$step = $row["TrackerStep"];
+		//everything under this is commented out for now. Until there is data in the database it will only bring errors
+		echo $step;
+		echo ",";
+		
+		echo "\"PID\":";
+		//output of PID
+		echo $row["PID"];
+		echo ",";
+	}
 	
 	//Searches for all packagestandardtimeline/standardtimeline values
 	
@@ -104,78 +103,79 @@
 		trigger_error('Invalid query: ' . $conn->error);
 	}
 	
-	$row = $result->fetch_assoc();
+	if($row = $result->fetch_assoc()) {
 	
-	//outputs packagestandardtimeline/standardtimeline values
-	echo "\"PkgCreationDate\":";
-	echo $row["PkgCreationDate"];
-	echo ",";
-	echo "\"Step1Delay\":";
-	echo $row["Step1Delay"]; //how many days Step1Date has been 
-	echo ",";
-	echo "\"Step2Delay\":";
-	echo $row["Step2Delay"]; //how many days Step2Date has been delayed
-	echo ",";
-	echo "\"Step3Delay\":";
-	echo $row["Step3Delay"]; //how many days Step3Date has been delayed
-	echo ",";
-	echo "\"Step4Delay\":";
-	echo $row["Step4Delay"]; //how many days Step4Date has been delayed
-	echo ",";
-	echo "\"Step5Delay\":";
-	echo $row["Step5Delay"]; //how many days Step5Date has been delayed
-	echo ",";
-	echo "\"CertAcquiredDelay\":";
-	echo $row["CertAcquiredDelay"]; //how many days CertAcquiredDate has been delayed
-	echo ",";
-	echo "\"ExpirationDelay\":";
-	echo $row["ExpirationDelay"]; //how many months ExpirationDateMonth has been delayed
-	echo ",";
-	echo "\"Zone\":\"";
-	echo $row["Zone"] . "\"";
-	echo ",";
-	echo "\"AccredType\":\"";
-	echo $row["AccredType"] . "\"";
-	echo ",";
-	echo "\"CreationDate\":";
-	echo $row["CreationDate"]; //not important for package data
-	echo ",";
-	echo "\"Step1Date\":";
-	echo $row["Step1Date"]; //how many days after PkgCreationDate Step 1 is due
-	echo ",";
-	echo "\"Step2Date\":";
-	echo $row["Step2Date"]; //how many days after Step1Date Step 2 is due
-	echo ",";
-	echo "\"Step3Date\":";
-	echo $row["Step3Date"]; //how many days after Step2Date Step 3 is due
-	echo ",";
-	echo "\"Step4Date\":";
-	echo $row["Step4Date"]; //how many days after Step3Date Step 4 is due
-	echo ",";
-	echo "\"Step5Date\":";
-	echo $row["Step5Date"]; //how many days after Step4Date Step 5 is due
-	echo ",";
-	echo "\"CertAcquiredDate\":";
-	echo $row["CertAcquiredDate"]; //how many days after Step5Date the Cert is expected to be  finalized
-	echo ",";
-	echo "\"ExpirationDateMonth\":";
-	echo $row["ExpirationDateMonth"]; //how long the cert lasts (months)
-	echo ",";
-	echo "\"OverallProcessMonths\":";
-	echo $row["OverallProcessMonths"]; //how long the process should take as a wile (months)
-
+		//outputs packagestandardtimeline/standardtimeline values
+		echo "\"PkgCreationDate\":";
+		echo $row["PkgCreationDate"];
+		echo ",";
+		echo "\"Step1Delay\":";
+		echo $row["Step1Delay"]; //how many days Step1Date has been 
+		echo ",";
+		echo "\"Step2Delay\":";
+		echo $row["Step2Delay"]; //how many days Step2Date has been delayed
+		echo ",";
+		echo "\"Step3Delay\":";
+		echo $row["Step3Delay"]; //how many days Step3Date has been delayed
+		echo ",";
+		echo "\"Step4Delay\":";
+		echo $row["Step4Delay"]; //how many days Step4Date has been delayed
+		echo ",";
+		echo "\"Step5Delay\":";
+		echo $row["Step5Delay"]; //how many days Step5Date has been delayed
+		echo ",";
+		echo "\"CertAcquiredDelay\":";
+		echo $row["CertAcquiredDelay"]; //how many days CertAcquiredDate has been delayed
+		echo ",";
+		echo "\"ExpirationDelay\":";
+		echo $row["ExpirationDelay"]; //how many months ExpirationDateMonth has been delayed
+		echo ",";
+		echo "\"Zone\":\"";
+		echo $row["Zone"] . "\"";
+		echo ",";
+		echo "\"AccredType\":\"";
+		echo $row["AccredType"] . "\"";
+		echo ",";
+		echo "\"CreationDate\":";
+		echo $row["CreationDate"]; //not important for package data
+		echo ",";
+		echo "\"Step1Date\":";
+		echo $row["Step1Date"]; //how many days after PkgCreationDate Step 1 is due
+		echo ",";
+		echo "\"Step2Date\":";
+		echo $row["Step2Date"]; //how many days after Step1Date Step 2 is due
+		echo ",";
+		echo "\"Step3Date\":";
+		echo $row["Step3Date"]; //how many days after Step2Date Step 3 is due
+		echo ",";
+		echo "\"Step4Date\":";
+		echo $row["Step4Date"]; //how many days after Step3Date Step 4 is due
+		echo ",";
+		echo "\"Step5Date\":";
+		echo $row["Step5Date"]; //how many days after Step4Date Step 5 is due
+		echo ",";
+		echo "\"CertAcquiredDate\":";
+		echo $row["CertAcquiredDate"]; //how many days after Step5Date the Cert is expected to be  finalized
+		echo ",";
+		echo "\"ExpirationDateMonth\":";
+		echo $row["ExpirationDateMonth"]; //how long the cert lasts (months)
+		echo ",";
+		echo "\"OverallProcessMonths\":";
+		echo $row["OverallProcessMonths"]; //how long the process should take as a wile (months)
+	}
 	
 	//search artifacts using PUID and associated tables
 	
-$sql = "SELECT PUID FROM packageusers WHERE packageusers.PID LIKE '%" . $package . "%'";
+	$sql = "SELECT PUID FROM packageusers WHERE packageusers.PID LIKE '%" . $package . "%'";
 	$result = $conn->query($sql);
 	
 	if (!$result) {
 		trigger_error('Invalid query: ' . $conn->error);
 	}
 	
-	$row = $result->fetch_assoc();
-	$puid = $row["PUID"];
+	if($row = $result->fetch_assoc()){
+		$puid = $row["PUID"];
+	}
 	
 	
 	$sql = "SELECT * FROM artifacts a, packageartifacts pa WHERE a.AID LIKE pa.AID AND pa.PUID LIKE '%" . $puid . "%'";
@@ -201,7 +201,7 @@ $sql = "SELECT PUID FROM packageusers WHERE packageusers.PID LIKE '%" . $package
 			echo "\"Progress\":";
 			echo $row["Progress"];
 		}
-	} */
+	} 
 	echo "}";
 	
 	
