@@ -210,22 +210,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div class ="PackTable">
 
-<!--<input type="search" class="light-table-filter" data-table="allP" placeholder="Filter">-->
-
-
-<!--
-<button class ="TableBut">JOHNSMITH 	12345G 	Weston Co. 	Smith Johns 	Johnson Smithsonian 	Validation 	Standard 	N/A</button>
-<button class ="TableBut">Hello Stuff</button>
-<button class ="TableBut">Hello Stuff</button>
-<button class ="TableBut">Hello Stuff</button>
-<button class ="TableBut">Hello Stuff</button>
-<button class ="TableBut">Hello Stuff</button>
-<button class ="TableBut">Hello Stuff</button>
-<button class ="TableBut">Hello Stuff</button>
-<button class ="TableBut">Hello Stuff</button>
-<button class ="TableBut">Hello Stuff</button>
-<button class ="TableBut">Hello Stuff</button>
--->
+<input id="pTableSearch" type="search" class="searchTable" onkeyup="searchTable()" placeholder="Filter package name" >
 
 <table  border="1" id="myTable" class="allP">
 <tbody id="allP">
@@ -239,11 +224,9 @@ var STYLE_PREFIX = 'wsite';
 	<th>Accreditation Type</th>
     <th>Certification Acquired Date</th>
     <th>Generate Report</th>
-
   </tr>
-</tbody>
-</table> 
-  <!--<tr>
+
+  <tr>
     <td>JOHN SMITH</td>
     <td>12345G</td>
 	<td>Weston Co.</td>
@@ -273,42 +256,11 @@ var STYLE_PREFIX = 'wsite';
 	<td>Done</td>
     <td>N/A</td>
   </tr>
-      <tr>
-    <td>Doober</td>
-    <td>01017Q</td>
-	<td>QQQQQQ</td>
-    <td>Doober</td>
-	<td>Doogal</td>
-    <td>Complete</td>
-	<td>Done</td>
-    <td>N/A</td>
-  </tr>
-      <tr>
-    <td>Doober</td>
-    <td>01017Q</td>
-	<td>QQQQQQ</td>
-    <td>Doober</td>
-	<td>Doogal</td>
-    <td>Complete</td>
-	<td>Done</td>
-    <td>N/A</td>
-  </tr>
-      <tr>
-    <td>Doober</td>
-    <td>01017Q</td>
-	<td>QQQQQQ</td>
-    <td>Doober</td>
-	<td>Doogal</td>
-    <td>Complete</td>
-	<td>Done</td>
-    <td>N/A</td>
-  </tr> -->
+ </tbody>
+</table> 
 </div>
 
 
-  
-  <!--style="text-align:left;-->
-  
 </div>
 </div>	
 
@@ -364,6 +316,27 @@ function sortTable(n) {
       if (switchcount == 0 && dir == "asc") {
         dir = "desc";
         switching = true;
+      }
+    }
+  }
+}
+
+function searchTable() {
+  // Declare variables
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("pTableSearch");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
       }
     }
   }
