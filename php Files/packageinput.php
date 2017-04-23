@@ -67,9 +67,10 @@
 		$result = $conn->query($sql);
 		$aid = $result->fetch_assoc();
 		$aid++;
+		$date = date ("Y-m-d");
 		
 		$sql = "INSERT INTO artifacts (AID, SID, Name, SubmitDate) 
-			VALUES ('%" . $aid . "%','%" . $artifactStep . "%','%" . $artifact . "%','%" . string $format [, int $timestamp = time() ] . "%'";
+			VALUES ('%" . $aid . "%','%" . $artifactStep . "%','%" . $artifact . "%','%" . $date . "%'";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "New record created successfully";
@@ -84,7 +85,7 @@
 		$paid++;
 		
 		$sql = "INSERT INTO artifacts (PAID, PID, AID, StartDate, Progress) 
-			VALUES ('%" . $paid . "%','%" . $pid . "%','%" . $aid . "%','%" . string $format [, int $timestamp = time() ] . "%', 0";
+			VALUES ('%" . $paid . "%','%" . $pid . "%','%" . $aid . "%','%" . $date . "%', 0";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "New record created successfully";

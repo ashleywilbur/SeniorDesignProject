@@ -22,18 +22,6 @@
 		$uid = $_POST['uid'];
 	}
 	
-	
-	$sql = "SELECT COUNT(PID) as total FROM packageusers WHERE packageusers.UID LIKE '%" . $uid . "%'";
-	$result = $conn->query($sql);
-	
-	
-	if (!$result) {
-		trigger_error('Invalid query: ' . $conn->error);
-	}
-	
-	$row = $result->fetch_assoc();
-	echo $row["total"];
-	
 	$sql = "SELECT RID FROM packageusers WHERE packageusers.UID LIKE '%" . $uid . "%'";
 	$result = $conn->query($sql);
 	
