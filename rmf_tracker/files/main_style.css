@@ -889,18 +889,30 @@ div.TrackerSteps{
 .reportFieldHead{
 	padding:5px;
 	float:left;
+	cursor:default;
+}
+
+.reportFieldHead label{
+	cursor:default;
 }
 
 .reportField{
 	padding:5px;
 	float:left;
 	width: 100%;
+	
+}
+
+.reportField label{
+	cursor:default;
 }
 
 .reportZones label{
 	float:left;
-	text-align:left:
+	text-align:left;
+	cursor: default;
 }
+
 
 .gi-2x{font-size: 2em;}
 .gi-3x{font-size: 3em;}
