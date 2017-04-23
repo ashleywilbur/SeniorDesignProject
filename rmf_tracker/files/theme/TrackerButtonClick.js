@@ -9,7 +9,9 @@ packNum = window.location.href.split("#")
 
 console.log(packNum);
 function TrackerColor(id) {
-
+		
+		AA();
+		
 		if(id == "track1")
 			document.getElementById('Snum').innerHTML = "Step #1";
 		if(id == "track2")
@@ -24,63 +26,28 @@ function TrackerColor(id) {
 			document.getElementById('Snum').innerHTML = "Step #6";
 	document.getElementById('T1').style.visibility = 'visible';
 }
-function TrackClick(){
-		//What shows up on first click
-	if(action == 1){
-			document.getElementById('T1').style.visibility = 'visible';
-			document.getElementById('T1').innerHTML = "<h1>Step #2</h1>Step Description: <br>Deliver Date: <h3>Artifacts: </h3> <h3>Progress: </h3>";;
-			
-			
-			action = 2;
+function AA(){
+ var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+      response =this.responseText;  
+
+	if(this.readyState == 3){
+	  if(response == 1)
+		document.getElementById("kickBack").innerHTML =  "<label> Delivered </label>\
+<button id=\"del\" class = \"artButton\"></button><br>\
+<form id=\"kickForm\" action = \"\" method = \"POST\">\
+	Step approved? <br>\
+	<input type=\"radio\" name=\"approved\" value=\"yes\"> Yes<br>\
+	<input type=\"radio\" name=\"approved\" value=\"no\"> No<br>\
+	Kickback Reason: <br>\
+	<input rows=\"1\" cols=\"50\" wrap=\"physical\" type=\"text\" name=\"kickback\"> <br>\
+	<button id=\"saveKickback\">Save </button><br>\
+</form> ";
 	}
-	//everything gets hidden on the second click
-	else{			
-			document.getElementById('T1').style.visibility = 'hidden';
-
-			
-			action= 1;
-
-	}
-}
-
-function TrackClick3(){
-		//What shows up on first click
-	if(action == 1){
-			document.getElementById('T1').style.visibility = 'visible';
-			document.getElementById('T1').innerHTML = "<h1>Step #3</h1>Step Description: <br>Deliver Date: <h3>Artifacts: </h3> <h3>Progress: </h3>";;
-
-			
-			
-			action = 2;
-	}
-	//everything gets hidden on the second click
-	else{			
-			document.getElementById('T1').style.visibility = 'hidden';
-
-			
-			action= 1;
-
-	}
-}
-
-function PackageDrop(){
-	
-		//What shows up on first click
-	if(action == 1){
-			document.getElementById('dropdown1').style.visibility = 'visible';
-
-			action = 2;
-	}
-	//everything gets hidden on the second click
-	else{			
-			document.getElementById('dropdown1').style.visibility = 'hidden';
-
-			
-			action= 1;
-
-	}
-	
-}
+  };
+  xhttp.open("POST", "http://localhost/rmf_tracker/php_Files/userroles.php", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("uid="+localStorage.getItem("UID"));
 
 
 	
