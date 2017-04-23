@@ -1,0 +1,8 @@
+<form action = "" method = "POST">
+	Step approved? <br>
+	<input type="radio" name="approved" value="yes"> Yes<br>
+	<input type="radio" name="approved" value="no"> No<br>
+	Kickback Reason: <br>
+	<input type="text" name="kickback"> <br>
+	<button id="saveKickback">Save </button><br>
+</form>
