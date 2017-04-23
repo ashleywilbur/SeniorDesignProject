@@ -8,7 +8,7 @@ ELLIOTT
 
 
 Login
-Delete - Home button
+Delete - Home button (A: done)
 
 Dashboards
 Add names and codes (D: done)
