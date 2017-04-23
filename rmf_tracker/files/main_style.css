@@ -897,7 +897,7 @@ div.TrackerSteps{
 	width: 100%;
 }
 
-.reportZones {
+.reportZones label{
 	float:left;
 	text-align:left:
 }
