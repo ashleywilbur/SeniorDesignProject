@@ -247,7 +247,6 @@ function createArtifactRegion () {
 		//Add the new artifact(s)
 		var newdiv = document.createElement('div'); 
 		var artName = ("artifact" + i);
-		window.alert(artName);
 		newdiv.innerHTML = "Artifact " + (i + 1) + " <br><input class = 'nameImp' type='text' name='" + artName + "' maxlength='30'>" + "Step: " + "<input class='numImp' type='number' name='artifactStep[]' min='1' max='5' >";	
 		document.getElementById("artifactList").appendChild(newdiv);  
 	}
