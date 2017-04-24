@@ -123,7 +123,7 @@ var STYLE_PREFIX = 'wsite';
 </span></div>
           <div class="nav desktop-nav"><ul class="wsite-menu-default">
 		<li id="pg838545246619449792" class="wsite-menu-item-wrap">
-			<a id="code"
+			<a
 				class="wsite-menu-item"
 				>
 				CODE: ###
@@ -146,14 +146,8 @@ var STYLE_PREFIX = 'wsite';
 		</li>
 
 		<li id="active" class="wsite-menu-item-wrap">
-			<a id="dash" href=" " class="wsite-menu-item">
+			<a href=" " class="wsite-menu-item">
 				Dashboard
-			</a>
-			
-		</li>
-		  		<li id="logout" class="wsite-menu-item-wrap">
-			<a href="login.html" class="wsite-menu-item" onclick="logout()">
-				Logout
 			</a>
 			
 		</li></ul>
@@ -182,7 +176,7 @@ var STYLE_PREFIX = 'wsite';
 
 
 <div class="createPackage">
-<form id="createPackageForm" action="packageinput.php" method = "POST">
+<form action="packageinput.php" method="POST">
 
 <h3>Name: <input type="text" name="name"  ></h3> 
 
@@ -202,46 +196,39 @@ var STYLE_PREFIX = 'wsite';
 
 <h3>eMassID: <input type="text" name="eMassID"  ></h3> 
 
-
-
-
-<h3>Classification:  <select style="color:black" name="classification">
-  <option value="Unclassified" selected>Unclassified</option>
-  <option value="Classified">Classified</option>
+<h3>Classification:  <select type="cPackDrop" style="color:black">
+  <option value="unclass" selected="selected">Unclassified</option>
+  <option value="class">Classified</option>
 </select> </h3> 
 
 
 
-<h3>CIA: <select style="color:black" name="cia">
-  <option value="High">High</option>
-  <option value="Medium" selected>Medium</option>
-  <option value="Low">Low</option>
+<h3>CIA: <select type="cPackDrop" style="color:black">
+  <option value="high">High</option>
+  <option value="medium" selected="selected">Medium</option>
+  <option value="low">Low</option>
 </select></h3> 
   
+</form>
 
 
 <!--Create artifacts section-->
+<form id="createPackageForm" action="packageinput.php" method = "POST">
 <div id = "cPackBase">
 <fieldset class="cPackField">
   <legend style = "color:white"> Add Artifact: </legend>
   Number of artifacts:
   <input class="numImp" type="number" name="artifactCount" min="1" max="99"> <br>
   Name of artifact: 
-  <input type="text" name="artifact" maxlength="30"> <br>
+  <input type="text" name="artifactName" maxlength="30"> <br>
   Beginning step:
   <input class= "numImp" type="number" name="artifactStep" min="1" max="5"> <br>
   <button type="button" onclick = "createArtifactRegion()" class="artifactGenButton">Continue</button>
  </fieldset>
 <br>
 </div>
-<<<<<<< HEAD
-   <input id="createPackageSubmit" type="submit" value="Submit">
-
-<div id = "artifactList">	
-=======
  
-<div class="artList" id = "artifactList">	
->>>>>>> origin/master
+<div id = "artifactList">	
 </div>
 
 
@@ -259,17 +246,20 @@ function createArtifactRegion () {
 	for(i = 0; i < numArts; i++) { 
 		//Add the new artifact(s)
 		var newdiv = document.createElement('div'); 
-		newdiv.innerHTML = "Artifact " + (i + 1) + " <br><input class = 'nameImp' type='text' name='artifact[]' maxlength='30'>" + "Step: " + "<input class='numImp' type='number' name='artifactStep[]' min='1' max='5' >";	
+		var artName = ("artifact" + i);
+		window.alert(artName);
+		newdiv.innerHTML = "Artifact " + (i + 1) + " <br><input class = 'nameImp' type='text' name='" + artName + "' maxlength='30'>" + "Step: " + "<input class='numImp' type='number' name='artifactStep[]' min='1' max='5' >";	
 		document.getElementById("artifactList").appendChild(newdiv);  
 	}
 }
 </script>
-  </form>   
-
+   
+  <input id="createPackageSubmit" type="submit" value="Submit">
+</form> 
 <!--users-->
 <br>
   
-
+ 
 
 </div>
 </p>			
@@ -300,7 +290,6 @@ function createArtifactRegion () {
 </div>
 
     </div>
-		<script type="text/javascript" src="files/theme/link.js"></script>
 	<script type="text/javascript" src="files/theme/plugins.js"></script>
   <script type="text/javascript" src="files/theme/custom.js"></script>
 
