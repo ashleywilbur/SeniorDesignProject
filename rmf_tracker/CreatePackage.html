@@ -123,7 +123,7 @@ var STYLE_PREFIX = 'wsite';
 </span></div>
           <div class="nav desktop-nav"><ul class="wsite-menu-default">
 		<li id="pg838545246619449792" class="wsite-menu-item-wrap">
-			<a
+			<a id="code"
 				class="wsite-menu-item"
 				>
 				CODE: ###
@@ -131,7 +131,7 @@ var STYLE_PREFIX = 'wsite';
 			
 		</li>
 		<li id="pg209166988402577634" class="wsite-menu-item-wrap">
-			<a
+			<a 
 				class="wsite-menu-item">
 				<div id="date"></div>
 
@@ -146,7 +146,7 @@ var STYLE_PREFIX = 'wsite';
 		</li>
 
 		<li id="active" class="wsite-menu-item-wrap">
-			<a href=" " class="wsite-menu-item">
+			<a id="dash" href=" " class="wsite-menu-item">
 				Dashboard
 			</a>
 			
@@ -176,7 +176,7 @@ var STYLE_PREFIX = 'wsite';
 
 
 <div class="createPackage">
-<form action="packageinput.php" method="POST">
+<form id="createPackageForm" action="packageinput.php" method = "POST">
 
 <h3>Name: <input type="text" name="name"  ></h3> 
 
@@ -196,17 +196,17 @@ var STYLE_PREFIX = 'wsite';
 
 <h3>eMassID: <input type="text" name="eMassID"  ></h3> 
 
-<h3>Classification:  <select type="cPackDrop" style="color:black">
-  <option value="unclass" selected="selected">Unclassified</option>
-  <option value="class">Classified</option>
+<h3>Classification:  <select type="cPackDrop" style="color:black" name="classification">
+  <option value="Unclassified" selected="selected">Unclassified</option>
+  <option value="Classified">Classified</option>
 </select> </h3> 
 
 
 
-<h3>CIA: <select type="cPackDrop" style="color:black">
-  <option value="high">High</option>
-  <option value="medium" selected="selected">Medium</option>
-  <option value="low">Low</option>
+<h3>CIA: <select style="color:black" name="cia">
+  <option value="High">High</option>
+  <option value="Medium" selected>Medium</option>
+  <option value="Low">Low</option>
 </select></h3> 
   
 </form>
@@ -228,7 +228,7 @@ var STYLE_PREFIX = 'wsite';
 <br>
 </div>
  
-<div id = "artifactList">	
+<div class="artList" id = "artifactList">	
 </div>
 
 
@@ -247,6 +247,7 @@ function createArtifactRegion () {
 		//Add the new artifact(s)
 		var newdiv = document.createElement('div'); 
 		var artName = ("artifact" + i);
+		window.alert(artName);
 		newdiv.innerHTML = "Artifact " + (i + 1) + " <br><input class = 'nameImp' type='text' name='" + artName + "' maxlength='30'>" + "Step: " + "<input class='numImp' type='number' name='artifactStep[]' min='1' max='5' >";	
 		document.getElementById("artifactList").appendChild(newdiv);  
 	}
@@ -289,6 +290,7 @@ function createArtifactRegion () {
 </div>
 
     </div>
+	<script type="text/javascript" src="files/theme/link.js"></script>
 	<script type="text/javascript" src="files/theme/plugins.js"></script>
   <script type="text/javascript" src="files/theme/custom.js"></script>
 
