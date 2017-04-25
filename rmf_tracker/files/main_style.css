@@ -734,6 +734,7 @@ div.TrackerSteps{
 	padding:5px;
 	vertical-align:left;
 }
+
 .createPackage input{
 	height: 25px;
 	border: solid 2px white;
@@ -749,7 +750,7 @@ div.TrackerSteps{
 	border: solid 2px white;
 	color: black;
 	border-radius: 5px;
-	width:375px;
+	width:300px;
 	display:inline-block;
 	font-size:15px;
 }
@@ -774,8 +775,8 @@ div.TrackerSteps{
 	background-color: #1C4C76; 
 	text-color: white; 
 	position:absolute; 
-	top:4%;
-	left:65%;
+	top:79%;
+	left:57%;
 }
 
 .cPackField {
@@ -784,6 +785,7 @@ div.TrackerSteps{
 	position: absolute; 
 	left: 600px; 
 	top: 10px;
+	width: 500px;
 }
 
 .cPackField .numImp{
@@ -793,11 +795,18 @@ div.TrackerSteps{
 	text-align: center;
 }
 
+.cPackField .numImp1{
+	width:260px;
+	height:25px;
+	color: black;
+	text-align: center;
+}
+
 #artifactList  {
 	position: absolute;
 	left: 600px;
 	top:170px;
-	width: 600px;
+	width: 520px;
 	text-align:left;
 }
 
@@ -811,7 +820,7 @@ div.TrackerSteps{
 	height: 25px;
 	border: solid 2px #1C4C76;
 	border-radius: 5px;
-	width:1160px;
+    width:1160px;
 	display:inline-block;
 }
 .colorKey{
@@ -922,8 +931,8 @@ div.TrackerSteps{
 .artList{
 	overflow:auto;
 	border: solid 1px white;
-	width:20px;
-	height:200px;
+	width:200px;
+	height:250px;
 }
 
 
