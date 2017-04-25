@@ -45,7 +45,7 @@ All packages
 fix filter 
 make buttons functional
 total packages from database
-add note for links to mypackages
+add note for links to mypackages (D:DONE)
 filter by alphabetical...etc.
 
 archive package
@@ -55,7 +55,7 @@ archve reviewer
 need forms 
 
 create package
-Fix css for text
+Fix css for text (D:DoNe)
 add functionalit to submit 
 MAKE PHP FILE FOR User (BE: Done)
 Number of artifacts form functionality (BC: done)
