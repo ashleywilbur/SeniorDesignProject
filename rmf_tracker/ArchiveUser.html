@@ -149,12 +149,6 @@ var STYLE_PREFIX = 'wsite';
 				Dashboard
 			</a>
 			
-		</li>
-		  		<li id="logout" class="wsite-menu-item-wrap">
-			<a href="login.html" class="wsite-menu-item" onclick="logout()">
-				Logout
-			</a>
-			
 		</li></ul>
 </div>
 
@@ -211,6 +205,8 @@ var STYLE_PREFIX = 'wsite';
 <!--Search functionality-
 <input type="text" id="searchTable" onkeyup="searchTable()" placeholder="Enter a search term">
 -->
+<form id="archiveUser" action="#" method = "POST">
+
 <div class ="ArchTable">
 
 <table class="archiveTable">
@@ -254,6 +250,8 @@ var STYLE_PREFIX = 'wsite';
 
 </div>
   
+
+  
  <script>
 function searchTable() {
   // Declare variables
@@ -277,7 +275,7 @@ function searchTable() {
 }
 </script>
 
-
+ </form>
   
 </div>
 </div>	
