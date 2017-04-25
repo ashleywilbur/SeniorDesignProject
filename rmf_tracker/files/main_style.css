@@ -754,6 +754,26 @@ div.TrackerSteps{
 	display:inline-block;
 	font-size:15px;
 }
+
+.createPackage select.reviewer{
+	height: 25px;
+	border: solid 2px white;
+	color: black;
+	border-radius: 5px;
+	width:250px;
+	display:inline-block;
+	font-size:15px;
+}
+
+.createPackage select.reviewerrole{
+	height: 25px;
+	border: solid 2px white;
+	color: black;
+	border-radius: 5px;
+	width:180px;
+	display:inline-block;
+	font-size:15px;
+}
 .createPackage h3 {
 	margin:10px;
 	text-align:right;
