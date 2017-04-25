@@ -76,6 +76,7 @@ add check boxes? and submit button?
 mypackages
 fix buttons on tracker (D: done)
 add color key (D: done)
+Colors need o be worked better. All yellow for kickbacks.
 
 reports
 purge (A: done)
