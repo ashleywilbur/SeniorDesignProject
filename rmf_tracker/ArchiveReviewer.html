@@ -149,12 +149,6 @@ var STYLE_PREFIX = 'wsite';
 				Dashboard
 			</a>
 			
-		</li>
-		  		<li id="logout" class="wsite-menu-item-wrap">
-			<a href="login.html" class="wsite-menu-item" onclick="logout()">
-				Logout
-			</a>
-			
 		</li></ul>
 </div>
 
@@ -211,6 +205,9 @@ var STYLE_PREFIX = 'wsite';
 <!--Search functionality
 <input type="text" id="searchTable" onkeyup="searchTable()" placeholder="Enter a search term">
 -->
+
+<form id="archiveReviewer" action="#" method = "POST">
+
 <div class ="ArchTable">
 
 <table class="archiveTable">
@@ -233,7 +230,7 @@ var STYLE_PREFIX = 'wsite';
     <td>Smith</td>
     <td>Johnson</td>
 	<td>smith.johnson@comcast.net</td>
-	<td> <input type="checkbox" name="archiveReviewer2" value="archived"> Archive Reviewerr<br></td>
+	<td> <input type="checkbox" name="archiveReviewer2" value="archived"> Archive Reviewer<br></td>
 	<td>6/1/2016 </td>
   </tr>
     <tr>
@@ -277,7 +274,7 @@ function searchTable() {
 }
 </script>
 
-
+</form>
   
 </div>
 </div>	
