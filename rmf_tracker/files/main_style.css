@@ -1388,3 +1388,40 @@ input{
     margin-top:5px; 
     margin-left:5px; 
 }
+
+.createST{
+	background-color:#4682B4;
+	width: 720px;
+	position:absolute;
+	top:70%;
+	left:5%;
+	height:525px;
+	border-radius: 25px;
+	border: solid 2px white;
+	padding:5px;
+	vertical-align:left;
+}
+
+.createST input{
+	height: 25px;
+	border: solid 2px white;
+	color: black;
+	border-radius: 5px;
+	width:375px;
+	display:inline-block;
+	font-size:15px;
+}
+
+.createST select{
+	height: 25px;
+	border: solid 2px white;
+	color: black;
+	border-radius: 5px;
+	width:300px;
+	display:inline-block;
+	font-size:15px;
+}
+.createST h3 {
+	margin:10px;
+	text-align:right;
+}
