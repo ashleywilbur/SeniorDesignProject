@@ -85,16 +85,16 @@
 		echo "It is not posting to the name artifact0";
 	}
 	
-	while(isset($_POST['artifact'.$i.])) {
-		$artifact = $_POST['artifact'.$i.];
-		if(isset($_POST['artifactStep'.$i.];)) {
-			$artifactStep = $_POST['artifactStep'.$i.];
+	while(isset($_POST['artifact'.$i])) {
+		$artifact = $_POST['artifact'.$i];
+		if(isset($_POST['artifactStep'.$i])) {
+			$artifactStep = $_POST['artifactStep'.$i];
 		}
 		else {
 			$artifactStep = '0';
 		}
-		if(isset($_POST['artifactReview'.$i.];)) {
-			$artifactReview = $_POST['artifactReview'.$i.];
+		if(isset($_POST['artifactReview'.$i])) {
+			$artifactReview = $_POST['artifactReview'.$i];
 		}
 		else {
 			$artifactReview = '0';
@@ -108,7 +108,7 @@
 		$date = date ("Y-m-d");
 		
 		$sql = "INSERT INTO artifacts (AID, SID, RID, Name, SubmitDate) 
-			VALUES (" . $aid . ",'" . $artifactStep . "','" . $artifactReview . "', '" . $artifact . "','" . $date . "')";
+			VALUES (" . $aid . "," . $artifactStep . "," . $artifactReview . ", '" . $artifact . "'," . $date . ")";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "New record created successfully";
@@ -117,13 +117,14 @@
 			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
 		
-		$sql = "SELECT MAX(AID) FROM packageartifacts";
+		$sql = "SELECT MAX(AID) as max FROM packageartifacts";
 		$result = $conn->query($sql);
-		$paid = $result->fetch_assoc();
+		$row = $result->fetch_assoc();
+		$paid = $row['max'];
 		$paid++;
 		
-		$sql = "INSERT INTO artifacts (PAID, PID, AID, StartDate, Progress) 
-			VALUES ('%" . $paid . "%','%" . $pid . "%','%" . $aid . "%','%" . $date . "%', 0)";
+		$sql = "INSERT INTO packageartifacts (PAID, PID, AID, StartDate, Progress) 
+			VALUES (" . $paid . "," . $pid . "," . $aid . ",'" . $date . "', 0)";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "New record created successfully";
