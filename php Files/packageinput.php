@@ -78,6 +78,13 @@
 	
 	$i=0;
 	
+	if(isset($_POST['artifact0'])){
+		echo $_POST['artifact0'];
+	}
+	else{
+		echo "It is not posting to the name artifact0";
+	}
+	
 	while(isset($_POST['artifact'.$i.])) {
 		$artifact = $_POST['artifact'.$i.];
 		if(isset($_POST['artifactStep'.$i.];)) {
