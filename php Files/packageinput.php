@@ -108,7 +108,7 @@
 		$date = date ("Y-m-d");
 		
 		$sql = "INSERT INTO artifacts (AID, SID, Name, SubmitDate) 
-			VALUES (" . $aid . ",(SELECT SID FROM steps WHERE step.SID LIKE '%" . $artifactStep . "%'),'" . $artifact . "'," . $date . ")";
+			VALUES (" . $aid . ",(SELECT SID FROM steps WHERE steps.SID LIKE '%" . $artifactStep . "%'),'" . $artifact . "'," . $date . ")";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "New artifact record created successfully ";
