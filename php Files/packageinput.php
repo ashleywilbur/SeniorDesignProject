@@ -91,7 +91,7 @@
 			$artifactStep = $_POST['artifactStep'.$i];
 		}
 		else {
-			$artifactStep = '0';
+			$artifactStep = '8';
 		}
 		if(isset($_POST['artifactReview'.$i])) {
 			$rwid = $_POST['artifactReview'.$i];
@@ -108,7 +108,7 @@
 		$date = date ("Y-m-d");
 		
 		$sql = "INSERT INTO artifacts (AID, SID, Name, SubmitDate) 
-			VALUES (" . $aid . "," . $artifactStep . ",'" . $artifact . "'," . $date . ")";
+			VALUES (" . $aid . ",(SELECT SID FROM steps WHERE step.SID LIKE '%" . $artifactStep . "%'),'" . $artifact . "'," . $date . ")";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "New artifact record created successfully ";
