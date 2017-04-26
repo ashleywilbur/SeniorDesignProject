@@ -69,7 +69,10 @@
 	echo ",";
 	echo "\"Code\":\"";
 	echo $row["Code"] . "\"";
-
+	echo ",";
+	echo "\"ArchiveDate\":\"";
+	echo $row["ArchiveDate"] . "\"";
+	
 	echo "}";
 	
 	
