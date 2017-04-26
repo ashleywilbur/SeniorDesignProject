@@ -21,7 +21,7 @@ function linked(){
 
   };
 
-  xhttp.open("POST", "http://localhost/userdata.php", true);
+  xhttp.open("POST", "http://localhost/rmf_tracker/php Files/userdata.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("uid="+localStorage.getItem("UID"));
 	
@@ -52,7 +52,7 @@ function userTable(){
 
   };
 
-  xhttp.open("POST", "http://localhost/userdata.php", true);
+  xhttp.open("POST", "http://localhost/rmf_tracker/php Files/userdata.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("uid="+localStorage.getItem("UID"));
 	

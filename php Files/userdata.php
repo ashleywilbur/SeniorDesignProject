@@ -43,10 +43,10 @@
 	
 	
 	//output of Usr Data
-	echo $row["FirstName"]." ";
+	/*echo $row["FirstName"]." ";
 	echo $row["LastName"];
 	echo "+";
-	echo $row["Code"];
+	echo $row["Code"];*/
 	
 	echo "{";	
 	echo "\"First\":\"";

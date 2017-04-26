@@ -38,15 +38,16 @@ function GetInfo(pNum){
 		//The structure is very sensitive, editing has to be done carefully because of the quotes
 		var tableStart = document.getElementById('allP').innerHTML;
 		var tableD = "<tr>\
-		<td><a href=\"http://localhost/MyPackages.html#"+Information.PID+"\">"+Information.Name+"</a></td>\
-		<td>"+Information.eMassID+"</td>\
-		<td>"+Information.Customer+"</td>\
-		<td>"+Information.PackageLead+"</td>\
-		<td>"+Information.PackageValidator+"</td>\
-		<td>"+Information.TrackerStep+"</td>\
-		<td>"+Information.AccredType+"</td>\
-		<td>"+Information.CertificationAcquiredDate+"</td>\
-		<td><a href=\"http://localhost/rmf_tracker/generate-report.html#"+Information.PID+"\">"+Information.CertificationAcquiredDate+"</a></td></tr>"
+	<td><a href=\"http://localhost/rmf_tracker/myPackages.html#"+Information.PID+"\">Click Here</a></td>\
+	<td><a href=\"http://localhost/rmf_tracker/generate-report.html#"+Information.PID+"\">Click Here</a></td>\
+	<td>"+Information.Name+"</td>\
+	<td>"+Information.eMassID+"</td>\
+	<td>"+Information.Customer+"</td>\
+	<td>"+Information.PackageLead+"</td>\
+	<td>"+Information.PackageValidator+"</td>\
+	<td>"+Information.TrackerStep+"</td>\
+	<td>"+Information.AccredType+"</td>\
+	<td>"+Information.CertificationAcquiredDate+"</td></tr>"
 
 		document.getElementById('allP').innerHTML = tableStart + tableD;
 		}

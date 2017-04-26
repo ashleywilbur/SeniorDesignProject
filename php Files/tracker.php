@@ -91,9 +91,9 @@
 		echo "\"PID\":";
 		//output of PID
 		echo $row["PID"];
-		echo ",";
+		//echo ",";
 	}
-	
+	/*
 	//Searches for all packagestandardtimeline/standardtimeline values
 	
 	$sql = "SELECT * FROM packagestandardtimeline pst, standardtimeline st WHERE pst.PID LIKE '%" . $package . "%' AND pst.STID LIKE st.STID";
@@ -201,7 +201,7 @@
 			echo "\"Progress\":";
 			echo $row["Progress"];
 		}
-	} 
+	} */
 	echo "}";
 	
 	
