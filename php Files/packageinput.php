@@ -97,7 +97,7 @@
 			$rwid = $_POST['artifactReview'.$i];
 		}
 		else {
-			$rwid = '0';
+			$rwid = '1';
 		}
 		
 		$sql = "SELECT MAX(AID) as max FROM artifacts";
