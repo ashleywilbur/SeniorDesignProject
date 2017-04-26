@@ -78,9 +78,20 @@
 	
 	$i=0;
 	
-	while(isset($_POST['artifact['.$i.']'])) {
-		$artifact = $_POST['artifact['.$i.']'];
-		$artifactStep = $_POST['artifactStep['.$i.']'];
+	while(isset($_POST['artifact'.$i.])) {
+		$artifact = $_POST['artifact'.$i.];
+		if(isset($_POST['artifactStep'.$i.];)) {
+			$artifactStep = $_POST['artifactStep'.$i.];
+		}
+		else {
+			$artifactStep = '0';
+		}
+		if(isset($_POST['artifactReview'.$i.];)) {
+			$artifactReview = $_POST['artifactReview'.$i.];
+		}
+		else {
+			$artifactReview = '0';
+		}
 		
 		$sql = "SELECT MAX(AID) as max FROM artifacts";
 		$result = $conn->query($sql);
@@ -89,8 +100,8 @@
 		$aid++;
 		$date = date ("Y-m-d");
 		
-		$sql = "INSERT INTO artifacts (AID, SID, Name, SubmitDate) 
-			VALUES (" . $aid . ",'" . $artifactStep . "','" . $artifact . "','" . $date . "'";
+		$sql = "INSERT INTO artifacts (AID, SID, RID, Name, SubmitDate) 
+			VALUES (" . $aid . ",'" . $artifactStep . "','" . $artifactReview . "', '" . $artifact . "','" . $date . "')";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "New record created successfully";
@@ -105,7 +116,7 @@
 		$paid++;
 		
 		$sql = "INSERT INTO artifacts (PAID, PID, AID, StartDate, Progress) 
-			VALUES ('%" . $paid . "%','%" . $pid . "%','%" . $aid . "%','%" . $date . "%', 0";
+			VALUES ('%" . $paid . "%','%" . $pid . "%','%" . $aid . "%','%" . $date . "%', 0)";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "New record created successfully";
