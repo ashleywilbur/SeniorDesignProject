@@ -43,9 +43,32 @@
 	
 	
 	//output of Usr Data
-	echo $row["FirstName"];
+	echo $row["FirstName"]." ";
 	echo $row["LastName"];
+	echo "+";
 	echo $row["Code"];
+	
+	echo "{";	
+	echo "\"First\":\"";
+	echo $row["FirstName"] . "\"";
+	echo ",";
+	echo "\"Last\":\"";
+	echo $row["LastName"] . "\"";
+	echo ",";
+	echo "\"Email\":\"";
+	echo $row["Email"] . "\"";
+	echo ",";
+	echo "\"Phone\":\"";
+	echo $row["Phone"] . "\"";
+	echo ",";
+	echo "\"Location\":\"";
+	echo $row["Location"] . "\"";
+	echo ",";
+	echo "\"Org\":\"";
+	echo $row["Org"] . "\"";
+	
+
+	echo "}";
 	
 	
 	//reference code - not used
