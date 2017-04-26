@@ -199,7 +199,7 @@ var STYLE_PREFIX = 'wsite';
 
 
 
-<h3>Classification:  <select type="cPackDrop" style="color:black" name="classification">
+<h3>Classification:  <select style="color:black" name="classification">
   <option value="Unclassified" selected="selected">Unclassified</option>
   <option value="Classified">Classified</option>
   <option value="Secret">Secret</option>
@@ -214,20 +214,16 @@ var STYLE_PREFIX = 'wsite';
 </select></h3> 
 
 <h3>Reviewer: <select class = "reviewer" style="color:black" name="reviewer">
-  <option value="" selected>Select a reviewer</option>		<!--needs to take from database-->
+  <option value="" selected>Select a reviewer</option>	
     <option value="">N/A</option>
 </select></h3>
   
-</form>
-
-
 <!--Create artifacts section-->
-<form id="createPackageForm" action="packageinput.php" method = "POST">
 <div id = "cPackBase">
 <fieldset class="cPackField">
   <legend style = "color:white"> Add Artifact: </legend>
   Name of artifact: 
-  <input class = "numImp1" type="text" name="artifactName" maxlength="30">
+  <input class = "numImp1" type="text" name="artifact" maxlength="30">
   Step: 
   <input class= "numImp" type="number" name="artifactStep" min="1" max="5"> <br> <br>
   Additional number of artifacts:
@@ -246,7 +242,7 @@ function createArtifactRegion () {
 	var incoming = document.getElementsByName("artifactCount")[0].value;
 	var numArts = parseInt(incoming,10);
 	// Name of the artifact
-	var artName = document.getElementsByName("artifactName")[0].value;
+	var artName = document.getElementsByName("artifact")[0].value;
 	var container = document.getElementById("artifactList");
 	while (container.hasChildNodes()) { container.removeChild(container.lastChild); }
 	//Loop for generation
@@ -257,12 +253,13 @@ function createArtifactRegion () {
 		//Dynamically creates artifact fields, each named artifact0, artifact1, etc.
 		newdiv.innerHTML = "Artifact " + (i + 1) + " <br><input class = 'nameImp' type='text' name='" + artName + "' maxlength='30'>" + " Step: " + "<input class='numImp' type='number' name='artifactStep[]' min='1' max='5' >";	
 		document.getElementById("artifactList").appendChild(newdiv);  
-	}
+	} 
 }
 </script>
    
    <br>
   <input id="createPackageSubmit" type="submit" value="Submit">
+
 </form> 
 <!--users-->
 <br>
