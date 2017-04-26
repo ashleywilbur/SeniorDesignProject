@@ -70,7 +70,7 @@
 			VALUES (" . $pid . ",'" . $name . "','" . $acronym . "','" . $description . "','" . $eMassID . "','" . $classification . "','" . $CIA . "')";
 
 	if ($conn->query($sql) === TRUE) {
-		echo "New record created successfully";
+		echo "New record created successfully ";
 	} 
 	else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
@@ -94,10 +94,10 @@
 			$artifactStep = '0';
 		}
 		if(isset($_POST['artifactReview'.$i])) {
-			$artifactReview = $_POST['artifactReview'.$i];
+			$rwid = $_POST['artifactReview'.$i];
 		}
 		else {
-			$artifactReview = '0';
+			$rwid = '0';
 		}
 		
 		$sql = "SELECT MAX(AID) as max FROM artifacts";
@@ -107,11 +107,11 @@
 		$aid++;
 		$date = date ("Y-m-d");
 		
-		$sql = "INSERT INTO artifacts (AID, SID, RID, Name, SubmitDate) 
-			VALUES (" . $aid . "," . $artifactStep . "," . $artifactReview . ", '" . $artifact . "'," . $date . ")";
+		$sql = "INSERT INTO artifacts (AID, SID, Name, SubmitDate) 
+			VALUES (" . $aid . "," . $artifactStep . "," . $artifactReview . ",'" . $artifact . "'," . $date . ")";
 
 		if ($conn->query($sql) === TRUE) {
-			echo "New record created successfully";
+			echo "New artifact record created successfully ";
 		} 
 		else {
 			echo "Error: " . $sql . "<br>" . $conn->error;
@@ -123,11 +123,11 @@
 		$paid = $row['max'];
 		$paid++;
 		
-		$sql = "INSERT INTO packageartifacts (PAID, PID, AID, StartDate, Progress) 
-			VALUES (" . $paid . "," . $pid . "," . $aid . ",'" . $date . "', 0)";
+		$sql = "INSERT INTO packageartifacts (PAID, PID, RWID, AID, StartDate, Progress) 
+			VALUES (" . $paid . "," . $pid . "," . $rwid . "," . $aid . ",'" . $date . "', 0)";
 
 		if ($conn->query($sql) === TRUE) {
-			echo "New record created successfully";
+			echo "New packageartifact record created successfully ";
 		} 
 		else {
 			echo "Error: " . $sql . "<br>" . $conn->error;
