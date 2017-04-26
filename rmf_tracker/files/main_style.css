@@ -755,25 +755,16 @@ div.TrackerSteps{
 	font-size:15px;
 }
 
-.createPackage select.reviewer{
+.createPackage select.reviewer1{
 	height: 25px;
 	border: solid 2px white;
 	color: black;
 	border-radius: 5px;
-	width:250px;
+	width:300px;
 	display:inline-block;
 	font-size:15px;
 }
 
-.createPackage select.reviewerrole{
-	height: 25px;
-	border: solid 2px white;
-	color: black;
-	border-radius: 5px;
-	width:180px;
-	display:inline-block;
-	font-size:15px;
-}
 .createPackage h3 {
 	margin:10px;
 	text-align:right;
@@ -929,10 +920,62 @@ div.TrackerSteps{
 }
 
 
+#searchTable{
+    margin-top:5px; 
+    margin-left:5px; 
+}
+
+.createST{
+	background-color:#4682B4;
+	width: 720px;
+	position:absolute;
+	top:70%;
+	left:5%;
+	height:525px;
+	border-radius: 25px;
+	border: solid 2px white;
+	padding:5px;
+	vertical-align:left;
+}
+
+.createST input{
+	height: 25px;
+	border: solid 2px white;
+	color: black;
+	border-radius: 5px;
+	width:375px;
+	display:inline-block;
+	font-size:15px;
+}
+.createST input.CAD{
+	height: 25px;
+	border: solid 2px white;
+	color: black;
+	border-radius: 5px;
+	width:300px;
+	display:inline-block;
+	font-size:15px;
+}
+
+.createST select{
+	height: 25px;
+	border: solid 2px white;
+	color: black;
+	border-radius: 5px;
+	width:300px;
+	display:inline-block;
+	font-size:15px;
+}
+.createST h3 {
+	margin:10px;
+	text-align:right;
+}
+
 .gi-2x{font-size: 2em;}
 .gi-3x{font-size: 3em;}
 .gi-4x{font-size: 4em;}
 .gi-5x{font-size: 5em;}
+
 
 
 @media print {
@@ -1384,44 +1427,4 @@ input{
 }
 
 
-#searchTable{
-    margin-top:5px; 
-    margin-left:5px; 
-}
 
-.createST{
-	background-color:#4682B4;
-	width: 720px;
-	position:absolute;
-	top:70%;
-	left:5%;
-	height:525px;
-	border-radius: 25px;
-	border: solid 2px white;
-	padding:5px;
-	vertical-align:left;
-}
-
-.createST input{
-	height: 25px;
-	border: solid 2px white;
-	color: black;
-	border-radius: 5px;
-	width:375px;
-	display:inline-block;
-	font-size:15px;
-}
-
-.createST select{
-	height: 25px;
-	border: solid 2px white;
-	color: black;
-	border-radius: 5px;
-	width:300px;
-	display:inline-block;
-	font-size:15px;
-}
-.createST h3 {
-	margin:10px;
-	text-align:right;
-}
