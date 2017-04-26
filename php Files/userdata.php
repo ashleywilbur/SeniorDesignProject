@@ -66,7 +66,9 @@
 	echo ",";
 	echo "\"Org\":\"";
 	echo $row["Org"] . "\"";
-	
+	echo ",";
+	echo "\"Code\":\"";
+	echo $row["Code"] . "\"";
 
 	echo "}";
 	
