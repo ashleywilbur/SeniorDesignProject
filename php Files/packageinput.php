@@ -124,7 +124,7 @@
 		$paid++;
 		
 		$sql = "INSERT INTO packageartifacts (PAID, PID, RWID, AID, StartDate, Progress) 
-			VALUES (" . $paid . "," . $pid . "," . $rwid . "," . $aid . "," . $date . ", 0)";
+			VALUES (" . $paid . "," . $pid . ",(SELECT SID FROM reviewer WHERE reviewer.RWID LIKE '%" . $rwid . "%')," . $aid . "," . $date . ", 0)";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "New packageartifact record created successfully ";
