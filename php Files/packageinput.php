@@ -108,7 +108,7 @@
 		$date = date ("Y-m-d");
 		
 		$sql = "INSERT INTO artifacts (AID, SID, Name, SubmitDate) 
-			VALUES (" . $aid . "," . $artifactStep . "," . $artifactReview . ",'" . $artifact . "'," . $date . ")";
+			VALUES (" . $aid . "," . $artifactStep . ",'" . $artifact . "'," . $date . ")";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "New artifact record created successfully ";
@@ -124,7 +124,7 @@
 		$paid++;
 		
 		$sql = "INSERT INTO packageartifacts (PAID, PID, RWID, AID, StartDate, Progress) 
-			VALUES (" . $paid . "," . $pid . "," . $rwid . "," . $aid . ",'" . $date . "', 0)";
+			VALUES (" . $paid . "," . $pid . "," . $rwid . "," . $aid . "," . $date . ", 0)";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "New packageartifact record created successfully ";
