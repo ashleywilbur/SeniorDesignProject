@@ -1,11 +1,10 @@
 
 
-MakeTable();
 
+userPackages();
 function MakeTable(){
-	var allPackages = new Array();
-	for(var i =1; i <7; i++){
-		GetInfo(i);
+	for(var i =1; i <=parseInt(packageAmount[0]); i++){
+	GetInfo(parseInt(packageAmount[i]));
 	}
 	console.log(window.location.href );
 }
@@ -33,7 +32,7 @@ function GetInfo(pNum){
 		Information = response;
 		//the parse makes the data usuable
 		Information =JSON.parse(Information);
-					
+				console.log("getinfo");	
 		//makes the table by grabbing the previous HTML and adding more info to it
 		//The structure is very sensitive, editing has to be done carefully because of the quotes
 		var tableStart = document.getElementById('allP').innerHTML;
@@ -53,7 +52,7 @@ function GetInfo(pNum){
 		}
 	};
 		
-  xhttp.open("POST", "http://localhost/rmf_tracker/phpFiles/tracker.php", true);
+  xhttp.open("POST", "http://localhost/rmf_tracker/php Files/tracker.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("package=" + pNum);
 	
@@ -94,7 +93,7 @@ function sortActive(active) {
 
 	document.getElementById('allP').innerHTML = tableStart + tableD;
 	}
-	
+	}	
 	//Clark's attempt, old version
 /*
   // Declare variables
@@ -131,7 +130,27 @@ function sortActive(active) {
       } else {
         tr[i].style.display = "none";
     } */
- } 
+} }
+
+function userPackages(){
+
+	var xhttp = new XMLHttpRequest();	
+	var uid = xhttp.onreadystatechange = function() {
+    response =this.responseText;
+	console.log(response);
+	if(this.readyState == 3){
+		packageAmount = response.split("+");
+		console.log(packageAmount);
+		MakeTable(packageAmount);
+	}
+
+  };
+
+  xhttp.open("POST", "http://localhost/rmf_tracker/php Files/userpackages.php", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("uid="+localStorage.getItem("UID"));
+	
+}
  
  
  
