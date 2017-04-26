@@ -68,7 +68,7 @@ function checkCreds(){
 
 		}
 	}	
-  xhttp.open("POST", "http://localhost/user.php", true);
+  xhttp.open("POST", "http://localhost/rmf_tracker/php Files/user.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("email="+email);
 	
