@@ -72,6 +72,9 @@
 	echo ",";
 	echo "\"ArchiveDate\":\"";
 	echo $row["ArchiveDate"] . "\"";
+	echo ",";
+	echo "\"Archive\":\"";
+	echo $row["Archive"] . "\"";
 	
 	echo "}";
 	
