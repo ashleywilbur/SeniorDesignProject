@@ -196,7 +196,10 @@
 			echo "\"SID\":";
 			echo $row["SID"];
 			echo ",";
-			echo "\"SubmitDate\":";
+			echo "\"RWID\":";
+			echo $row["RWID"];
+			echo ",";
+			echo "\"SubmitDate\":"; ////the deliver date!!!!!!
 			echo $row["SubmitDate"];
 			echo ",";
 			echo "\"Progress\":";

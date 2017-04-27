@@ -18,13 +18,13 @@
 	//echo "Connected successfully";
 
 	//paid, sid, reasons
-	if(isset($_POST['uid'])){
-		$uid = $_POST['uid'];
+	if(isset($_POST['pid'])){
+		$pid = $_POST['pid'];
 	}
 	
 	$date = date ("Y-m-d");
 	
-	$sql = "UPDATE users SET (Archive = 1, ArchiveDate = '".$date."') WHERE users.uid LIKE '%" . $uid . "%'";
+	$sql = "UPDATE package SET (Archive = 1, ArchiveDate = '".$date."') WHERE package.uid LIKE '%" . $pid . "%'";
 
 	if ($conn->query($sql) === TRUE) {
 		echo "Record updated successfully";
