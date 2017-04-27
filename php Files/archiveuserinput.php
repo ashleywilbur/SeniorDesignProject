@@ -24,7 +24,7 @@
 	
 	$date = date ("Y-m-d");
 	
-	$sql = "UPDATE users SET (Archive = 1, ArchiveDate = '".$date."') WHERE users.uid LIKE '%" . $uid . "%'";
+	$sql = "UPDATE users SET (Archive = 1, ArchiveDate = ".$date.") WHERE users.uid LIKE " . $uid . "";
 
 	if ($conn->query($sql) === TRUE) {
 		echo "Record updated successfully";
