@@ -197,9 +197,6 @@ var STYLE_PREFIX = 'wsite';
 <h3>eMassID: <input type="text" name="eMassID"  ></h3> 
 
 
-<h3>Start Date: <input type = "date" name="startDate" placeholder="YYYY-MM-DD"></h3>
-
-
 
 
 <h3>Classification:  <select style="color:black" name="classification">
@@ -225,12 +222,12 @@ var STYLE_PREFIX = 'wsite';
 <div id = "cPackBase">
 <fieldset class="cPackField">
   <legend style = "color:white"> Add Artifact: </legend>
-  Name of artifact: 
+  <p hidden>Name of artifact: 
   <input class = "numImp1" type="text" name="artifact" maxlength="30">
   Step: 
-  <input class= "numImp" type="number" name="artifactStep" min="1" max="5"> <br> <br>
-  Additional number of artifacts:
-  <input class="numImp" type="number" name="artifactCount" min="1" max="99"> <br>
+  <input class= "numImp" type="number" name="artifactStep" min="1" max="5"> <br> <br></p>
+  Number of artifacts to add:
+  &nbsp;<input class="numImp" type="number" name="artifactCount" min="1" max="99"> <br>
   <button type="button" onclick = "createArtifactRegion()" class="artifactGenButton">Add</button>
  </fieldset>
 </div>
