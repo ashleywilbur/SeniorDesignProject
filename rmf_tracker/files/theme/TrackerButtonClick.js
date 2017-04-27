@@ -32,7 +32,7 @@ function AA(){
       response =this.responseText;  
 
 	if(this.readyState == 3){
-	  if(response == 1)
+	  //if(response == 1){
 		document.getElementById("kickBack").innerHTML =  "<label> Delivered </label>\
 <button id=\"del\" class = \"artButton\"></button><br>\
 <form id=\"kickForm\" action = \"\" method = \"POST\">\
@@ -43,6 +43,7 @@ function AA(){
 	<input rows=\"1\" cols=\"50\" wrap=\"physical\" type=\"text\" name=\"kickback\"> <br>\
 	<button id=\"saveKickback\">Save </button><br>\
 </form> ";
+	//}
 	}
   };
   xhttp.open("POST", "http://localhost/rmf_tracker/php_Files/userroles.php", true);
