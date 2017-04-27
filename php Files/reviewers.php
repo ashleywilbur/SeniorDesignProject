@@ -31,15 +31,18 @@
 	}
 	
 	//$row = mysql_fetch_row($result);
-	$row = $result->fetch_assoc();
+	//$row = $result->fetch_assoc();
 	
 	
 	//output of reviewer Data
 	if ($result->num_rows > 0) {
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
+			echo "+";
 			echo $row["RWID"];
-			echo $row["FirstName"];
+					echo "+";
+			echo $row["FirstName"]. " ";
+					//echo "+";
 			echo $row["LastName"];
 		}
 	} else {
