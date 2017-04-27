@@ -69,6 +69,13 @@
 		$CIA = "N/A";
 	}
 	
+	if(isset($_POST['rwid'.$i])) {
+		$rwid = $_POST['rwid'.$i];
+	}
+	else {
+		$rwid = '1';
+	}
+	
 	$sql = "SELECT MAX(PID) as max FROM package";
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
@@ -101,12 +108,6 @@
 		}
 		else {
 			$artifactStep = '8';
-		}
-		if(isset($_POST['artifactReview'.$i])) {
-			$rwid = $_POST['artifactReview'.$i];
-		}
-		else {
-			$rwid = '1';
 		}
 		if(isset($_POST['submitDays'.$i])) {
 			$submitDays = $_POST['submitDays'.$i];
