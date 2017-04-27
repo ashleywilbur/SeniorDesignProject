@@ -146,14 +146,8 @@ var STYLE_PREFIX = 'wsite';
 		</li>
 
 		<li id="active" class="wsite-menu-item-wrap">
-			<a href=" " id="dash" class="wsite-menu-item">
+			<a id="dash" href=" " class="wsite-menu-item">
 				Dashboard
-			</a>
-			
-		</li>
-		  		<li id="logout" class="wsite-menu-item-wrap">
-			<a href="login.html" class="wsite-menu-item" onclick="logout()">
-				Logout
 			</a>
 			
 		</li></ul>
@@ -203,9 +197,6 @@ var STYLE_PREFIX = 'wsite';
 <h3>eMassID: <input type="text" name="eMassID"  ></h3> 
 
 
-<h3>Start Date: <input type = "date" name="startDate" placeholder="YYYY-MM-DD"></h3>
-
-
 
 
 <h3>Classification:  <select style="color:black" name="classification">
@@ -222,9 +213,12 @@ var STYLE_PREFIX = 'wsite';
   <option value="Low">Low</option>
 </select></h3> 
 
-<h3>Reviewer: <select class = "reviewer" style="color:black" name="reviewer">
+<h3>Reviewer: <select id = "archivereviewer" class = "reviewer" style="color:black" name="rwid">
+      <option value="">N/A</option>
+
+  
   <option value="" selected>Select a reviewer</option>	
-    <option value="">N/A</option>
+     
 </select></h3>
   
 <!--Create artifacts section-->
@@ -259,9 +253,8 @@ function createArtifactRegion () {
 		//Add the new artifact(s)
 		var newdiv = document.createElement('div'); 
 		var artName = ("artifact" + i);
-		var subDays = ("submitDays" + i);
 		//Dynamically creates artifact fields, each named artifact0, artifact1, etc.
-		newdiv.innerHTML = ("Artifact " + (i + 1) + " <br><input class = 'nameImp' type='text' name='" + artName + "' maxlength='30'>" + " Step: " + "<input class='numImp' type='number' name='artifactStep[]' min='1' max='5' >" + " Submit days: " + "<input class = 'numImp' type='number' name='" + subDays + "'> <br>");
+		newdiv.innerHTML = "Artifact " + (i + 1) + " <br><input class = 'nameImp' type='text' name='" + artName + "' maxlength='30'>" + " Step: " + "<input class='numImp' type='number' name='artifactStep[]' min='1' max='5' >";	
 		document.getElementById("artifactList").appendChild(newdiv);  
 	} 
 }
@@ -311,5 +304,5 @@ function createArtifactRegion () {
 
 
 		
-	<script type="text/javascript" src="files/theme/link.js"></script>  </body>
+	<script type="text/javascript" src="files/theme/reviewersfl.js"></script>  </body>
 </html>
