@@ -16,7 +16,9 @@
 		die("Connection failed: " . $conn->connect_error);
 	} 
 	//echo "Connected successfully";
-
+	
+	$date = date ("Y-m-d");
+	
 	//name, acronym, description, eMassID, classification, CIA, artifact
 	if(isset($_POST['name'])){
 		$name = $_POST['name'];
@@ -44,6 +46,13 @@
 	}
 	else {
 		$eMassID = "N/A";
+	}
+	
+	if(isset($_POST['startDate'])){
+		$startDate = $_POST['startDate'];
+	}
+	else {
+		$startDate = $date;
 	}
 	
 	if(isset($_POST['classification'])){
@@ -99,16 +108,23 @@
 		else {
 			$rwid = '1';
 		}
+		if(isset($_POST['submitDays'.$i])) {
+			$submitDays = $_POST['submitDays'.$i];
+		}
+		else {
+			$submitDays = '1';
+		}
 		
 		$sql = "SELECT MAX(AID) as max FROM artifacts";
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
 		$aid = $row['max'];
 		$aid++;
-		$date = date ("Y-m-d");
+		$addedDays = $submitDays - 14;
+		$submitDate = date('Y-m-d', strtotime($date. ' + '.$addedDays.' days'))
 		
-		$sql = "INSERT INTO artifacts (AID, SID, Name, SubmitDate) 
-			VALUES (" . $aid . ",(SELECT SID FROM steps WHERE steps.SID LIKE '%" . $artifactStep . "%'),'" . $artifact . "'," . $date . ")";
+		$sql = "INSERT INTO artifacts (AID, SID, Name, SubmitDays) 
+			VALUES (" . $aid . ",(SELECT SID FROM steps WHERE steps.SID LIKE '%" . $artifactStep . "%'),'" . $artifact . "'," . $submitDays . ")";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "New artifact record created successfully ";
@@ -123,8 +139,8 @@
 		$paid = $row['max'];
 		$paid++;
 		
-		$sql = "INSERT INTO packageartifacts (PAID, PID, RWID, AID, StartDate, Progress) 
-			VALUES (" . $paid . "," . $pid . ",(SELECT RWID FROM reviewer WHERE reviewer.RWID LIKE '%" . $rwid . "%')," . $aid . "," . $date . ", 0)";
+		$sql = "INSERT INTO packageartifacts (PAID, PID, RWID, AID, StartDate, SubmitDate, Progress) 
+			VALUES (" . $paid . "," . $pid . ",(SELECT RWID FROM reviewer WHERE reviewer.RWID LIKE '%" . $rwid . "%')," . $aid . "," . $startDate . "," . $submitDate . ", 0)";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "New packageartifact record created successfully ";
