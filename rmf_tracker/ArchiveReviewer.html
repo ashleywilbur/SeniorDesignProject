@@ -145,117 +145,119 @@ var STYLE_PREFIX = 'wsite';
 		</li>
 
 		<li id="active" class="wsite-menu-item-wrap">
-			<a href=" " id="dash" class="wsite-menu-item">
+			<a id="dash" href=" " class="wsite-menu-item">
 				Dashboard
-			</a>
-			
-		</li>
-		  		<li id="logout" class="wsite-menu-item-wrap">
-			<a href="login.html" class="wsite-menu-item" onclick="logout()">
-				Logout
 			</a>
 			
 		</li></ul>
 </div>
-
-
+ 
 
           <label class="hamburger"><span></span></label>
         </div>
       </div>
     </div>
-	
-	
-	
+
     <div class="banner-wrap">
       <div class="wsite-elements wsite-not-footer wsite-header-elements">
 	<div class="wsite-section-wrap">
-
-	<div  class="wsite-section wsite-header-section wsite-section-bg-color" style="background-color: #1c4c76;background-image: none;is_customized: 1;" >
-<h2 class="wsite-content-title"><font size="6">Archive Reviewer</font></h2>		
-    <div class="wsite-spacer" style="height:250px;"></div>
-
+	<div  class="wsite-section wsite-header-section wsite-section-bg-color" style="height: 200px;background-color: #1c4c76;background-image: none;is_customized: 1;" >
 		<div class="wsite-section-content">
 			
           <div class="container">
             <div class="banner">
 				<div class="wsite-section-elements">
-					<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-	<table class="wsite-multicol-table">
-		<tbody class="wsite-multicol-tbody">
-			<tr class="wsite-multicol-tr">
+<div class="wsite-spacer" style="height:50px;"></div>
+					<h2 class="wsite-content-title" style="text-align:left;"><font size="7">Archive Reviewers</font><br /></h2>
 
-<!--Make the table so it can be searched/sorted -->
-  </div>
-</div>
-</div>
 
- <br />
-					
-				</td>			</tr>
-		</tbody>
-	</table>
-</div></div></div>
-				</div>
-			</div>
-          </div>
-      
-		</div>
-		<div class=""></div>
-	</div>
-</div>
-
-</div>
-
-    </div>
-<!--Search functionality
+<!--Search functionality-
 <input type="text" id="searchTable" onkeyup="searchTable()" placeholder="Enter a search term">
 -->
 
-<form id="archiveReviewer" action="#" method = "POST">
-
-<div class ="ArchTable">
-
-<table class="archiveTable">
+<form id="archiveUser" name = "uid" action="archiveuserinput.php" method = "POST">
+  <font class="PackageInfo">
+<p>
+</font></p>			
+<table onload="userTable()"  class="allP">
+<tbody id="allR">
  <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-	<th>Email</th>
-	<th>Archive? </th> 
-	<th>Date of Last Archive </th>
-	<!--This final row should be a check box to toggle archive status -->
+ 	<th>Archive?</th>
+ 	<th>First Name</th>
+	<th>Last Name</th>
+    <th>Email</th>
+    <th>Date of Last Archive</th> 
   </tr>
-  <tr>
-    <td>John</td>
-    <td>Smith</td>
-	<td>john.smith@test.com</td>
-	<td> <input type="checkbox" name="archiveReviewer1" value="archived"> Archive Reviewer<br></td>
-	<td>3/3/2013 </td>
+
+</tbody>
+
+</table> 
+ <br>
+  <input id="archiveuserSubmit" type="submit" value="Submit">
+  <!--<tr>
+    <td>JOHN SMITH</td>
+    <td>12345G</td>
+	<td>Weston Co.</td>
+    <td>Smith Johns</td>
+	<td>Johnson Smithsonian</td>
+    <td>Validation</td>
+	<td>Standard</td>
+    <td>N/A</td>
   </tr>
     <tr>
-    <td>Smith</td>
-    <td>Johnson</td>
-	<td>smith.johnson@comcast.net</td>
-	<td> <input type="checkbox" name="archiveReviewer2" value="archived"> Archive Reviewer<br></td>
-	<td>6/1/2016 </td>
+    <td>WILL CHRISON</td>
+    <td>66678I</td>
+	<td>Burger King</td>
+    <td>Chrison Wilson</td>
+	<td>Not Will</td>
+    <td>Planning</td>
+	<td>Standard</td>
+    <td>N/A</td>
   </tr>
     <tr>
-    <td>Hodor</td>
-    <td>Hodor</td>
-	<td>hodor@fakedoors.net</td>
-	<td> <input type="checkbox" name="archiveReviewer3" value="archived"> Archive Reviewer<br></td>
-	<td>12/31/2015 </td>
+    <td>Doober</td>
+    <td>01017Q</td>
+	<td>QQQQQQ</td>
+    <td>Doober</td>
+	<td>Doogal</td>
+    <td>Complete</td>
+	<td>Done</td>
+    <td>N/A</td>
   </tr>
       <tr>
-    <td>Rick</td>
-    <td>Sanchez</td>
-	<td>tinyrick@sanchez.com</td>
-	<td> <input type="checkbox" name="archiveReviewer4" value="archived"> Archive Reviewer<br></td>
-	<td>5/9/1560 </td>
+    <td>Doober</td>
+    <td>01017Q</td>
+	<td>QQQQQQ</td>
+    <td>Doober</td>
+	<td>Doogal</td>
+    <td>Complete</td>
+	<td>Done</td>
+    <td>N/A</td>
   </tr>
-</table> 
-
+      <tr>
+    <td>Doober</td>
+    <td>01017Q</td>
+	<td>QQQQQQ</td>
+    <td>Doober</td>
+	<td>Doogal</td>
+    <td>Complete</td>
+	<td>Done</td>
+    <td>N/A</td>
+  </tr>
+      <tr>
+    <td>Doober</td>
+    <td>01017Q</td>
+	<td>QQQQQQ</td>
+    <td>Doober</td>
+	<td>Doogal</td>
+    <td>Complete</td>
+	<td>Done</td>
+    <td>N/A</td>
+  </tr> -->
 </div>
+<div class="wsite-spacer" style="height:15px;"></div>
+
+
   
  <script>
 function searchTable() {
@@ -280,15 +282,37 @@ function searchTable() {
 }
 </script>
 
-</form>
+ </form>
   
 </div>
 </div>	
 
+				</div>
+			</div>
+          </div>
+      
+		</div>
+		<div class=""></div>
+	</div>
+</div>
 
+</div>
+
+    </div>
+
+    <div class="main-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+
+</div>
+</div>
+
+    </div>
+
+<script type="text/javascript" src="files/theme/reviewers.js"></script>
 	<script type="text/javascript" src="files/theme/plugins.js"></script>
   <script type="text/javascript" src="files/theme/custom.js"></script>
 
 		
-	<script type="text/javascript" src="files/theme/link.js"></script>  </body>
+	
 </html>
