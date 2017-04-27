@@ -176,6 +176,8 @@ var STYLE_PREFIX = 'wsite';
 				<div class="wsite-section-elements">
 <div class="wsite-spacer" style="height:50px;"></div>
 					<h2 id = "Pname"  style="text-align:left;" id = "Pname"><font size="7px">Package Name</font><br /></h2>
+		
+					
 <font class="PackageInfo">
 <p>
 <h1 id = "Pacronym" >Package Acronym:</h1>
@@ -191,7 +193,11 @@ var STYLE_PREFIX = 'wsite';
 <button class="Steps">Step 5</button>
 <button class="Steps">Step 6</button>
 </div>
-
+<div class="colorKey">
+<button class="buttonRed"> </button>: Not Completed<br>
+<button class="buttonYellow"> </button>: Current Step<br>
+<button class="buttonGreen"> </button>: Completed<br>
+</div>	
 <div class="TrackerSteps">
 
 <button id="Track1" onclick="TrackerColor('track1');" class="Tracker"></button>
@@ -201,14 +207,17 @@ var STYLE_PREFIX = 'wsite';
 <button id="Track5" onclick="TrackerColor('track5');" class="Tracker"></button>
 <button id="Track6" onclick="TrackerColor('track6');" class="Tracker"></button>
 </div>
-
+	
 <div style="height:10px;" class="info" id="T1">
+
+
+
+<div style="height:10px;" class="info" id="T2">
 
 <!--So if we can pass the information from the database to the javascript file we can fill the div with the necessary text -->
 
-<h1 id = "Snum" >Step #1</h1>
-<h3 id = "Sdesc" >Step Description</h3>
-<h3 id = "Ddate" >Deliver Date: </h3>
+<h1 id = "Snum" >Step #2</h1>
+
 
 
 <h3>Artifact Progress</h3> <br>
@@ -216,22 +225,22 @@ var STYLE_PREFIX = 'wsite';
 <!--name is paid-->
 <label> Artifact 1 </label>
 <button id="art1" class = "artButton"></button>
- <input type="checkbox" name="art1sub" value="artifactsubmit"> Submit &nbsp
- <input type="checkbox" name="art1app" value="artifactapproved"> Approve &nbsp <br>
+ <input class="artSub" type="checkbox" name="art1sub" value="artifactsubmit"> Submit &nbsp
+ <input class="artApp"type="checkbox" name="art1app" value="artifactapproved"> Approve &nbsp <br>
 
  <label> Artifact 2 </label>
 <button id="art2" class = "artButton"></button>
- <input type="checkbox" name="art2sub" value="artifactsubmit"> Submit &nbsp
- <input type="checkbox" name="art2app" value="artifactapproved"> Approve &nbsp <br>
+<span class="artSub"> <input type="checkbox" name="art2sub" value="artifactsubmit"> Submit &nbsp </span>
+ <input class="artApp" type="checkbox" name="art2app" value="artifactapproved"> Approve &nbsp <br>
 <label> Artifact 3 </label>
 <button id="art3" class = "artButton"></button>
-<input type="checkbox" name="art3sub" value="artifactsubmit"> Submit &nbsp
- <input type="checkbox" name="art3app" value="artifactapproved"> Approve &nbsp <br><br> <br>
+<span class="artSub"><input class="artSub" type="checkbox" name="art3sub" value="artifactsubmit"> Submit &nbsp </span>
+ <input class="artApp" type="checkbox" name="art3app" value="artifactapproved"> Approve &nbsp <br><br> <br>
 
 <label> Delivered </label>
-<button id="del" class = "artButton"></button><br>
+<button id="del2" class = "artButton"></button><br>
 
-<div class="kickBack" id="kickBack">
+<div class="kickBack" id="kickBack2">
 
 
 </div>
@@ -239,12 +248,216 @@ var STYLE_PREFIX = 'wsite';
 
 
 
-<div class="kickBack" id="kickBack">
+<div class="kickBack" id="kickBack2">
 
+<form action = "" method = "POST">
+	Step approved? <br>
+	<input type="radio" name="approved" value="yes"> Yes<br>
+	<input type="radio" name="approved" value="no"> No<br>
+	Kickback Reason: <br>
+	<input type="text" name="kickback"> <br>
+	<button id="saveKickback2">Save </button><br>
+</form>
 
 </div>
 
 </div>
+
+<div style="height:10px;" class="info" id="T3">
+
+<!--So if we can pass the information from the database to the javascript file we can fill the div with the necessary text -->
+
+<h1 id = "Snum" >Step #3</h1>
+
+
+
+<h3>Artifact Progress</h3> <br>
+<form action="artifactsubmit.php" method="POST">
+<!--name is paid-->
+<label> Artifact 1 </label>
+<button id="art1" class = "artButton"></button>
+ <input class="artSub" type="checkbox" name="art1sub" value="artifactsubmit"> Submit &nbsp
+ <input class="artApp"type="checkbox" name="art1app" value="artifactapproved"> Approve &nbsp <br>
+
+ <label> Artifact 2 </label>
+<button id="art2" class = "artButton"></button>
+<span class="artSub"> <input type="checkbox" name="art2sub" value="artifactsubmit"> Submit &nbsp </span>
+ <input class="artApp" type="checkbox" name="art2app" value="artifactapproved"> Approve &nbsp <br>
+<label> Artifact 3 </label>
+<button id="art3" class = "artButton"></button>
+<span class="artSub"><input class="artSub" type="checkbox" name="art3sub" value="artifactsubmit"> Submit &nbsp </span>
+ <input class="artApp" type="checkbox" name="art3app" value="artifactapproved"> Approve &nbsp <br><br> <br>
+
+<label> Delivered </label>
+<button id="del3" class = "artButton"></button><br>
+
+<div class="kickBack" id="kickBack3">
+
+
+</div>
+</form>
+
+
+
+<div class="kickBack" id="kickBack3">
+
+<form action = "" method = "POST">
+	Step approved? <br>
+	<input type="radio" name="approved" value="yes"> Yes<br>
+	<input type="radio" name="approved" value="no"> No<br>
+	Kickback Reason: <br>
+	<input type="text" name="kickback"> <br>
+	<button id="saveKickback3">Save </button><br>
+</form>
+
+</div>
+
+</div>
+
+<div style="height:10px;" class="info" id="T4">
+
+<!--So if we can pass the information from the database to the javascript file we can fill the div with the necessary text -->
+
+<h1 id = "Snum" >Step #4</h1>
+
+
+
+<h3>Artifact Progress</h3> <br>
+<form action="artifactsubmit.php" method="POST">
+<!--name is paid-->
+<label> Artifact 1 </label>
+<button id="art1" class = "artButton"></button>
+ <input class="artSub" type="checkbox" name="art1sub" value="artifactsubmit"> Submit &nbsp
+ <input class="artApp"type="checkbox" name="art1app" value="artifactapproved"> Approve &nbsp <br>
+
+ <label> Artifact 2 </label>
+<button id="art2" class = "artButton"></button>
+<span class="artSub"> <input type="checkbox" name="art2sub" value="artifactsubmit"> Submit &nbsp </span>
+ <input class="artApp" type="checkbox" name="art2app" value="artifactapproved"> Approve &nbsp <br>
+<label> Artifact 3 </label>
+<button id="art3" class = "artButton"></button>
+<span class="artSub"><input class="artSub" type="checkbox" name="art3sub" value="artifactsubmit"> Submit &nbsp </span>
+ <input class="artApp" type="checkbox" name="art3app" value="artifactapproved"> Approve &nbsp <br><br> <br>
+
+<label> Delivered </label>
+<button id="del4" class = "artButton"></button><br>
+
+</form>
+
+
+
+<div class="kickBack" id="kickBack4">
+
+<form action = "" method = "POST">
+	Step approved? <br>
+	<input type="radio" name="approved" value="yes"> Yes<br>
+	<input type="radio" name="approved" value="no"> No<br>
+	Kickback Reason: <br>
+	<input type="text" name="kickback"> <br>
+	<button id="saveKickback4">Save </button><br>
+</form>
+
+</div>
+
+</div>
+
+<div style="height:10px;" class="info" id="T5">
+
+<!--So if we can pass the information from the database to the javascript file we can fill the div with the necessary text -->
+
+<h1 id = "Snum" >Step #5</h1>
+
+
+
+<h3>Artifact Progress</h3> <br>
+<form action="artifactsubmit.php" method="POST">
+<!--name is paid-->
+<label> Artifact 1 </label>
+<button id="art1" class = "artButton"></button>
+ <input class="artSub" type="checkbox" name="art1sub" value="artifactsubmit"> Submit &nbsp
+ <input class="artApp"type="checkbox" name="art1app" value="artifactapproved"> Approve &nbsp <br>
+
+ <label> Artifact 2 </label>
+<button id="art2" class = "artButton"></button>
+<span class="artSub"> <input type="checkbox" name="art2sub" value="artifactsubmit"> Submit &nbsp </span>
+ <input class="artApp" type="checkbox" name="art2app" value="artifactapproved"> Approve &nbsp <br>
+<label> Artifact 3 </label>
+<button id="art3" class = "artButton"></button>
+<span class="artSub"><input class="artSub" type="checkbox" name="art3sub" value="artifactsubmit"> Submit &nbsp </span>
+ <input class="artApp" type="checkbox" name="art3app" value="artifactapproved"> Approve &nbsp <br><br> <br>
+
+<label> Delivered </label>
+<button id="del5" class = "artButton"></button><br>
+
+
+</form>
+
+
+
+<div class="kickBack" id="kickBack5">
+
+<form action = "" method = "POST">
+	Step approved? <br>
+	<input type="radio" name="approved" value="yes"> Yes<br>
+	<input type="radio" name="approved" value="no"> No<br>
+	Kickback Reason: <br>
+	<input type="text" name="kickback"> <br>
+	<button id="saveKickback5">Save </button><br>
+</form>
+
+</div>
+
+</div>
+
+<div style="height:10px;" class="info" id="T6">
+
+<!--So if we can pass the information from the database to the javascript file we can fill the div with the necessary text -->
+
+<h1 id = "Snum6" >Step #6</h1>
+<h3 id = "Sdesc6">Step Description</h3>
+<h3 id = "Ddate6" >Deliver Date: </h3>
+
+
+<h3>Artifact Progress</h3> <br>
+<form action="artifactsubmit.php" method="POST">
+<!--name is paid-->
+<label> Artifact 1 </label>
+<button id="art1" class = "artButton"></button>
+ <input class="artSub" type="checkbox" name="art1sub" value="artifactsubmit"> Submit &nbsp
+ <input class="artApp"type="checkbox" name="art1app" value="artifactapproved"> Approve &nbsp <br>
+
+ <label> Artifact 2 </label>
+<button id="art2" class = "artButton"></button>
+<span class="artSub"> <input type="checkbox" name="art2sub" value="artifactsubmit"> Submit &nbsp </span>
+ <input class="artApp" type="checkbox" name="art2app" value="artifactapproved"> Approve &nbsp <br>
+<label> Artifact 3 </label>
+<button id="art3" class = "artButton"></button>
+<span class="artSub"><input class="artSub" type="checkbox" name="art3sub" value="artifactsubmit"> Submit &nbsp </span>
+ <input class="artApp" type="checkbox" name="art3app" value="artifactapproved"> Approve &nbsp <br><br> <br>
+
+<label> Delivered </label>
+<button id="del6" class = "artButton"></button><br>
+
+</form>
+
+
+
+<div class="kickBack" id="kickBack6">
+
+<form action = "" method = "POST">
+	Step approved? <br>
+	<input type="radio" name="approved" value="yes"> Yes<br>
+	<input type="radio" name="approved" value="no"> No<br>
+	Kickback Reason: <br>
+	<input type="text" name="kickback"> <br>
+	<button id="saveKickback5">Save </button><br>
+</form>
+
+</div>
+
+</div>
+
+
 <!--
 <div id="demo">
 </div>
