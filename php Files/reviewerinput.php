@@ -53,7 +53,7 @@
 	$rwid = $row['max'];
 	$rwid++;
 	
-	$sql = "INSERT INTO kickbackemail (RWID, FirstName, LastName, Email, PhoneNumber) 
+	$sql = "INSERT INTO reviewer (RWID, FirstName, LastName, Email, PhoneNumber) 
 			VALUES (" . $rwid . ",'" . $firstName . "','" . $lastName . "','" . $email . "','" . $phoneNumber . "')";
 
 	if ($conn->query($sql) === TRUE) {
