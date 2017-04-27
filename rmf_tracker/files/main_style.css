@@ -779,6 +779,14 @@ div.TrackerSteps{
 }
 
 
+#artifactList .nameImp{
+	width:220px;
+	height:25px;
+	color: black;
+	text-align: left;
+}
+
+
 #archiveuserSubmit {
 	background-color: #1C4C76;
     color: white;
@@ -797,8 +805,8 @@ div.TrackerSteps{
 	background-color: #1C4C76; 
 	text-color: white; 
 	position:absolute; 
-	top:79%;
-	left:57%;
+	top:65%;
+	left:55%;
 }
 
 .cPackField {
@@ -806,7 +814,7 @@ div.TrackerSteps{
 	float: left; 
 	position: absolute; 
 	left: 600px; 
-	top: 10px;
+	top: 50px;
 	width: 500px;
 }
 
@@ -830,23 +838,14 @@ div.TrackerSteps{
 	top:170px;
 	width: 520px;
 	text-align:left;
-	padding: 4px;
 }
 
 #artifactList .numImp{
-	width:60px;
+	width:50px;
 	height:25px;
 	color: black;
 	text-align: center;
 }
-
-#artifactList .nameImp{
-	width:220px;
-	height:25px;
-	color: black;
-	text-align: left;
-}
-
 .searchBar{
 	height: 25px;
 	border: solid 2px #1C4C76;
@@ -936,7 +935,7 @@ div.TrackerSteps{
 	overflow:auto;
 	border: solid 1px white;
 	width:200px;
-	height:250px;
+	height:200px;
 }
 
 
