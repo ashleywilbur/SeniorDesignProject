@@ -150,8 +150,8 @@ var STYLE_PREFIX = 'wsite';
 
 		<li id="active" class="wsite-menu-item-wrap">
 			<a id="dash" href=" " class="wsite-menu-item">
-			
-		</li></ul>
+			Dashboard
+		</li></ul></a>
 </div>
 
           <label class="hamburger"><span></span></label>
@@ -183,18 +183,30 @@ var STYLE_PREFIX = 'wsite';
 <div class="reportDiv"></div></div>
 
 <!--Package information/Report Information-->
- <h2 id = "Pname1">Package Name</h2>
- <h1 id = "Pacronym1" >Package Acronym</h1>
+ <h2 id = "Pname">Package Name</h2>
+ <h1 id = "Pacronym" >Package Acronym</h1>
  <br>
  		<div class="wsite-spacer"></div>
 		<div class="TrackerSteps">
 
-	<button class="Steps">Step 1</button>	<button class="Steps">Step 2</button>	<button class="Steps">Step 3</button>	<button class="Steps">Step 4</button>	<button class="Steps">Step 5</button>	<button class="Steps">Step 6</button>
+<div class="TrackerSteps">
+
+<button class="Steps">Step 1</button>
+<button class="Steps">Step 2</button>
+<button class="Steps">Step 3</button>
+<button class="Steps">Step 4</button>
+<button class="Steps">Step 5</button>
+<button class="Steps">Step 6</button>
 </div>
 
 <div class="TrackerSteps">
 
-<button id="Track1" onclick="TrackerColor('Track1', '#63AC50');" class="Tracker"></button><button id="Track2"  class="Tracker"></button><button id="Track3" class="Tracker"></button><button id="Track4" class="Tracker"></button><button id="Track5" class="Tracker"></button><button id="Track6" class="Tracker"></button>
+<button id="Track1" onclick="TrackerColor('track1');" class="Tracker"></button>
+<button id="Track2" onclick="TrackerColor('track2');"  class="Tracker"></button>
+<button id="Track3" onclick="TrackerColor('track3');" class="Tracker"></button>
+<button id="Track4" onclick="TrackerColor('track4');" class="Tracker"></button>
+<button id="Track5" onclick="TrackerColor('track5');" class="Tracker"></button>
+<button id="Track6" onclick="TrackerColor('track6');" class="Tracker"></button>
 </div>
 
 
@@ -223,19 +235,19 @@ Delivered? []-->
       <fieldset class="reportFieldHead" >
         <legend>Description of system: </legend>
 		<p>
-          <label id = "Descript1"> Package Description </label>
+          <label id = "Sdesc"> Package Description </label>
         </p>
       </fieldset>
 	  
 	<!--&nbsp creates a space [there for artificial padding] -->
 	<div class="reportZones" >
 		<br>
-		<label> &nbsp; &nbsp; Zone: </label>
+
 		<label id = "Zone"> </label>  <br>
-		<label>&nbsp; &nbsp; Accreditation Type: 		</label>
-		<label id = "Atype1"> </label> <br>
-		<label> &nbsp; &nbsp; Certificate Acquired Target Date:  </label>   
-		<label id = "CATdate1"><br /> <br /></label>	
+
+		<label id = "Atype"> </label> <br>
+  
+		<label id = "CATdate"><br /> <br /></label>	
 	</div>
     </form>
 			
