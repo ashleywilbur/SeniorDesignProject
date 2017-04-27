@@ -989,6 +989,30 @@ div.TrackerSteps{
 	margin:10px;
 	text-align:right;
 }
+.artApp{
+	visibility:hidden;
+}
+
+.artSub{
+	visibility:hidden;
+}
+.UserTable{
+
+	background-color:#4682B4;
+	position:absolute;
+	top: 70%;
+	left:30px;
+	overflow:auto;
+	border: solid;
+	border-color:white;
+	border-bottom-width:1px;
+	font-family: 'Birdseye', sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+	word-wrap: break-word;
+	white-space:nowrap;
+	
+}
 
 .gi-2x{font-size: 2em;}
 .gi-3x{font-size: 3em;}
