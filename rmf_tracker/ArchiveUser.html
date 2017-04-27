@@ -174,7 +174,8 @@ var STYLE_PREFIX = 'wsite';
 <!--Search functionality-
 <input type="text" id="searchTable" onkeyup="searchTable()" placeholder="Enter a search term">
 -->
-<form id="archiveUser" action="#" method = "POST">
+
+<form id="archiveUser" name = "uid" action="archiveuserinput.php" method = "POST">
   <font class="PackageInfo">
 <p>
 </font></p>			
@@ -189,7 +190,10 @@ var STYLE_PREFIX = 'wsite';
   </tr>
 
 </tbody>
+
 </table> 
+ <br>
+  <input id="archiveuserSubmit" type="submit" value="Submit">
   <!--<tr>
     <td>JOHN SMITH</td>
     <td>12345G</td>
@@ -310,5 +314,5 @@ function searchTable() {
   <script type="text/javascript" src="files/theme/custom.js"></script>
 
 		
-	<script type="text/javascript" src="files/theme/archiveusers.js"></script>  </body>
+	
 </html>
