@@ -778,6 +778,21 @@ div.TrackerSteps{
 	height:50px;
 }
 
+
+#archiveuserSubmit {
+	background-color: #1C4C76;
+    color: white;
+    font-size: 20px;
+    border-style: solid;
+    cursor: pointer;
+	font-family: 'Birdseye', sans-serif;
+  	position: relative;
+  	top: -3px;
+  	left: -80px;
+  	height:50px;
+  	width: 80px;
+}
+
 .artifactGenButton {
 	background-color: #1C4C76; 
 	text-color: white; 
