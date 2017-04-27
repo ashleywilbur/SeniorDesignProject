@@ -164,7 +164,7 @@
 		echo "\"OverallProcessMonths\":";
 		echo $row["OverallProcessMonths"]; //how long the process should take as a wile (months)
 	}
-	
+	*/
 	//search artifacts using PUID and associated tables
 	
 	$sql = "SELECT PUID FROM packageusers WHERE packageusers.PID LIKE '%" . $package . "%'";
@@ -179,36 +179,37 @@
 	}
 	
 	
-	$sql = "SELECT * FROM artifacts a, packageartifacts pa WHERE a.AID LIKE pa.AID AND pa.PUID LIKE '%" . $puid . "%'";
+	$sql = "SELECT * FROM artifacts a, packageartifacts pa WHERE a.AID LIKE pa.AID AND pa.PAID LIKE '%" . $puid . "%'";
 	$result = $conn->query($sql);
 	
 	if (!$result) {
 		trigger_error('Invalid query: ' . $conn->error);
 	}
 	
+	$i=1;
+	
 	if ($result->num_rows > 0) {
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
 			echo ",";
-			echo "\"PAID\":\"";
-			echo $row["PAID"] . "\"";
-			echo ",";
-			echo "\"ArtifactName\":\"";
+			echo "\"ArtifactName".$i."\":\"";
 			echo $row["Name"] . "\"";
 			echo ",";
-			echo "\"SID\":";
-			echo $row["SID"];
+			echo "\"SID".$i."\":\"";
+			echo $row["SID"]. "\"";
 			echo ",";
-			echo "\"RWID\":";
-			echo $row["RWID"];
+			echo "\"SubmitDate".$i."\":\"";
+			echo $row["SubmitDate"]. "\"";
 			echo ",";
-			echo "\"SubmitDate\":"; ////the deliver date!!!!!!
-			echo $row["SubmitDate"];
+			echo "\"Progress".$i."\":\"";
+			echo $row["Progress"]. "\"";
 			echo ",";
-			echo "\"Progress\":";
-			echo $row["Progress"];
+			echo "\"i\":";
+			echo $i;
+			
+			$i++;
 		}
-	} */
+	} 
 	echo "}";
 	
 	
