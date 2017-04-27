@@ -190,6 +190,9 @@
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
 			echo ",";
+			echo "\"PAID\":\"";
+			echo $row["PAID"] . "\"";
+			echo ",";
 			echo "\"ArtifactName\":\"";
 			echo $row["Name"] . "\"";
 			echo ",";
