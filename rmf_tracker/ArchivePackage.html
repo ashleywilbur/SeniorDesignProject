@@ -206,46 +206,27 @@ var STYLE_PREFIX = 'wsite';
 </div>
 
 </div>
-
     </div>
-<!--Search functionality
-<input type="text" id="searchTable" onkeyup="searchTable()" placeholder="Enter a search term">
--->
-<div class ="ArchTable">
-
-<table class="archiveTable">
+	
+<form class = "archivePackage" id="archivePackage" name = "uid" action="archivepackageinput.php" method = "POST">
+  <font class="PackageInfo">
+<p>
+</font></p>			
+<table onload="userTable()"  class="allP">
+<tbody id="allR">
  <tr>
-    <th>Package Name</th>
+ 	<th>Package Name</th>
     <th>Package Acronym</th>
 	<th>Archive? </th> 
 	<th>Date of Last Archive </th>
-	<!--This final row should be a check box to toggle archive status -->
   </tr>
-  <tr>
-    <td>Fine Wines</td>
-    <td>FW</td>
-	<td> <input type="checkbox" name="archivePackage1" value="archived"> Archive Package<br></td>
-	<td>3/3/2013 </td>
-  </tr>
-    <tr>
-    <td>Hard Rock Cafe</td>
-    <td>HRC</td>
-	<td> <input type="checkbox" name="archivePackage2" value="archived"> Archive Package<br></td>
-	<td>6/1/2016 </td>
-  </tr>
-    <tr>
-    <td>Game of Thrones</td>
-    <td>GOT</td>
-	<td> <input type="checkbox" name="archivePackage3" value="archived"> Archive Package<br></td>
-	<td>12/31/2015 </td>
-  </tr>
-      <tr>
-    <td>Package</td>
-    <td>PG</td>
-	<td> <input type="checkbox" name="archivePackage4" value="archived"> Archive Package<br></td>
-	<td>5/9/1560 </td>
-  </tr>
+
+</tbody>
+
 </table> 
+ <br>
+  <input id="archivepackageSubmit" type="submit" value="Submit">
+
 
 </div>
 
@@ -272,7 +253,7 @@ function searchTable() {
 }
 </script>
 
-
+</font>
   
 </div>
 </div>	
