@@ -49,7 +49,7 @@ function AA(){
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("uid="+localStorage.getItem("UID"));
 
-
+}
 	
 	
 
@@ -64,13 +64,13 @@ function loadDoc() {
 	if(this.readyState == 3){
 	  
 	 Information = response;
-	 
+	 console.log(Information);
 	 //Parse brings errors but if it is not there it does not work
 	Information =JSON.parse(Information);
 	
 	//Brings everything to the webpage
    	document.getElementById('Pname').innerHTML = Information.Name;
-	document.getElementById('infoTest').innerHTML = Information;
+	//document.getElementById('infoTest').innerHTML = Information;
 	document.getElementById('Pacronym').innerHTML = "Package Acronym: "+Information.Acronym;
 	document.getElementById('Atype').innerHTML = "Accredidation Type: "+Information.AccredType;
 	document.getElementById('CATdate').innerHTML = "Certification Acquired Target Date: "+Information.CIA;
@@ -83,7 +83,7 @@ function loadDoc() {
 	  }
 	}
   };
-  xhttp.open("POST", "http://localhost/php Files/tracker.php", true);
+  xhttp.open("POST", "http://localhost/rmf_tracker/php Files/tracker.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("package="+packNum[1]);
 
