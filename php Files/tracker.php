@@ -82,6 +82,7 @@
 		echo ",";
 		echo "\"TrackerStep\":";
 		
+		
 		//output of current step
 		$step = $row["TrackerStep"];
 		//everything under this is commented out for now. Until there is data in the database it will only bring errors
@@ -91,8 +92,8 @@
 		echo "\"PID\":";
 		//output of PID
 		echo $row["PID"];
-		//echo ",";
-	}/*
+		echo ",";
+	}
 	
 	//Searches for all packagestandardtimeline/standardtimeline values
 	
@@ -106,7 +107,7 @@
 	if($row = $result->fetch_assoc()) {
 	
 		//outputs packagestandardtimeline/standardtimeline values
-		echo "\"PkgCreationDate\":";
+		/*echo "\"PkgCreationDate\":";
 		echo $row["PkgCreationDate"];
 		echo ",";
 		echo "\"Step1Delay\":";
@@ -129,12 +130,12 @@
 		echo ",";
 		echo "\"ExpirationDelay\":";
 		echo $row["ExpirationDelay"]; //how many months ExpirationDateMonth has been delayed
-		echo ",";
+		echo ",";*/
 		echo "\"Zone\":\"";
 		echo $row["Zone"] . "\"";
 		echo ",";
 		echo "\"AccredType\":\"";
-		echo $row["AccredType"] . "\"";
+		echo $row["AccredType"] . "\"";}/*
 		echo ",";
 		echo "\"CreationDate\":";
 		echo $row["CreationDate"]; //not important for package data
