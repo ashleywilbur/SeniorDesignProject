@@ -73,7 +73,7 @@
 		$rwid = $_POST['rwid'.$i];
 	}
 	else {
-		$rwid = '1';
+		$rwid = '0';
 	}
 	
 	$sql = "SELECT MAX(PID) as max FROM package";
@@ -122,7 +122,7 @@
 		$aid = $row['max'];
 		$aid++;
 		$addedDays = $submitDays - 14;
-		$submitDate = date('Y-m-d', strtotime($date. ' + '.$addedDays.' days'))
+		$submitDate = date('Y-m-d', strtotime($date. ' + '.$addedDays.' days'));
 		
 		$sql = "INSERT INTO artifacts (AID, SID, Name, SubmitDays) 
 			VALUES (" . $aid . ",(SELECT SID FROM steps WHERE steps.SID LIKE '%" . $artifactStep . "%'),'" . $artifact . "'," . $submitDays . ")";
@@ -134,7 +134,7 @@
 			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
 		
-		$sql = "SELECT MAX(AID) as max FROM packageartifacts";
+		$sql = "SELECT MAX(PAID) as max FROM packageartifacts";
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
 		$paid = $row['max'];
