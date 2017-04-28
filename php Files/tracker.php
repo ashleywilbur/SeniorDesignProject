@@ -92,7 +92,7 @@
 		echo "\"PID\":";
 		//output of PID
 		echo $row["PID"];
-		echo ",";
+		//echo ",";
 	}
 	
 	//Searches for all packagestandardtimeline/standardtimeline values
