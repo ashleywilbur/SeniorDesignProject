@@ -1,0 +1,13 @@
+<form action = "" method = "POST">
+	Step approved? <br>
+	<input type="radio" name="approved" value="yes"> Yes<br>
+	<input type="radio" name="approved" value="no"> No<br>
+	Kickback Reason: <select style="color:black" name="kickback">
+  <option value="Use" updated form>Use updated form</option>
+  <option value="Scans are expired">Scans are expired</option>
+  <option value="Missing signature(s)">Missing signature(s)</option>
+  <option value="Change of reviewer">Change of reviewer</option>
+  <option value="Incomplete form(s)">Incomplete form(s)</option>
+</select> <br>
+	<button id="saveKickback5">Save </button><br>
+</form>
