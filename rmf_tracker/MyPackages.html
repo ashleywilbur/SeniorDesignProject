@@ -211,55 +211,10 @@ var STYLE_PREFIX = 'wsite';
 <div style="height:10px;" class="info" id="T1">
 
 
-
+</div>
 <div style="height:10px;" class="info" id="T2">
 
-<!--So if we can pass the information from the database to the javascript file we can fill the div with the necessary text -->
 
-<h1 id = "Snum" >Step #2</h1>
-
-
-
-<h3>Artifact Progress</h3> <br>
-<form action="artifactsubmit.php" method="POST">
-<!--name is paid-->
-<label> Artifact 1 </label>
-<button id="art1" class = "artButton"></button>
- <input class="artSub" type="checkbox" name="art1sub" value="artifactsubmit"> Submit &nbsp
- <input class="artApp"type="checkbox" name="art1app" value="artifactapproved"> Approve &nbsp <br>
-
- <label> Artifact 2 </label>
-<button id="art2" class = "artButton"></button>
-<span class="artSub"> <input type="checkbox" name="art2sub" value="artifactsubmit"> Submit &nbsp </span>
- <input class="artApp" type="checkbox" name="art2app" value="artifactapproved"> Approve &nbsp <br>
-<label> Artifact 3 </label>
-<button id="art3" class = "artButton"></button>
-<span class="artSub"><input class="artSub" type="checkbox" name="art3sub" value="artifactsubmit"> Submit &nbsp </span>
- <input class="artApp" type="checkbox" name="art3app" value="artifactapproved"> Approve &nbsp <br><br> <br>
-
-<label> Delivered </label>
-<button id="del2" class = "artButton"></button><br>
-
-<div class="kickBack" id="kickBack2">
-
-
-</div>
-</form>
-
-
-
-<div class="kickBack" id="kickBack2">
-
-<form action = "" method = "POST">
-	Step approved? <br>
-	<input type="radio" name="approved" value="yes"> Yes<br>
-	<input type="radio" name="approved" value="no"> No<br>
-	Kickback Reason: <br>
-	<input type="text" name="kickback"> <br>
-	<button id="saveKickback2">Save </button><br>
-</form>
-
-</div>
 
 </div>
 
@@ -496,7 +451,7 @@ var STYLE_PREFIX = 'wsite';
 	<script type="text/javascript" src="files/theme/TrackerButtonClick.js"></script>
 	<script type="text/javascript" src="files/theme/plugins.js"></script>
   <script type="text/javascript" src="files/theme/custom.js"></script>
-
+<script>loadDoc();</script>
 		
 	<script type="text/javascript" src="files/theme/link.js"></script>  </body>
 </html>

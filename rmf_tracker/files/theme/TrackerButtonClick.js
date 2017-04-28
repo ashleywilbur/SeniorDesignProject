@@ -1,44 +1,150 @@
-
+var packNum = window.location.href.split("#") 
 var action = 1;
 var action2 = 1;
 var action3 = 1;
 //function gets called as soon as the page loads
-window.onload = loadDoc;
+window.onload = TrackerColor("track1");
 //divides URL into an array to extract the package ID from the previous link
-packNum = window.location.href.split("#") 
+
 
 console.log(packNum);
 function TrackerColor(id) {
 		
-		AA();
+
 		
-if(id == "track1"){
+if(id == "track1"){artLoad(1);
 			document.getElementById('T1').innerHTML = 
 
 '<br><br><h1 id = "Snum" >Step #1</h1>'+
 '<h3>Artifact Progress</h3> <br>'+
 '<form action="artifactsubmit.php" method="POST">'+
-'<!--name is paid-->'+
-'<label> Artifact 1 </label>'+
-'<button id="art1" class = "artButton"></button>'+
-'<input class="artSub" type="checkbox" name="art1sub" value="artifactsubmit"> Submit &nbsp'+
-'<input class="artApp"type="checkbox" name="art1app" value="artifactapproved"> Approve &nbsp <br>'+
-'<label> Artifact 2 </label>'+
-'<button id="art2" class = "artButton"></button>'+
-'<span class="artSub"> <input type="checkbox" name="art2sub" value="artifactsubmit"> Submit &nbsp </span>'+
-' <input class="artApp" type="checkbox" name="art2app" value="artifactapproved"> Approve &nbsp <br>'+
-'<label> Artifact 3 </label>'+
-'<button id="art3" class = "artButton"></button>'+
-'<span class="artSub"><input class="artSub" type="checkbox" name="art3sub" value="artifactsubmit"> Submit &nbsp </span>'+
-' <input class="artApp" type="checkbox" name="art3app" value="artifactapproved"> Approve &nbsp <br><br> <br>'+
+
+'</form>';
+
+
+}
+
+		if(id == "track2"){artLoad(2);
+			document.getElementById('T1').innerHTML = 
+'<br><br><h1 id = "Snum" >Step #2</h1>'+
+
+'<h3>Artifact Progress</h3> <br>'+
+'<form action="artifactsubmit.php" method="POST">'+
+
+
+'</form>'+
+'<div class="kickBack" id="kickBack2">'+
 '<label> Delivered </label>'+
-'<button id="del" class = "artButton"></button><br>'+
-'<div class="kickBack" id="kickBack">'+
-'</div>'+
+'<button id="del4" class = "artButton"></button><br>'+
+'<form action = "" method = "POST">'+
+	'Step approved? <br>'+
+	'<input type="radio" name="approved" value="yes"> Yes<br>'+
+	'<input type="radio" name="approved" value="no"> No<br>'+
+	'Kickback Reason: <br>'+
+	'<input type="text" name="kickback"> <br>'+
+	'<button id="saveKickback2">Save </button><br>'+
 '</form>'+
 
-'<div class="kickBack" id="kickBack">'+
+		'</div>';}
+		if(id == "track3"){artLoad(3);
+			document.getElementById('T1').innerHTML = 
+'<br><br><h1 id = "Snum" >Step #3</h1>'+
 
+'<h3>Artifact Progress</h3> <br>'+
+'<form action="artifactsubmit.php" method="POST">'+
+
+'</form>'+
+'<div class="kickBack" id="kickBack3">'+
+'<label> Delivered </label>'+
+'<button id="del4" class = "artButton"></button><br>'+
+'<form action = "" method = "POST">'+
+	'Step approved? <br>'+
+	'<input type="radio" name="approved" value="yes"> Yes<br>'+
+	'<input type="radio" name="approved" value="no"> No<br>'+
+	'Kickback Reason: <br>'+
+	'<input type="text" name="kickback"> <br>'+
+	'<button id="saveKickback3">Save </button><br>'+
+'</form>'+
+
+		'</div>';}
+		if(id == "track4"){artLoad(4);
+			document.getElementById('T1').innerHTML = 
+'<br><br><h1 id = "Snum" >Step #4</h1>'+
+
+'<h3>Artifact Progress</h3> <br>'+
+'<form action="artifactsubmit.php" method="POST">'+
+
+'</form>'+
+'<div class="kickBack" id="kickBack4">'+
+'<label> Delivered </label>'+
+'<button id="del4" class = "artButton"></button><br>'+
+'<form action = "" method = "POST">'+
+	'Step approved? <br>'+
+	'<input type="radio" name="approved" value="yes"> Yes<br>'+
+	'<input type="radio" name="approved" value="no"> No<br>'+
+	'Kickback Reason: <br>'+
+	'<input type="text" name="kickback"> <br>'+
+	'<button id="saveKickback4">Save </button><br>'+
+'</form>'+
+
+		'</div>';}
+		if(id == "track5"){artLoad(5);
+			document.getElementById('T1').innerHTML = 
+'<br><br><h1 id = "Snum" >Step #5</h1>'+
+
+'<h3>Artifact Progress</h3> <br>'+
+'<form action="artifactsubmit.php" method="POST">'+
+
+
+'</form>'+
+'<div class="kickBack" id="kickBack5">'+
+'<label> Delivered </label>'+
+'<button id="del4" class = "artButton"></button><br>'+
+'<form action = "" method = "POST">'+
+	'Step approved? <br>'+
+	'<input type="radio" name="approved" value="yes"> Yes<br>'+
+	'<input type="radio" name="approved" value="no"> No<br>'+
+	'Kickback Reason: <br>'+
+	'<input type="text" name="kickback"> <br>'+
+	'<button id="saveKickback5">Save </button><br>'+
+'</form>'+
+
+		'</div>';}
+		if(id == "track6"){artLoad(6);
+			document.getElementById('T1').innerHTML = 
+'<br><br><h1 id = "Snum" >Step #6</h1>'+
+
+'<h3>Artifact Progress</h3> <br>'+
+'<form action="artifactsubmit.php" method="POST">'+
+
+'</form>'+
+'<div class="kickBack" id="kickBack6">'+
+'<label> Delivered </label>'+
+'<button id="del4" class = "artButton"></button><br>'+
+'<form action = "" method = "POST">'+
+	'Step approved? <br>'+
+	'<input type="radio" name="approved" value="yes"> Yes<br>'+
+	'<input type="radio" name="approved" value="no"> No<br>'+
+	'Kickback Reason: <br>'+
+	'<input type="text" name="kickback"> <br>'+
+	'<button id="saveKickback6">Save </button><br>'+
+'</form>'+
+
+		'</div>';}
+	document.getElementById('T1').style.visibility = 'visible';
+}
+function AA(i){
+ var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+      response =this.responseText;  
+
+	if(this.readyState == 3){console.log(this);
+		response = response.split("+");
+	if(response[0] == 1 || response[0] == 2){
+	var T1 = document.getElementById("T1").innerHTML;
+	document.getElementById("T1").innerHTML= T1 + '<div class="kickBack" id="kickBack">'+
+'<label> Delivered </label>'+
+'<button id="del4" class = "artButton"></button><br>'+
 '<form action = "" method = "POST">'+
 	'Step approved? <br>'+
 	'<input type="radio" name="approved" value="yes"> Yes<br>'+
@@ -47,61 +153,47 @@ if(id == "track1"){
 	'<input type="text" name="kickback"> <br>'+
 '	<button id="saveKickback">Save </button><br>'+
 '</form>';
-}/*
-
-		if(id == "track2"){
-			document.getElementById('T1').style.visibility = 'hidden';
-			document.getElementById('T2').style.visibility = 'visible';
-			document.getElementById('T3').style.visibility = 'hidden';
-			document.getElementById('T4').style.visibility = 'hidden';
-			document.getElementById('T5').style.visibility = 'hidden';
-		document.getElementById('T6').style.visibility = 'hidden';}
-		if(id == "track3"){
-			document.getElementById('T1').style.visibility = 'hidden';
-			document.getElementById('T2').style.visibility = 'hidden';
-			document.getElementById('T3').style.visibility = 'visible';
-			document.getElementById('T4').style.visibility = 'hidden';
-			document.getElementById('T5').style.visibility = 'hidden';
-		document.getElementById('T6').style.visibility = 'hidden';}
-		if(id == "track4"){
-			document.getElementById('T1').style.visibility = 'hidden';
-			document.getElementById('T2').style.visibility = 'hidden';
-			document.getElementById('T3').style.visibility = 'hidden';
-			document.getElementById('T4').style.visibility = 'visible';
-			document.getElementById('T5').style.visibility = 'hidden';
-		document.getElementById('T6').style.visibility = 'hidden';}
-		if(id == "track5"){
-			document.getElementById('T1').style.visibility = 'hidden';
-			document.getElementById('T2').style.visibility = 'hidden';
-			document.getElementById('T3').style.visibility = 'hidden';
-			document.getElementById('T4').style.visibility = 'hidden';
-			document.getElementById('T5').style.visibility = 'visible';
-		document.getElementById('T6').style.visibility = 'hidden';}
-		if(id == "track6"){
-			document.getElementById('T1').style.visibility = 'hidden';
-			document.getElementById('T2').style.visibility = 'hidden';
-			document.getElementById('T3').style.visibility = 'hidden';
-			document.getElementById('T4').style.visibility = 'hidden';
-			document.getElementById('T5').style.visibility = 'hidden';
-		document.getElementById('T6').style.visibility = 'visible';}*/
-	document.getElementById('T1').style.visibility = 'visible';
-}
-function AA(){
- var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-      response =this.responseText;  
-
-	if(this.readyState == 3){
-		
-	  if(response == 1){
-
+	document.getElementById("T1").innerHTML= T1 +
+	'<span><input class="artApp"type="checkbox" name="artapp'+i+'" value="artifactapproved"> Approve &nbsp </span><br>';
 	}
+	if(response[0] == 4){
+	var T1 = document.getElementById("T1").innerHTML;
+	document.getElementById("T1").innerHTML= T1 +
+	'<span><input class="artSub" type="checkbox" name="artsub'+i+'" value="artifactsubmit"> Submit &nbsp</span>';
+	}
+	
 	}
   };
-  xhttp.open("POST", "http://localhost/rmf_tracker/php_Files/userroles.php", true);
+  xhttp.open("POST", "http://localhost/rmf_tracker/php Files/userroles.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("uid="+localStorage.getItem("UID"));
 
+}
+
+function artLoad(step){
+	  var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+      response =this.responseText;  
+	 // Information = response.split(","); Can be used to take in info as array instead of object
+	if(this.readyState == 3){
+		Information = response;
+		Information =JSON.parse(Information);
+		for(var i=1; i <= Information.i;i++){
+			var sid = i.toString();
+			sid = "SID"+sid;
+			if(step == Information[sid]){
+		var aName = i.toString();
+		aName = "ArtifactName"+aName;
+			artifacts(Information[aName], Information.SID, i);
+			console.log(Information[aName]);}
+		}
+	
+	}
+  };
+  xhttp.open("POST", "http://localhost/rmf_tracker/php Files/tracker.php", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("package="+packNum[1]);
+  
 }
 	
 	
@@ -129,13 +221,6 @@ function loadDoc() {
 	document.getElementById('CATdate').innerHTML = "Certification Acquired Target Date: "+Information.CIA;
 	//document.getElementById('Sdesc').innerHTML = Information.Description;
 	
-	for(var i=1; i <= Information.i;i++){
-	var aName = i.toString();
-	aName = "ArtifactName"+aName;
-	//	artifacts(Information.ArtifactName+i);
-	console.log(Information[aName]);
-	}
-	
 	//loop for tracker color
 	  for(i =1; i < Information.TrackerStep; i++){
 		  document.getElementById("Track"+i).style.backgroundColor = '#63AC50';
@@ -146,13 +231,16 @@ function loadDoc() {
   xhttp.open("POST", "http://localhost/rmf_tracker/php Files/tracker.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("package="+packNum[1]);
-
- 
-   
+  
 }
 
-function artifacts(aName, stepID){
-	
-	
+function artifacts(aName, stepID,i){ console.log(aName);
+	var T1 = document.getElementById("T1").innerHTML;
+	document.getElementById("T1").innerHTML= T1 +
+	'<label>'+ aName +'</label> '+
+	'<button id="art'+i+'" class = "artButton"></button>';
+	//'<span id="subs"></span>'+
+	//'<span id></span><br>';
+	AA(i);
 	
 }
