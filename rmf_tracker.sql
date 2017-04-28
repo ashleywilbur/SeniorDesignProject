@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 18, 2017 at 02:31 AM
+-- Generation Time: Apr 28, 2017 at 03:12 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -30,37 +30,54 @@ CREATE TABLE IF NOT EXISTS `artifacts` (
   `AID` int(11) NOT NULL,
   `SID` int(11) NOT NULL,
   `Name` varchar(20) NOT NULL,
-  `SubmitDate` date NOT NULL
+  `SubmitDays` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `artifacts`
 --
 
-INSERT INTO `artifacts` (`AID`, `SID`, `Name`, `SubmitDate`) VALUES
-(1, 1, 'Artifact 1', '0000-00-00'),
-(2, 1, 'Artifact 2', '0000-00-00'),
-(3, 1, 'Artifact 3', '0000-00-00'),
-(4, 2, 'Artifact 4', '0000-00-00'),
-(5, 2, 'Artifact 5', '0000-00-00'),
-(6, 2, 'Artifact 6', '0000-00-00'),
-(7, 2, 'Artifact 7', '0000-00-00'),
-(8, 2, 'Artifact 8', '0000-00-00'),
-(9, 3, 'Artifact 9', '0000-00-00'),
-(10, 3, 'Artifact 10', '0000-00-00'),
-(11, 3, 'Artifact 11', '0000-00-00'),
-(12, 4, 'Artifact 12', '0000-00-00'),
-(13, 4, 'Artifact 13', '0000-00-00'),
-(14, 4, 'Artifact 14', '0000-00-00'),
-(15, 4, 'Artifact 15', '0000-00-00'),
-(16, 5, 'Artifact 16', '0000-00-00'),
-(17, 5, 'Artifact 17', '0000-00-00'),
-(18, 6, 'Artifact 18', '0000-00-00'),
-(19, 6, 'Artifact 19', '0000-00-00'),
-(20, 7, 'Artifact 20', '0000-00-00'),
-(21, 7, 'Artifact 21', '0000-00-00'),
-(22, 8, 'Artifact 22', '0000-00-00'),
-(23, 8, 'Artifact 23', '0000-00-00');
+INSERT INTO `artifacts` (`AID`, `SID`, `Name`, `SubmitDays`) VALUES
+(1, 1, 'Artifact 1', 0),
+(2, 1, 'Artifact 2', 0),
+(3, 1, 'Artifact 3', 0),
+(4, 2, 'Artifact 4', 0),
+(5, 2, 'Artifact 5', 0),
+(6, 2, 'Artifact 6', 0),
+(7, 2, 'Artifact 7', 0),
+(8, 2, 'Artifact 8', 0),
+(9, 3, 'Artifact 9', 0),
+(10, 3, 'Artifact 10', 0),
+(11, 3, 'Artifact 11', 0),
+(12, 4, 'Artifact 12', 0),
+(13, 4, 'Artifact 13', 0),
+(14, 4, 'Artifact 14', 0),
+(15, 4, 'Artifact 15', 0),
+(16, 5, 'Artifact 16', 0),
+(17, 5, 'Artifact 17', 0),
+(18, 6, 'Artifact 18', 0),
+(19, 6, 'Artifact 19', 0),
+(20, 7, 'Artifact 20', 0),
+(21, 7, 'Artifact 21', 0),
+(22, 8, 'Artifact 22', 0),
+(23, 8, 'Artifact 23', 0),
+(28, 8, 'reat', 1),
+(29, 8, 'wow', 1),
+(30, 8, 'reat', 1),
+(31, 8, 'wow', 1),
+(32, 8, 'reat', 1),
+(33, 8, 'wow', 1),
+(34, 8, 'reat', 1),
+(35, 8, 'wow', 1),
+(36, 8, 'reat', 1),
+(37, 8, 'ab', 23),
+(38, 8, 'ba', 78),
+(39, 8, 'ab', 23),
+(40, 8, 'ba', 78),
+(41, 8, 'ab', 23),
+(42, 8, 'ba', 78),
+(43, 8, 'ab', 23),
+(44, 8, 'ba', 78);
 
 -- --------------------------------------------------------
 
@@ -87,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `package` (
   `Name` varchar(20) NOT NULL,
   `Acronym` varchar(10) NOT NULL,
   `Description` varchar(100) NOT NULL,
-  `eMassID` int(11) NOT NULL,
+  `eMassID` varchar(10) NOT NULL,
   `Classification` varchar(15) NOT NULL,
   `CIA` varchar(10) NOT NULL,
   `Archive` tinyint(1) NOT NULL,
@@ -100,12 +117,21 @@ CREATE TABLE IF NOT EXISTS `package` (
 --
 
 INSERT INTO `package` (`PID`, `Name`, `Acronym`, `Description`, `eMassID`, `Classification`, `CIA`, `Archive`, `ArchiveDate`, `TrackerStep`) VALUES
-(1, 'Person of Interest', 'POI', 'Brief Description ', 385, 'Classified', 'Medium', 1, '0000-00-00', 1),
-(2, 'Games of Thrones', 'GOT', 'Brief Description ', 579, 'UnClassified', 'Low', 0, '0000-00-00', 2),
-(3, 'The Magicians', 'TM', 'Brief Description ', 0, 'UnClassified', 'Medium', 0, '0000-00-00', 3),
-(4, 'Boardwalk Empire', 'BE', 'Brief Description ', 0, 'Classified', 'Low', 0, '0000-00-00', 4),
-(5, 'SMASH', 'SMASH', 'Brief Description ', 147, 'Secret', 'High', 1, '0000-00-00', 5),
-(6, 'Hulk', 'Hulk', 'Brief Description ', 467, 'UnClassified', 'Low', 0, '1981-12-01', 6);
+(1, 'Person of Interest', 'POI', 'Brief Description ', '385', 'Classified', 'Medium', 1, '0000-00-00', 1),
+(2, 'Games of Thrones', 'GOT', 'Brief Description ', '579', 'UnClassified', 'Low', 0, '0000-00-00', 2),
+(3, 'The Magicians', 'TM', 'Brief Description ', '0', 'UnClassified', 'Medium', 0, '0000-00-00', 3),
+(4, 'Boardwalk Empire', 'BE', 'Brief Description ', '0', 'Classified', 'Low', 0, '0000-00-00', 4),
+(5, 'SMASH', 'SMASH', 'Brief Description ', '147', 'Secret', 'High', 1, '0000-00-00', 5),
+(6, 'Hulk', 'Hulk', 'Brief Description ', '467', 'UnClassified', 'Low', 0, '1981-12-01', 6),
+(7, 'a', 'b', 'c', 'd', 'Classified', 'Moderate', 0, '0000-00-00', 0),
+(8, 'a', 'b', 'c', 'd', 'Classified', 'Moderate', 0, '0000-00-00', 0),
+(9, 'a', 'b', 'c', 'd', 'Classified', 'Moderate', 0, '0000-00-00', 0),
+(10, 'a', 'b', 'c', 'd', 'Classified', 'Moderate', 0, '0000-00-00', 0),
+(11, 'a', 'b', 'c', 'd', 'Classified', 'Moderate', 0, '0000-00-00', 0),
+(12, 'a', 'b', 'c', 'd', 'Unclassified', 'Moderate', 0, '0000-00-00', 0),
+(13, 'a', 'b', 'c', 'd', 'Unclassified', 'Moderate', 0, '0000-00-00', 0),
+(14, 'a', 'b', 'c', 'd', 'Unclassified', 'Moderate', 0, '0000-00-00', 0),
+(15, 'a', 'b', 'c', 'd', 'Unclassified', 'Moderate', 0, '0000-00-00', 0);
 
 -- --------------------------------------------------------
 
@@ -125,6 +151,13 @@ CREATE TABLE IF NOT EXISTS `packageartifacts` (
   `ApprovalDate` date NOT NULL,
   `Progress` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `packageartifacts`
+--
+
+INSERT INTO `packageartifacts` (`PAID`, `PID`, `AID`, `RWID`, `StartDate`, `SubmitDate`, `AcceptedDate`, `DeliveryDate`, `ApprovalDate`, `Progress`) VALUES
+(0, 3, 9, 2, '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 0);
 
 -- --------------------------------------------------------
 
@@ -224,12 +257,12 @@ CREATE TABLE IF NOT EXISTS `standardtimeline` (
   `Zone` varchar(20) NOT NULL,
   `AccredType` varchar(20) NOT NULL,
   `CreationDate` date NOT NULL,
-  `Step1Complete` date NOT NULL,
-  `Step2Complete` date NOT NULL,
-  `Step3Complete` date NOT NULL,
-  `Step4Complete` date NOT NULL,
-  `Step5Complete` date NOT NULL,
-  `CertAcquiredDate` date NOT NULL,
+  `Step1Complete` int(11) NOT NULL,
+  `Step2Complete` int(11) NOT NULL,
+  `Step3Complete` int(11) NOT NULL,
+  `Step4Complete` int(11) NOT NULL,
+  `Step5Complete` int(11) NOT NULL,
+  `CertAcquiredDate` int(11) NOT NULL,
   `ExpirationDateMonth` int(11) NOT NULL,
   `OverallProcessMonths` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -239,30 +272,30 @@ CREATE TABLE IF NOT EXISTS `standardtimeline` (
 --
 
 INSERT INTO `standardtimeline` (`STID`, `Zone`, `AccredType`, `CreationDate`, `Step1Complete`, `Step2Complete`, `Step3Complete`, `Step4Complete`, `Step5Complete`, `CertAcquiredDate`, `ExpirationDateMonth`, `OverallProcessMonths`) VALUES
-(1, 'A', 'ATO', '2031-12-01', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 48, 14.5),
-(2, 'A', 'IATT', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 3, 7.5),
-(3, 'A', 'ISCM- ReCred', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 12, 7.5),
-(4, 'B', 'ATO', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 48, 14.5),
-(5, 'B', 'IATT', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 3, 7.5),
-(6, 'B', 'ISCM- ReCred', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 12, 7.5),
-(7, 'C', 'ATO', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 48, 14.5),
-(8, 'C', 'IATT', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 3, 7.5),
-(9, 'C', 'ISCM- ReCred', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 12, 7.5),
-(10, 'D- Development ', 'ATO', '2032-02-01', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 48, 14.5),
-(11, 'D- Development ', 'IATT', '2032-12-01', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 3, 7.5),
-(12, 'D- Development ', 'ISCM- ReCred', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 12, 7.5),
-(13, 'D- Non Development ', 'ATO', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 48, 14.5),
-(14, 'D- Non Development ', 'IATT', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 3, 7.5),
-(15, 'D- Non Development ', 'ISCM- ReCred', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 12, 7.5),
-(16, 'PIT- Alfoat', 'ATO', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 48, 14.5),
-(17, 'PIT- Alfoat', 'IATT', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 3, 7.5),
-(18, 'PIT- Alfoat', 'ISCM- ReCred', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 12, 7.5),
-(19, 'PIT- Non Alfoat', 'ATO', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 48, 14.5),
-(20, 'PIT- Non Alfoat', 'IATT', '2033-02-01', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 3, 7.5),
-(21, 'PIT- Non Alfoat', 'ISCM- ReCred', '2033-12-01', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 12, 7.5),
-(22, 'Software', 'ATO', '2040-12-01', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 48, 14.5),
-(23, 'Software', 'IATT', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 3, 7.5),
-(24, 'Software', 'ISCM- ReCred', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', 12, 7.5);
+(1, 'A', 'ATO', '2031-12-01', 0, 0, 0, 0, 0, 0, 48, 14.5),
+(2, 'A', 'IATT', '0000-00-00', 0, 0, 0, 0, 0, 0, 3, 7.5),
+(3, 'A', 'ISCM- ReCred', '0000-00-00', 0, 0, 0, 0, 0, 0, 12, 7.5),
+(4, 'B', 'ATO', '0000-00-00', 0, 0, 0, 0, 0, 0, 48, 14.5),
+(5, 'B', 'IATT', '0000-00-00', 0, 0, 0, 0, 0, 0, 3, 7.5),
+(6, 'B', 'ISCM- ReCred', '0000-00-00', 0, 0, 0, 0, 0, 0, 12, 7.5),
+(7, 'C', 'ATO', '0000-00-00', 0, 0, 0, 0, 0, 0, 48, 14.5),
+(8, 'C', 'IATT', '0000-00-00', 0, 0, 0, 0, 0, 0, 3, 7.5),
+(9, 'C', 'ISCM- ReCred', '0000-00-00', 0, 0, 0, 0, 0, 0, 12, 7.5),
+(10, 'D- Development ', 'ATO', '2032-02-01', 0, 0, 0, 0, 0, 0, 48, 14.5),
+(11, 'D- Development ', 'IATT', '2032-12-01', 0, 0, 0, 0, 0, 0, 3, 7.5),
+(12, 'D- Development ', 'ISCM- ReCred', '0000-00-00', 0, 0, 0, 0, 0, 0, 12, 7.5),
+(13, 'D- Non Development ', 'ATO', '0000-00-00', 0, 0, 0, 0, 0, 0, 48, 14.5),
+(14, 'D- Non Development ', 'IATT', '0000-00-00', 0, 0, 0, 0, 0, 0, 3, 7.5),
+(15, 'D- Non Development ', 'ISCM- ReCred', '0000-00-00', 0, 0, 0, 0, 0, 0, 12, 7.5),
+(16, 'PIT- Alfoat', 'ATO', '0000-00-00', 0, 0, 0, 0, 0, 0, 48, 14.5),
+(17, 'PIT- Alfoat', 'IATT', '0000-00-00', 0, 0, 0, 0, 0, 0, 3, 7.5),
+(18, 'PIT- Alfoat', 'ISCM- ReCred', '0000-00-00', 0, 0, 0, 0, 0, 0, 12, 7.5),
+(19, 'PIT- Non Alfoat', 'ATO', '0000-00-00', 0, 0, 0, 0, 0, 0, 48, 14.5),
+(20, 'PIT- Non Alfoat', 'IATT', '2033-02-01', 0, 0, 0, 0, 0, 0, 3, 7.5),
+(21, 'PIT- Non Alfoat', 'ISCM- ReCred', '2033-12-01', 0, 0, 0, 0, 0, 0, 12, 7.5),
+(22, 'Software', 'ATO', '2040-12-01', 0, 0, 0, 0, 0, 0, 48, 14.5),
+(23, 'Software', 'IATT', '0000-00-00', 0, 0, 0, 0, 0, 0, 3, 7.5),
+(24, 'Software', 'ISCM- ReCred', '0000-00-00', 0, 0, 0, 0, 0, 0, 12, 7.5);
 
 -- --------------------------------------------------------
 
