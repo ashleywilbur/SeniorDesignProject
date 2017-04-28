@@ -20,7 +20,21 @@ if(id == "track1"){artLoad(1);
 '<form action="artifactsubmit.php" method="POST">'+
 
 '</form>';
+'<form action = "" method = "POST">'+
+	'Step approved? <br>'+
+	'<input type="radio" name="approved" value="yes"> Yes<br>'+
+	'<input type="radio" name="approved" value="no"> No<br>'+
+	'Kickback Reason: <select style="color:black" name="kickback">'+
+ ' <option value="Use" updated form>Use updated form</option>'+
+  '<option value="Scans are expired">Scans are expired</option>'+
+  '<option value="Missing signature(s)">Missing signature(s)</option>'+
+ ' <option value="Change of reviewer">Change of reviewer</option>'+
+ ' <option value="Incomplete form(s)">Incomplete form(s)</option>'+
+'</select> <br>'+
+'	<button id="saveKickback5">Save </button><br>'+
+'</form>'+
 
+		'</div>'
 
 }
 
@@ -33,16 +47,18 @@ if(id == "track1"){artLoad(1);
 
 
 '</form>'+
-'<div class="kickBack" id="kickBack2">'+
-'<label> Delivered </label>'+
-'<button id="del4" class = "artButton"></button><br>'+
 '<form action = "" method = "POST">'+
 	'Step approved? <br>'+
 	'<input type="radio" name="approved" value="yes"> Yes<br>'+
 	'<input type="radio" name="approved" value="no"> No<br>'+
-	'Kickback Reason: <br>'+
-	'<input type="text" name="kickback"> <br>'+
-	'<button id="saveKickback2">Save </button><br>'+
+	'Kickback Reason: <select style="color:black" name="kickback">'+
+ ' <option value="Use" updated form>Use updated form</option>'+
+  '<option value="Scans are expired">Scans are expired</option>'+
+  '<option value="Missing signature(s)">Missing signature(s)</option>'+
+ ' <option value="Change of reviewer">Change of reviewer</option>'+
+ ' <option value="Incomplete form(s)">Incomplete form(s)</option>'+
+'</select> <br>'+
+'	<button id="saveKickback5">Save </button><br>'+
 '</form>'+
 
 		'</div>';}
@@ -54,16 +70,18 @@ if(id == "track1"){artLoad(1);
 '<form action="artifactsubmit.php" method="POST">'+
 
 '</form>'+
-'<div class="kickBack" id="kickBack3">'+
-'<label> Delivered </label>'+
-'<button id="del4" class = "artButton"></button><br>'+
 '<form action = "" method = "POST">'+
 	'Step approved? <br>'+
 	'<input type="radio" name="approved" value="yes"> Yes<br>'+
 	'<input type="radio" name="approved" value="no"> No<br>'+
-	'Kickback Reason: <br>'+
-	'<input type="text" name="kickback"> <br>'+
-	'<button id="saveKickback3">Save </button><br>'+
+	'Kickback Reason: <select style="color:black" name="kickback">'+
+ ' <option value="Use" updated form>Use updated form</option>'+
+  '<option value="Scans are expired">Scans are expired</option>'+
+  '<option value="Missing signature(s)">Missing signature(s)</option>'+
+ ' <option value="Change of reviewer">Change of reviewer</option>'+
+ ' <option value="Incomplete form(s)">Incomplete form(s)</option>'+
+'</select> <br>'+
+'	<button id="saveKickback5">Save </button><br>'+
 '</form>'+
 
 		'</div>';}
@@ -75,16 +93,18 @@ if(id == "track1"){artLoad(1);
 '<form action="artifactsubmit.php" method="POST">'+
 
 '</form>'+
-'<div class="kickBack" id="kickBack4">'+
-'<label> Delivered </label>'+
-'<button id="del4" class = "artButton"></button><br>'+
 '<form action = "" method = "POST">'+
 	'Step approved? <br>'+
 	'<input type="radio" name="approved" value="yes"> Yes<br>'+
 	'<input type="radio" name="approved" value="no"> No<br>'+
-	'Kickback Reason: <br>'+
-	'<input type="text" name="kickback"> <br>'+
-	'<button id="saveKickback4">Save </button><br>'+
+	'Kickback Reason: <select style="color:black" name="kickback">'+
+ ' <option value="Use" updated form>Use updated form</option>'+
+  '<option value="Scans are expired">Scans are expired</option>'+
+  '<option value="Missing signature(s)">Missing signature(s)</option>'+
+ ' <option value="Change of reviewer">Change of reviewer</option>'+
+ ' <option value="Incomplete form(s)">Incomplete form(s)</option>'+
+'</select> <br>'+
+'	<button id="saveKickback5">Save </button><br>'+
 '</form>'+
 
 		'</div>';}
@@ -97,16 +117,18 @@ if(id == "track1"){artLoad(1);
 
 
 '</form>'+
-'<div class="kickBack" id="kickBack5">'+
-'<label> Delivered </label>'+
-'<button id="del4" class = "artButton"></button><br>'+
 '<form action = "" method = "POST">'+
 	'Step approved? <br>'+
 	'<input type="radio" name="approved" value="yes"> Yes<br>'+
 	'<input type="radio" name="approved" value="no"> No<br>'+
-	'Kickback Reason: <br>'+
-	'<input type="text" name="kickback"> <br>'+
-	'<button id="saveKickback5">Save </button><br>'+
+	'Kickback Reason: <select style="color:black" name="kickback">'+
+ ' <option value="Use" updated form>Use updated form</option>'+
+  '<option value="Scans are expired">Scans are expired</option>'+
+  '<option value="Missing signature(s)">Missing signature(s)</option>'+
+ ' <option value="Change of reviewer">Change of reviewer</option>'+
+ ' <option value="Incomplete form(s)">Incomplete form(s)</option>'+
+'</select> <br>'+
+'	<button id="saveKickback5">Save </button><br>'+
 '</form>'+
 
 		'</div>';}
@@ -118,16 +140,18 @@ if(id == "track1"){artLoad(1);
 '<form action="artifactsubmit.php" method="POST">'+
 
 '</form>'+
-'<div class="kickBack" id="kickBack6">'+
-'<label> Delivered </label>'+
-'<button id="del4" class = "artButton"></button><br>'+
 '<form action = "" method = "POST">'+
 	'Step approved? <br>'+
 	'<input type="radio" name="approved" value="yes"> Yes<br>'+
 	'<input type="radio" name="approved" value="no"> No<br>'+
-	'Kickback Reason: <br>'+
-	'<input type="text" name="kickback"> <br>'+
-	'<button id="saveKickback6">Save </button><br>'+
+	'Kickback Reason: <select style="color:black" name="kickback">'+
+ ' <option value="Use" updated form>Use updated form</option>'+
+  '<option value="Scans are expired">Scans are expired</option>'+
+  '<option value="Missing signature(s)">Missing signature(s)</option>'+
+ ' <option value="Change of reviewer">Change of reviewer</option>'+
+ ' <option value="Incomplete form(s)">Incomplete form(s)</option>'+
+'</select> <br>'+
+'	<button id="saveKickback5">Save </button><br>'+
 '</form>'+
 
 		'</div>';}
@@ -142,16 +166,18 @@ function AA(i){
 		response = response.split("+");
 	if(response[0] == 1 || response[0] == 2){
 	var T1 = document.getElementById("T1").innerHTML;
-	document.getElementById("T1").innerHTML= T1 + '<div class="kickBack" id="kickBack">'+
-'<label> Delivered </label>'+
-'<button id="del4" class = "artButton"></button><br>'+
-'<form action = "" method = "POST">'+
+	document.getElementById("T1").innerHTML= T1 + '<form action = "" method = "POST">'+
 	'Step approved? <br>'+
 	'<input type="radio" name="approved" value="yes"> Yes<br>'+
 	'<input type="radio" name="approved" value="no"> No<br>'+
-	'Kickback Reason: <br>'+
-	'<input type="text" name="kickback"> <br>'+
-'	<button id="saveKickback">Save </button><br>'+
+	'Kickback Reason: <select style="color:black" name="kickback">'+
+ ' <option value="Use" updated form>Use updated form</option>'+
+  '<option value="Scans are expired">Scans are expired</option>'+
+  '<option value="Missing signature(s)">Missing signature(s)</option>'+
+ ' <option value="Change of reviewer">Change of reviewer</option>'+
+ ' <option value="Incomplete form(s)">Incomplete form(s)</option>'+
+'</select> <br>'+
+'	<button id="saveKickback5">Save </button><br>'+
 '</form>';
 	document.getElementById("T1").innerHTML= T1 +
 	'<span><input class="artApp"type="checkbox" name="artapp'+i+'" value="artifactapproved"> Approve &nbsp </span><br>';
@@ -182,8 +208,8 @@ function artLoad(step){
 			var sid = i.toString();
 			sid = "SID"+sid;
 			if(step == Information[sid]){
-		var aName = i.toString();
-		aName = "ArtifactName"+aName;
+			var aName = i.toString();
+			aName = "ArtifactName"+aName;
 			artifacts(Information[aName], Information.SID, i);
 			console.log(Information[aName]);}
 		}
@@ -238,7 +264,7 @@ function artifacts(aName, stepID,i){ console.log(aName);
 	var T1 = document.getElementById("T1").innerHTML;
 	document.getElementById("T1").innerHTML= T1 +
 	'<label>'+ aName +'</label> '+
-	'<button id="art'+i+'" class = "artButton"></button>';
+	'<button id="art'+i+'" class = "artButton"></button> <br><br>';
 	//'<span id="subs"></span>'+
 	//'<span id></span><br>';
 	AA(i);
