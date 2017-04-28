@@ -135,25 +135,25 @@
 		echo $row["Zone"] . "\"";
 		echo ",";
 		echo "\"AccredType\":\"";
-		echo $row["AccredType"] . "\"";}/*
+		echo $row["AccredType"] . "\"";}
 		echo ",";
-		echo "\"CreationDate\":";
-		echo $row["CreationDate"]; //not important for package data
+		echo "\"CreationDate\":\"";
+		echo $row["CreationDate"] . "\""; //not important for package data
 		echo ",";
-		echo "\"Step1Date\":";
-		echo $row["Step1Date"]; //when  Step 1 is due
+		echo "\"Step1Date\":\"";
+		echo $row["Step1Date"] . "\""; //when  Step 1 is due
 		echo ",";
-		echo "\"Step2Date\":";
-		echo $row["Step2Date"]; //when Step1Date Step 2 is due
+		echo "\"Step2Date\":\"";
+		echo $row["Step2Date"] . "\""; //when Step1Date Step 2 is due
 		echo ",";
-		echo "\"Step3Date\":";
-		echo $row["Step3Date"]; //when Step2Date Step 3 is due
+		echo "\"Step3Date\":\"";
+		echo $row["Step3Date"] . "\""; //when Step2Date Step 3 is due
 		echo ",";
-		echo "\"Step4Date\":";
-		echo $row["Step4Date"]; //when Step3Date Step 4 is due
+		echo "\"Step4Date\":\"";
+		echo $row["Step4Date"] . "\""; //when Step3Date Step 4 is due
 		echo ",";
-		echo "\"Step5Date\":";
-		echo $row["Step5Date"]; //when Step4Date Step 5 is due
+		echo "\"Step5Date\":\"";
+		echo $row["Step5Date"] . "\"";/* //when Step4Date Step 5 is due
 		echo ",";
 		echo "\"CertAcquiredDate\":";
 		echo $row["CertAcquiredDate"]; //how many days after Step5Date the Cert is expected to be  finalized
