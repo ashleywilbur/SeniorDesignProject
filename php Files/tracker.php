@@ -110,26 +110,26 @@
 		/*echo "\"PkgCreationDate\":";
 		echo $row["PkgCreationDate"];
 		echo ",";
-		echo "\"Step1Delay\":";
-		echo $row["Step1Delay"]; //how many days Step1Date has been 
+		echo "\"Step1Days\":";
+		echo $row["Step1Days"]; //how many days Step1Date has been Delayed
 		echo ",";
-		echo "\"Step2Delay\":";
-		echo $row["Step2Delay"]; //how many days Step2Date has been delayed
+		echo "\"Step2Days\":";
+		echo $row["Step2Days"]; //how many days Step2Date has been Delayed
 		echo ",";
-		echo "\"Step3Delay\":";
-		echo $row["Step3Delay"]; //how many days Step3Date has been delayed
+		echo "\"Step3Days\":";
+		echo $row["Step3Days"]; //how many days Step3Date has been Delayed
 		echo ",";
-		echo "\"Step4Delay\":";
-		echo $row["Step4Delay"]; //how many days Step4Date has been delayed
+		echo "\"Step4Days\":";
+		echo $row["Step4Days"]; //how many days Step4Date has been Delayed
 		echo ",";
-		echo "\"Step5Delay\":";
-		echo $row["Step5Delay"]; //how many days Step5Date has been delayed
+		echo "\"Step5Days\":";
+		echo $row["Step5Days"]; //how many days Step5Date has been Delayed
 		echo ",";
-		echo "\"CertAcquiredDelay\":";
-		echo $row["CertAcquiredDelay"]; //how many days CertAcquiredDate has been delayed
+		echo "\"CertAcquiredDays\":";
+		echo $row["CertAcquiredDays"]; //how many days CertAcquiredDate has been Delayed
 		echo ",";
-		echo "\"ExpirationDelay\":";
-		echo $row["ExpirationDelay"]; //how many months ExpirationDateMonth has been delayed
+		echo "\"ExpirationMonths\":";
+		echo $row["ExpirationMonths"]; //how many months ExpirationDateMonth has been Delayed
 		echo ",";*/
 		echo "\"Zone\":\"";
 		echo $row["Zone"] . "\"";
@@ -141,25 +141,25 @@
 		echo $row["CreationDate"]; //not important for package data
 		echo ",";
 		echo "\"Step1Date\":";
-		echo $row["Step1Date"]; //how many days after PkgCreationDate Step 1 is due
+		echo $row["Step1Date"]; //when  Step 1 is due
 		echo ",";
 		echo "\"Step2Date\":";
-		echo $row["Step2Date"]; //how many days after Step1Date Step 2 is due
+		echo $row["Step2Date"]; //when Step1Date Step 2 is due
 		echo ",";
 		echo "\"Step3Date\":";
-		echo $row["Step3Date"]; //how many days after Step2Date Step 3 is due
+		echo $row["Step3Date"]; //when Step2Date Step 3 is due
 		echo ",";
 		echo "\"Step4Date\":";
-		echo $row["Step4Date"]; //how many days after Step3Date Step 4 is due
+		echo $row["Step4Date"]; //when Step3Date Step 4 is due
 		echo ",";
 		echo "\"Step5Date\":";
-		echo $row["Step5Date"]; //how many days after Step4Date Step 5 is due
+		echo $row["Step5Date"]; //when Step4Date Step 5 is due
 		echo ",";
 		echo "\"CertAcquiredDate\":";
 		echo $row["CertAcquiredDate"]; //how many days after Step5Date the Cert is expected to be  finalized
 		echo ",";
-		echo "\"ExpirationDateMonth\":";
-		echo $row["ExpirationDateMonth"]; //how long the cert lasts (months)
+		echo "\"ExpirationDate\":";
+		echo $row["ExpirationDate"]; //how long the cert lasts (months)
 		echo ",";
 		echo "\"OverallProcessMonths\":";
 		echo $row["OverallProcessMonths"]; //how long the process should take as a wile (months)
