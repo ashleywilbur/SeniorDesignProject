@@ -83,12 +83,12 @@
 		$CIA = "N/A";
 	}
 	
-	if(isset($_POST['rwid'])) {
+	/*if(isset($_POST['rwid'])) {
 		$rwid = $_POST['rwid'];
 	}
 	else {
 		$rwid = '0';
-	}
+	}*/
 	
 	//Insert to the package table------------------------------------------------
 	
@@ -209,8 +209,9 @@
 		$paid = $row['max'];
 		$paid++;
 		
-		$sql = "INSERT INTO packageartifacts (PAID, PID, RWID, AID, StartDate, SubmitDate, Progress) 
-			VALUES (" . $paid . "," . $pid . ",(SELECT RWID FROM reviewer WHERE reviewer.RWID LIKE '%" . $rwid . "%')," . $aid . "," . $startDate . "," . $submitDate . ", 0)";
+		$sql = "INSERT INTO packageartifacts (PAID, PID, AID, StartDate, SubmitDate, Progress) 
+			VALUES (" . $paid . "," . $pid . "," . $aid . "," . $startDate . "," . $submitDate . ", 0)";
+			//(SELECT RWID FROM reviewer WHERE reviewer.RWID LIKE '%" . $rwid . "%'),
 
 		if ($conn->query($sql) === TRUE) {
 			echo "New packageartifact record created successfully <br>";
