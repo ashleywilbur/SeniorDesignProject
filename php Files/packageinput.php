@@ -83,8 +83,8 @@
 		$CIA = "N/A";
 	}
 	
-	if(isset($_POST['rwid'.$i])) {
-		$rwid = $_POST['rwid'.$i];
+	if(isset($_POST['rwid'])) {
+		$rwid = $_POST['rwid'];
 	}
 	else {
 		$rwid = '0';
@@ -98,24 +98,30 @@
 	$pid = $row['max'];
 	$pid++;
 	
+	echo $zone;
+	echo $accred;
 	
 	$sql = "INSERT INTO package (PID, Name, Acronym, Description, eMassID, Classification, CIA) 
 			VALUES (" . $pid . ",'" . $name . "','" . $acronym . "','" . $description . "','" . $eMassID . "','" . $classification . "','" . $CIA . "')";
 
 	if ($conn->query($sql) === TRUE) {
-		echo "New record created successfully ";
+		echo "New package record created successfully <br>";
 	} 
 	else {
-		echo "Error: " . $sql . "<br>" . $conn->error;
+		echo "Error(p): " . $sql . "<br>" . $conn->error . "<br>";
 	}
 	
 	//Insert into packagestandardtimeline table------------------------------------------------
 	
-	$sql = "SELECT * FROM standardtimeline WHERE standardtimeline.Zone LIKE '%" . $zone . "%' AND standardtimeline.AccredType LIKE '%" . $accred . "%'";
+	$sql = "SELECT * FROM standardtimeline WHERE standardtimeline.Zone LIKE '" . $zone . "' AND standardtimeline.AccredType LIKE '" . $accred . "'";
 	$result = $conn->query($sql);
+	
+	if (!$result) {
+		trigger_error('Invalid query: ' . $conn->error);
+	}
+	
 	$row = $result->fetch_assoc();
 	$stid = $row['STID'];
-	$stid++; 
 	$step1 = date('Y-m-d', strtotime($date. ' + '.$row['Step1Complete'].' days'));
 	$step2 = date('Y-m-d', strtotime($step1. ' + '.$row['Step2Complete'].' days'));
 	$step3 = date('Y-m-d', strtotime($step2. ' + '.$row['Step3Complete'].' days'));
@@ -128,12 +134,18 @@
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 	$pstid = $row['max'];
-	$pstid++; 
+	$pstid++; //(SELECT STID FROM standardtimeline WHERE standardtimeline.STID LIKE '%" . $stid . "%')
 	
 	$sql = "INSERT INTO packagestandardtimeline (PSTID, PID, STID, PkgCreationDate, Step1Date, Step2Date, Step3Date, Step4Date, Step5Date, CertAcquiredDate, ExpirationDate) 
-			VALUES (" . $pstid . ",(SELECT PID FROM package WHERE package.PID LIKE '%" . $pid . "%'), (SELECT STID FROM standardtimeline WHERE standardtimeline.STID LIKE '%" . $stid . "%'),
+			VALUES (" . $pstid . ",(SELECT PID FROM package WHERE package.PID LIKE '%" . $pid . "%'), '%".$stid."$',
 			" . $date . "," . $step1 . "," . $step2 . "," . $step3 . "," . $step4 . "," . $step5 . "," . $complete . "," . $expiration . ")";
 	
+	if ($conn->query($sql) === TRUE) {
+		echo "New packagestandardtimeline record created successfully <br>";
+	} 
+	else {
+		echo "Error(pst): " . $sql . "<br>" . $conn->error . "<br>";
+	}
 	
 	$i=0;
 	
@@ -174,10 +186,10 @@
 			VALUES (" . $aid . ",(SELECT SID FROM steps WHERE steps.SID LIKE '%" . $artifactStep . "%'),'" . $artifact . "'," . $submitDays . ")";
 
 		if ($conn->query($sql) === TRUE) {
-			echo "New artifact record created successfully ";
+			echo "New artifact record created successfully <br>";
 		} 
 		else {
-			echo "Error: " . $sql . "<br>" . $conn->error;
+			echo "Error(a): " . $sql . "<br>" . $conn->error . "<br>";
 		}
 		
 		//packageartifact entry---------------------------------------------------------------------
@@ -192,10 +204,10 @@
 			VALUES (" . $paid . "," . $pid . ",(SELECT RWID FROM reviewer WHERE reviewer.RWID LIKE '%" . $rwid . "%')," . $aid . "," . $startDate . "," . $submitDate . ", 0)";
 
 		if ($conn->query($sql) === TRUE) {
-			echo "New packageartifact record created successfully ";
+			echo "New packageartifact record created successfully <br>";
 		} 
 		else {
-			echo "Error: " . $sql . "<br>" . $conn->error;
+			echo "Error(pa): " . $sql . "<br>" . $conn->error . "<br>";
 		}
 		
 		$i++;
@@ -235,3 +247,6 @@
 	}*/
 	$conn->close();
 ?>
+
+
+<button type="button" onclick = "CreatePackage.html" class="return">Return</button>
