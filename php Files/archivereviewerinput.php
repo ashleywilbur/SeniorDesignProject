@@ -18,13 +18,14 @@
 	//echo "Connected successfully";
 
 	
-	if(isset($_POST['pid'])){
-		$pid = $_POST['pid'];
+	
+	if(isset($_POST['rwid'])){
+		$rwid = $_POST['rwid'];
 	}
 	
 	$date = date ("Y-m-d");
 	
-	$sql = "UPDATE package SET (Archive = 1, ArchiveDate = '".$date."') WHERE package.uid LIKE '%" . $pid . "%'";
+	$sql = "UPDATE reviewer SET (Archive = 1, ArchiveDate = '".$date."') WHERE reviewer.rwid LIKE '%" . $rwid . "%'";
 
 	if ($conn->query($sql) === TRUE) {
 		echo "Record updated successfully";
