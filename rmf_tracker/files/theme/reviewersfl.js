@@ -43,11 +43,11 @@ function allReviewer(){
 	if(this.readyState == 3){
 		reviewerAmount = response.split("+");
 		console.log(reviewerAmount);
-		
+		reviewerAmount.shift();
 		
 		//dropD = " <option>+reviewerAmount[i]+</option>"
 		for(var i = 1; i<=reviewerAmount.length; i++){
-			if(i%2 == 0){console.log("loop"); console.log(reviewerAmount[i]);
+			if(i%2 == 1){console.log("loop"); console.log(reviewerAmount[i]);
 			dropStart = document.getElementById('archivereviewer').innerHTML;
 			dropD = " <option value="+reviewerAmount[i-1]+"\">"+reviewerAmount[i]+"</option>"
 			document.getElementById('archivereviewer').innerHTML = dropStart + dropD;
