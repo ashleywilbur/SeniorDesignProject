@@ -19,7 +19,7 @@
 	
 	$date = date ("Y-m-d");
 	
-	//name, acronym, description, eMassID, classification, CIA, artifact
+	//input from form into variables ------------------------------------------------
 	if(isset($_POST['name'])){
 		$name = $_POST['name'];
 	}
@@ -55,6 +55,20 @@
 		$startDate = $date;
 	}
 	
+	if(isset($_POST['zone'])){
+		$zone = $_POST['zone'];
+	}
+	else {
+		$zone = 0;
+	}
+	
+	if(isset($_POST['accred'])){
+		$accred = $_POST['accred'];
+	}
+	else {
+		$accred = 0;
+	}
+	
 	if(isset($_POST['classification'])){
 		$classification = $_POST['classification'];
 	}
@@ -76,11 +90,14 @@
 		$rwid = '0';
 	}
 	
+	//Insert to the pckage table------------------------------------------------
+	
 	$sql = "SELECT MAX(PID) as max FROM package";
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 	$pid = $row['max'];
 	$pid++;
+	
 	
 	$sql = "INSERT INTO package (PID, Name, Acronym, Description, eMassID, Classification, CIA) 
 			VALUES (" . $pid . ",'" . $name . "','" . $acronym . "','" . $description . "','" . $eMassID . "','" . $classification . "','" . $CIA . "')";
@@ -91,6 +108,32 @@
 	else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
+	
+	//Insert into packagestandardtimeline table------------------------------------------------
+	
+	$sql = "SELECT * FROM standardtimeline WHERE standardtimeline.Zone LIKE '%" . $zone . "%' AND standardtimeline.AccredType LIKE '%" . $accred . "%'";
+	$result = $conn->query($sql);
+	$row = $result->fetch_assoc();
+	$stid = $row['PSTID'];
+	$stid++; 
+	$step1 = date('Y-m-d', strtotime($date. ' + '.$row['Step1Complete'].' days'));
+	$step2 = date('Y-m-d', strtotime($step1. ' + '.$row['Step2Complete'].' days'));
+	$step3 = date('Y-m-d', strtotime($step2. ' + '.$row['Step3Complete'].' days'));
+	$step4 = date('Y-m-d', strtotime($step3. ' + '.$row['Step4Complete'].' days'));
+	$step5 = date('Y-m-d', strtotime($step4. ' + '.$row['Step5Complete'].' days'));
+	$complete = date('Y-m-d', strtotime($step5. ' + '.$row['CertAcquiredDate'].' days'));
+	$expiration = date('Y-m-d', strtotime($complete. ' + '.$row['ExpirationDateMonth'].' months'));
+	
+	$sql = "SELECT MAX(PSTID) as max FROM packagestandardtimeline";
+	$result = $conn->query($sql);
+	$row = $result->fetch_assoc();
+	$pstid = $row['max'];
+	$pstid++; 
+	
+	$sql = "INSERT INTO packagestandardtimeline (PSTID, PID, STID, PkgCreationDate, Step1Date, Step2Date, Step3Date, Step4Date, Step5Date, CertAcquiredDate, ExpirationDate) 
+			VALUES (" . $pstid . ",(SELECT PID FROM package WHERE package.PID LIKE '%" . $pid . "%'), (SELECT STID FROM standardtimeline WHERE standardtimeline.STID LIKE '%" . $stid . "%'),
+			" . $date . "," . $step1 . "," . $step2 . "," . $step3 . "," . $step4 . "," . $step5 . "," . $complete . "," . $expiration . ")";
+	
 	
 	$i=0;
 	
