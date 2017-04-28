@@ -100,6 +100,15 @@
 	
 	echo $zone;
 	echo $accred;
+	$sql = "SELECT STID FROM standardtimeline WHERE standardtimeline.Zone LIKE '" . $zone . "' AND standardtimeline.AccredType LIKE '" . $accred . "'";
+	$result = $conn->query($sql);
+	
+	if (!$result) {
+		trigger_error('Invalid query: ' . $conn->error);
+	}
+	$row = $result->fetch_assoc();
+	$testzone = $row['STID'];
+	echo $testzone . "<br>";
 	
 	$sql = "INSERT INTO package (PID, Name, Acronym, Description, eMassID, Classification, CIA) 
 			VALUES (" . $pid . ",'" . $name . "','" . $acronym . "','" . $description . "','" . $eMassID . "','" . $classification . "','" . $CIA . "')";
