@@ -90,7 +90,7 @@
 		$rwid = '0';
 	}
 	
-	//Insert to the pckage table------------------------------------------------
+	//Insert to the package table------------------------------------------------
 	
 	$sql = "SELECT MAX(PID) as max FROM package";
 	$result = $conn->query($sql);
@@ -114,7 +114,7 @@
 	$sql = "SELECT * FROM standardtimeline WHERE standardtimeline.Zone LIKE '%" . $zone . "%' AND standardtimeline.AccredType LIKE '%" . $accred . "%'";
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
-	$stid = $row['PSTID'];
+	$stid = $row['STID'];
 	$stid++; 
 	$step1 = date('Y-m-d', strtotime($date. ' + '.$row['Step1Complete'].' days'));
 	$step2 = date('Y-m-d', strtotime($step1. ' + '.$row['Step2Complete'].' days'));
@@ -145,6 +145,9 @@
 	}*/
 	
 	while(isset($_POST['artifact'.$i])) {
+		
+		//artifact entry---------------------------------------------------------------------
+		
 		$artifact = $_POST['artifact'.$i];
 		if(isset($_POST['artifactStep'.$i])) {
 			$artifactStep = $_POST['artifactStep'.$i];
@@ -176,6 +179,8 @@
 		else {
 			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
+		
+		//packageartifact entry---------------------------------------------------------------------
 		
 		$sql = "SELECT MAX(PAID) as max FROM packageartifacts";
 		$result = $conn->query($sql);
