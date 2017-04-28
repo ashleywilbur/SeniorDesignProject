@@ -196,7 +196,7 @@ var STYLE_PREFIX = 'wsite';
 
 <h3>eMassID: <input type="text" name="eMassID"  ></h3> 
 
-
+<h3>Start Date: <input type = "date" name="startDate" placeholder="YYYY-MM-DD"></h3>
 
 
 <h3>Classification:  <select style="color:black" name="classification">
@@ -253,8 +253,9 @@ function createArtifactRegion () {
 		//Add the new artifact(s)
 		var newdiv = document.createElement('div'); 
 		var artName = ("artifact" + i);
+		var subDays = ("submitDays" + i);
 		//Dynamically creates artifact fields, each named artifact0, artifact1, etc.
-		newdiv.innerHTML = "Artifact " + (i + 1) + " <br><input class = 'nameImp' type='text' name='" + artName + "' maxlength='30'>" + " Step: " + "<input class='numImp' type='number' name='artifactStep[]' min='1' max='5' >";	
+		newdiv.innerHTML = ("Artifact " + (i + 1) + " <br><input class = 'nameImp' type='text' name='" + artName + "' maxlength='30'>" + " Step: " + "<input class='numImp' type='number' name='artifactStep[]' min='1' max='5' >" + " Submit days: " + "<input class = 'numImp' type='number' name='" + subDays + "'> <br>");	
 		document.getElementById("artifactList").appendChild(newdiv);  
 	} 
 }
