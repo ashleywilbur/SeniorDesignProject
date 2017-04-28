@@ -724,7 +724,7 @@ div.TrackerSteps{
 	position:absolute;
 	top:70%;
 	left:5%;
-	height:380px;
+	height:480px;
 	border-radius: 25px;
 	border: solid 2px white;
 	padding:5px;
@@ -761,6 +761,17 @@ div.TrackerSteps{
 	font-size:15px;
 }
 
+.createPackage select.accred{
+	height: 25px;
+	border: solid 2px white;
+	color: black;
+	border-radius: 5px;
+	width:300px;
+	display:inline-block;
+	font-size:15px;
+}
+
+
 .createPackage h3 {
 	margin:10px;
 	text-align:right;
@@ -775,9 +786,22 @@ div.TrackerSteps{
 	font-family: 'Birdseye', sans-serif;
 	width: 100px;
 	text-align: center;
-	height:30px;
+	height:50px;
 }
 
+#adduserSubmit{
+	background-color: #1C4C76;
+    color: white;
+    font-size: 20px;
+    border-style: solid;
+    cursor: pointer;
+	font-family: 'Birdseye', sans-serif;
+	width: 100px;
+	text-align: center;
+	height:30px;
+	top: 3000px;
+	left: 200px;
+}
 
 #artifactList .nameImp{
 	width:220px;
@@ -786,6 +810,12 @@ div.TrackerSteps{
 	text-align: left;
 }
 
+#artifactList .nameImp2{
+	width:340px;
+	height:25px;
+	color: black;
+	text-align: left;
+}
 
 #archiveuserSubmit {
 	background-color: #1C4C76;
@@ -805,9 +835,10 @@ div.TrackerSteps{
 	background-color: #1C4C76; 
 	text-color: white; 
 	position:absolute; 
-	top:65%;
+	top:22%;
 	left:55%;
 }
+
 
 .cPackField {
 	color: white; 
@@ -816,6 +847,30 @@ div.TrackerSteps{
 	left: 600px; 
 	top: 50px;
 	width: 500px;
+	height: 80px;
+}
+
+.cPackField1 {
+	color: white; 
+	float: left; 
+	position: absolute; 
+	left: 50px; 
+	top: 220px;
+	width: 500px;
+}
+
+.cPackField1 .numImp{
+	width:50px;
+	height:25px;
+	color: black;
+	text-align: center;
+}
+
+.cPackField1 .numImp1{
+	width:260px;
+	height:25px;
+	color: black;
+	text-align: center;
 }
 
 .cPackField .numImp{
@@ -936,6 +991,7 @@ div.TrackerSteps{
 	border: solid 1px white;
 	width:200px;
 	height:200px;
+	right: 400px;
 }
 
 
@@ -989,10 +1045,15 @@ div.TrackerSteps{
 	margin:10px;
 	text-align:right;
 }
+
+.indent{
+text-indent: 50px;
+}
+
 .artApp{
 	visibility:hidden;
 }
-
+ 
 .artSub{
 	visibility:hidden;
 }
@@ -1011,7 +1072,6 @@ div.TrackerSteps{
 	color: #ffffff;
 	word-wrap: break-word;
 	white-space:nowrap;
-	
 }
 
 .gi-2x{font-size: 2em;}
